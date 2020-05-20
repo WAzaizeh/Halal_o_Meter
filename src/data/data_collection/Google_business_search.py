@@ -3,8 +3,11 @@
 # a location, type of business, and search term.
 
 import requests, json, time
+from dotenv import load_dotenv
+import os
 
-API_key = 'AIzaSyAvKIZu8zOpq5FIANy5bA14zovrUPbNmWw'
+load_dotenv()
+API_key = os.getenv('GOOGLE_API_KEY')
 
 # initilization of variables used in functions
 total_results = []
@@ -67,6 +70,6 @@ def get_google_places_by_location(business_type, search_term, location_name = ''
         next_page_token = json_obj["next_page_token"]
     except KeyError:
         #no next page
-        return
+        return total_results
     time.sleep(1)
     get_google_places_by_location(business_type, search_term, coordinates=coordinates, next_page=next_page_token)

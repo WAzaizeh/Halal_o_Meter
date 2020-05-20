@@ -3,8 +3,11 @@
 # a location, type of business, and search term.
 
 import requests, json, time
+from dotenv import load_dotenv
+import os
 
-API_key = '9HyMSC_C3XTFMXp2XoqkN4IVTNC3KJh6guNLuoDxIra07urp-LaWF5lgOnRwPltadlUZWL-7t5YIhsQaOAltdlzbi1hmbpoHcim52j1kUt7ji962Kih3dCvhW8nCXnYx'
+load_dotenv()
+API_key = os.getenv('YELP_API_KEY')
 
 
 def get_yelp_places_by_location(search_location, search_type, search_term):
@@ -22,7 +25,6 @@ def get_yelp_places_by_location(search_location, search_type, search_term):
     total_results = []
     offset_max = 951
     while len(params['offset']) == 0 or int(params['offset']) < offset_max:
-        print(params['offset'])
         response = requests.request("GET", url, headers=headers, params=params)
         json_obj = json.loads(response.text)
         results = json_obj['businesses']
@@ -34,8 +36,6 @@ def get_yelp_places_by_location(search_location, search_type, search_term):
             review_count = result['review_count']
             address = result['location']['display_address']
             total_results.append([name, yelp_id, yelp_url, review_count, address])
-            print(total_results[-1])
-            print('\n', len(total_results),'\n')
         # load more results using the offset param
         params['offset'] = str(int(params['offset']) + 50) if params['offset'] != '' else '51'
         time.sleep(5)
