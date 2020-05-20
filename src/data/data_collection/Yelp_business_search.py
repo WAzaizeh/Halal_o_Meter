@@ -20,12 +20,13 @@ def get_yelp_places_by_location(search_location, search_type, search_term):
     }
 
     total_results = []
-    # offset limit needs to be changed to json_obj[total]
-    while len(params['offset']) == 0 or int(params['offset']) < 951:
+    offset_max = 951
+    while len(params['offset']) == 0 or int(params['offset']) < offset_max:
         print(params['offset'])
         response = requests.request("GET", url, headers=headers, params=params)
         json_obj = json.loads(response.text)
         results = json_obj['businesses']
+        offset_max =json_obj['total']
         for result in results:
             name = result['name']
             yelp_id = result['id']
@@ -35,8 +36,9 @@ def get_yelp_places_by_location(search_location, search_type, search_term):
             total_results.append([name, yelp_id, yelp_url, review_count, address])
             print(total_results[-1])
             print('\n', len(total_results),'\n')
-        # iterate over results using the offset param
+        # load more results using the offset param
         params['offset'] = str(int(params['offset']) + 50) if params['offset'] != '' else '51'
         time.sleep(5)
 
+    return total_results
     # print(total_results)
