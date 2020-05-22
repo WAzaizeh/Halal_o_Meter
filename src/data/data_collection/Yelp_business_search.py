@@ -1,4 +1,4 @@
-# Get a set of businesses along with their full deatils
+# Get a set of businesses along with their full details
 # by querying Yelp Fusion API according to
 # a location, type of business, and search term.
 
