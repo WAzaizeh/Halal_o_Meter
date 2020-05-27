@@ -2,28 +2,6 @@
 # using Selenium
 
 
-'''
-Scraping Google Reviews
-Steps
-1. open google maps page of business (from database)
-2. click review search button (xpath = //button[@aria-label="Search reviews"])
-3. find review search input (xpath = //input[@aria-label="Search reviews"]), use explicit wait
-4. insert 'halal'
-5. insert Key.Return
-6. figure out how to scrol to show all results
-7. scrape all reviews and save to DB
-
-
-Scrape Yelp reviews
-Steps
-1. open yelp business url (from database)
-2. find "search within reviews input" (xpath = //input[@name="query"])
-3. insert 'halal'
-4. insert Keys.Return
-5. scrape reviews ( xpath = //span[@lang="en"]) -> nested in multiple 'span'
-6. go to next page by clicking '>'
-'''
-
 from selenium import webdriver as Webdriver
 from selenium.webdriver import ChromeOptions
 from selenium.webdriver.common.keys import Keys
@@ -48,7 +26,6 @@ def scrape_yelp_reviews(yelp_url):
     # get business url with halal-relevant reviews only
     webdriver.get(yelp_url + '&q=halal')
     review_num = _get_yelp_reviews_num(webdriver) # a function that will return number of reviews
-    print(review_num)
     data = []
     for i in range(1 ,int(review_num / 20) + (review_num % 20 > 0)):
         data.extend(_scrape_yelp_halal_reviews(webdriver))
@@ -61,7 +38,7 @@ def _get_webdriver():
     chromedriver_path = '/Users/wesamazaizeh/Desktop/Projects/Chrome_driver/chromedriver_83'
     options = ChromeOptions()
     # will need more configuration when deployed
-    # options.add_argument('headless')
+    options.add_argument('headless')
     options.add_argument('--disable-infobars --disable-extensions')
     webdriver = Webdriver.Chrome(executable_path=chromedriver_path, chrome_options=options)
     return webdriver

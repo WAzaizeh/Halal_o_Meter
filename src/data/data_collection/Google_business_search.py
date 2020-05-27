@@ -34,7 +34,10 @@ def get_google_place_url_and_review_count(place_id):
     json_obj = json.loads(response)
     place_details = json_obj["result"]
     google_url = place_details['url']
-    review_count = place_details['user_ratings_total']
+    try:
+        review_count = place_details['user_ratings_total']
+    except:
+        review_count = 0
     return google_url, review_count
     ## get website - omitted for now
     # try:
@@ -46,14 +49,14 @@ def get_google_place_url_and_review_count(place_id):
 	# 	print("err getting place details")
 
 
-def get_google_places_by_location(business_type, search_term, location_name = '', coordinates =None, next_page=''):
+def get_google_places_by_location(business_type, search_term, location_name = '', coordinates =None, radius = '16093', next_page=''):
     if len(location_name):
         coordinates = ','.join(map(str, get_corrdinates_from_name(location_name=location_name)))
     elif not len(coordinates):
         # change to raise an error
         print('Must provide an area name or coordinates for the search')
     URL = ('https://maps.googleapis.com/maps/api/place/textsearch/json?location='
-    	+ coordinates + '&radius=16093' + 'query=' + search_term + '&type='
+    	+ coordinates + '&radius=' + radius + 'query=' + search_term + '&type='
     	+ business_type + '&pagetoken=' + next_page + '&key='+ API_key)
     r = requests.get(URL)
     response = r.text
@@ -65,11 +68,11 @@ def get_google_places_by_location(business_type, search_term, location_name = ''
         address = result['formatted_address']
         google_url , review_count = get_google_place_url_and_review_count(google_id)
         total_results.append([name, google_id, google_url, review_count, address])
-        print(total_results[-1])
     try:
         next_page_token = json_obj["next_page_token"]
-    except KeyError:
+    except:
         #no next page
         return total_results
     time.sleep(1)
     get_google_places_by_location(business_type, search_term, coordinates=coordinates, next_page=next_page_token)
+    return total_results
