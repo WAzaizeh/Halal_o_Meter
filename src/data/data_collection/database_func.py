@@ -103,4 +103,3 @@ def _close_connection(connection, cursor):
     if (connection):
         cursor.close()
         connection.close()
-        print('PostgreSQL connection is closed')

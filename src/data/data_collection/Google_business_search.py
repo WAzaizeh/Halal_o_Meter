@@ -62,16 +62,19 @@ def get_google_places_by_location(business_type, search_term, location_name = ''
     response = r.text
     json_obj = json.loads(response)
     results = json_obj["results"]
+    total_results = []
     for result in results:
         name = result['name']
         google_id = result['place_id']
         address = result['formatted_address']
         google_url , review_count = get_google_place_url_and_review_count(google_id)
-        db.append_to_businesses(name, google_id, google_url, review_count, address)
+        # db.append_to_businesses(name, google_id, google_url, review_count, address)
+        total_results.append([name, google_id, google_url, review_count, address])
     try:
         next_page_token = json_obj["next_page_token"]
     except:
         #no next page
-        return
+        return total_results
     time.sleep(1)
     get_google_places_by_location(business_type, search_term, coordinates=coordinates, next_page=next_page_token)
+    return total_results
