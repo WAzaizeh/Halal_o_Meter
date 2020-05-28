@@ -3,15 +3,16 @@
 import psycopg2
 from psycopg2 import sql
 
-
 def append_to_businesses(name, id, url, review_count, address):
     try:
         # connecto to database
         connection, cursor = _connect_to_database()
 
         # insert row into approproate businesses table
-        cursor.execute(                                                # correct
-        sql.SQL("""INSERT INTO businesses (Name, ID, URL, Total_review_count, Address) VALUES (%s, %s, %s, %s, %s)"""),
+        cursor.execute(
+        sql.SQL("""INSERT INTO businesses (Name, ID, URL, Total_review_count, Address)
+                VALUES (%s, %s, %s, %s, %s)
+                ON CONFLICT DO NOTHING"""), # if id already exists avoid inserting a row
         (name, id, url, review_count, address))
         connection.commit()
 
@@ -28,8 +29,10 @@ def append_to_reviews(id, url, review_text, review_date):
         connection, cursor = _connect_to_database()
 
         # insert row into reviews database
-        cursor.execute(                                                # correct
-        sql.SQL("""INSERT INTO reviews (restaurnat_id, url, review_text, review_date) VALUES (%s, %s, %s, %s)"""),
+        cursor.execute(
+        sql.SQL("""INSERT INTO reviews (restaurant_id, url, review_text, review_date)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT DO NOTHING"""), # if id already exists avoid inserting a row
         (id, url, review_text, review_date))
         connection.commit()
 
@@ -81,7 +84,7 @@ def get_reviews():
         # closing database connection
         _close_connection(connection, cursor)
 
-        
+
 def _connect_to_database():
     try:
         connection = psycopg2.connect(user="wesamazaizeh",

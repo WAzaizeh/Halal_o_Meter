@@ -3,6 +3,7 @@
 # a location, type of business, and search term.
 
 import requests, json, time
+import database_func as db
 from dotenv import load_dotenv
 import os
 
@@ -22,7 +23,6 @@ def get_yelp_places_by_location(search_location, search_type, search_term):
       'Authorization': 'Bearer %s' % API_key
     }
 
-    total_results = []
     offset_max = 951
     while len(params['offset']) == 0 or int(params['offset']) < offset_max:
         response = requests.request("GET", url, headers=headers, params=params)
@@ -35,10 +35,7 @@ def get_yelp_places_by_location(search_location, search_type, search_term):
             yelp_url = result['url']
             review_count = result['review_count']
             address = result['location']['display_address']
-            total_results.append([name, yelp_id, yelp_url, review_count, address])
+            db.append_to_businesses(name, google_id, google_url, review_count, address)
         # load more results using the offset param
         params['offset'] = str(int(params['offset']) + 50) if params['offset'] != '' else '51'
         time.sleep(5)
-
-    return total_results
-    # print(total_results)

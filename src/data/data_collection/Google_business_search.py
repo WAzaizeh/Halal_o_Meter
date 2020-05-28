@@ -3,6 +3,7 @@
 # a location, type of business, and search term.
 
 import requests, json, time
+import database_func as db
 from dotenv import load_dotenv
 import os
 
@@ -10,7 +11,6 @@ load_dotenv()
 API_key = os.getenv('GOOGLE_API_KEY')
 
 # initilization of variables used in functions
-total_results = []
 next_page = ''
 
 
@@ -67,12 +67,11 @@ def get_google_places_by_location(business_type, search_term, location_name = ''
         google_id = result['place_id']
         address = result['formatted_address']
         google_url , review_count = get_google_place_url_and_review_count(google_id)
-        total_results.append([name, google_id, google_url, review_count, address])
+        db.append_to_businesses(name, google_id, google_url, review_count, address)
     try:
         next_page_token = json_obj["next_page_token"]
     except:
         #no next page
-        return total_results
+        return
     time.sleep(1)
     get_google_places_by_location(business_type, search_term, coordinates=coordinates, next_page=next_page_token)
-    return total_results
