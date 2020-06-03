@@ -9,33 +9,66 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
+from database import Database
+import os
+from dotenv import load_dotenv
 import time
 
 
-def scrape_google_reviews(google_url):
+def scrape_google_reviews(google_id, google_url):
     webdriver = _get_webdriver()
     webdriver.get(google_url)
     _search_google_halal_review(webdriver) # a function that will carry the search and infinite scroll
-    data = _scrape_google_halal_reviews(webdriver) # a function that will retreive the list of reviews after clicking all the 'more'
+    reviews_list = _scrape_google_halal_reviews(webdriver) # a function that will retreive the list of reviews after clicking all the 'more'
+    db = Database()
+    # for testing compare count of added rows
+    start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    update_sql = '''INSERT INTO reviews (restaurant_id, review_text, review_date)
+                    VALUES (%s, %s, %s)'''
+    db_list = [(google_id, *review) for review in reviews_list]
+    db.insert_rows(update_sql, *db_list)
     _close_webdriver(webdriver)
-    return data
+
+    # for testing compare count of added rows
+    final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    print('{} rows added'.format(final_row_num - start_row_num))
 
 
-def scrape_yelp_reviews(yelp_url):
+def scrape_yelp_reviews(yelp_id, yelp_url):
     webdriver = _get_webdriver()
     # get business url with halal-relevant reviews only
     webdriver.get(yelp_url + '&q=halal')
-    review_num = _get_yelp_reviews_num(webdriver) # a function that will return number of reviews
-    data = []
+    review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
+
+    db = Database()
+    # for testing compare count of added rows
+    start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    update_sql = '''INSERT INTO reviews (restaurant_id, review_text, review_date)
+                    VALUES (%s, %s, %s)'''
+
+    reviews_list = []
     for i in range(1 ,int(review_num / 20) + (review_num % 20 > 0)):
-        data.extend(_scrape_yelp_halal_reviews(webdriver))
+        # get list of reviews text and dates and append to database
+        reviews_list = _scrape_yelp_halal_reviews(webdriver)
+        db_list = [(yelp_id, *review) for review in reviews_list]
+        db.insert_rows(update_sql, *db_list)
+        # call next page
         webdriver.get(yelp_url + '&start='+str(i*20) + '&q=halal')
-    data.extend(_scrape_yelp_halal_reviews(webdriver))
+    # scrape last page
+    reviews_list = _scrape_yelp_halal_reviews(webdriver)
+    db_list = [(yelp_id, *review) for review in reviews_list]
+    db.insert_rows(update_sql, *db_list)
+
     _close_webdriver(webdriver)
-    return data
+
+    # for testing compare count of added rows
+    final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    print('{} rows added'.format(final_row_num - start_row_num))
+
 
 def _get_webdriver():
-    chromedriver_path = '/Users/wesamazaizeh/Desktop/Projects/Chrome_driver/chromedriver_83'
+    load_dotenv()
+    chromedriver_path = os.getenv('CHROMEDRIVER_PATH')
     options = ChromeOptions()
     # will need more configuration when deployed
     options.add_argument('headless')
@@ -96,13 +129,15 @@ def _search_google_halal_review(webdriver):
 
 
 def _scrape_google_halal_reviews(webdriver):
-    reviews_xpath = '//span[@class="section-review-text"]'
-    reviews = webdriver.find_elements_by_xpath(reviews_xpath)
+    reviews_text_xpath = '//span[@class="section-review-text"]'
+    reviews_dates_xpath = '//span[@class = "section-review-publish-date"]'
+    reviews_text = webdriver.find_elements_by_xpath(reviews_text_xpath)
+    reviews_dates = webdriver.find_elements_by_xpath(reviews_dates_xpath)
     reviews_list = []
-    for review in reviews:
+    for review, review_date in zip(reviews_text, reviews_dates):
         text = review.text
-        reviews_list.append(text)
-        # append to database instead
+        date = review_date.text
+        reviews_list.append([text, date])
     return reviews_list
 
 
@@ -115,12 +150,12 @@ def _get_yelp_reviews_num(webdriver):
 
 
 def _scrape_yelp_halal_reviews(webdriver):
-    reviews_xpath = '//span[@lang="en"]'
-    reviews = webdriver.find_elements_by_xpath(reviews_xpath)
+    reviews_text_xpath = '//span[@lang="en"]'
+    dates_xpath_from_text = './../../../div/div/div[2]/span'
+    reviews = webdriver.find_elements_by_xpath(reviews_text_xpath)
     reviews_list = []
     for review in reviews:
         text = review.text
-        reviews_list.append(text)
-        # append to database instead
+        date = review.find_element_by_xpath(dates_xpath_from_text).text
+        reviews_list.append([text, date])
     return reviews_list
-        # append to database instead

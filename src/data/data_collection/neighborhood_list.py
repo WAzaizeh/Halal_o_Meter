@@ -13,3 +13,5 @@ def get_list():
     neighborhood_list = neighborhood_table.values.flatten()
     neighborhood_list = list(filter(lambda x: not x.startswith(','), neighborhood_list))
     return neighborhood_list
+
+    # make this upload the final result to postgres
