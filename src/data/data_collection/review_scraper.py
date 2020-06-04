@@ -31,7 +31,7 @@ def scrape_google_reviews(google_id, google_url):
 
     # for testing compare count of added rows
     final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
-    print('{} rows added'.format(final_row_num - start_row_num))
+    print(final_row_num, start_row_num)
 
 
 def scrape_yelp_reviews(yelp_id, yelp_url):
@@ -63,7 +63,7 @@ def scrape_yelp_reviews(yelp_id, yelp_url):
 
     # for testing compare count of added rows
     final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
-    print('{} rows added'.format(final_row_num - start_row_num))
+    print(final_row_num, start_row_num)
 
 
 def _get_webdriver():
@@ -71,8 +71,10 @@ def _get_webdriver():
     chromedriver_path = os.getenv('CHROMEDRIVER_PATH')
     options = ChromeOptions()
     # will need more configuration when deployed
-    options.add_argument('headless')
-    options.add_argument('--disable-infobars --disable-extensions')
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('window-size=1920x1480') # to overcome _scroll_into_view failure in headless mode
     webdriver = Webdriver.Chrome(executable_path=chromedriver_path, chrome_options=options)
     return webdriver
 
@@ -108,7 +110,7 @@ def _search_google_halal_review(webdriver):
     open_search_input = webdriver.find_element_by_xpath(open_search_button_xpath)
     _scroll_into_view(open_search_input)
     time.sleep(2)
-    open_search_input.click()
+    WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
 
     # insert input then RETURN
     search_input_xpath = '//input[@aria-label="Search reviews"]'

@@ -4,14 +4,23 @@
 
 import pandas as pd
 import os
+from Google_business_search import get_corrdinates_from_name
+from database import Database
 
-def get_list():
+def custom_csv_to_db():
     neighborhood_table = pd.read_csv(os.getcwd()+'/NYC_neighborhood.csv', keep_default_na=False)
 
     # add borough name to neighborhood name and return as a flat list
     neighborhood_table = neighborhood_table.apply(lambda x: x+','+x.name)
     neighborhood_list = neighborhood_table.values.flatten()
     neighborhood_list = list(filter(lambda x: not x.startswith(','), neighborhood_list))
-    return neighborhood_list
+    neighborhood_list = [neighborhood.replace(' ','+') for neighborhood in neighborhood_list]
 
-    # make this upload the final result to postgres
+    # convert neighborhood_list to neighborhood_coordinates and update database
+    db = Database()
+    update_sql = """INSERT INTO coordinates (neighborhood, lat, lng)
+                    VALUES (%s, %s, %s)"""
+    for neighborhood in neighborhood_list:
+        # print(neighborhood)
+        lat, lng = get_corrdinates_from_name(neighborhood)
+        db.insert_row(update_sql, *(neighborhood, lat, lng))

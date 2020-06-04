@@ -40,6 +40,7 @@ def get_yelp_places_by_location(search_location, search_type, search_term):
             yelp_url = result['url']
             review_count = result['review_count']
             address = result['location']['display_address']
+            db.insert_row(update_sql, *(name, yelp_id, yelp_url, review_count, address))
         # load more results using the offset param
         params['offset'] = str(int(params['offset']) + 50) if params['offset'] != '' else '51'
         time.sleep(5)

@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-API_key = os.getenv('GOOGLE_API_KEY')
+API_key = os.getenv('GOOGLE_API_KEY_2')
 
 def get_corrdinates_from_name(location_name):
     URL = ('https://maps.googleapis.com/maps/api/geocode/json?address='
@@ -60,9 +60,9 @@ def get_google_places_by_location(business_type, search_term, location_name = ''
     for result in results:
         name = result['name']
         google_id = result['place_id']
-        address = result['formatted_address']
         google_url , review_count = get_google_place_url_and_review_count(google_id)
-        db.update_rows( update_sql, *(name, id, url, review_count, address))
+        address = result['formatted_address']
+        db.insert_row( update_sql, *(name, google_id, google_url, review_count, address))
     try:
         next_page_token = json_obj["next_page_token"]
     except:
