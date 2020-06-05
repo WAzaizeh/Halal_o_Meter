@@ -9,12 +9,6 @@ import multiprocessing
 from Google_business_search import get_google_places_by_location
 from Yelp_business_search import get_yelp_places_by_location
 from review_scraper import scrape_yelp_reviews, scrape_google_reviews
-from review_scraper import
-
-
-if __name__ == "__main__":
-    get_businesses()
-    scrape_reviews()
 
 
 def get_businesses():
@@ -56,3 +50,7 @@ def scrape_reviews():
         # pool.map_async(scrape_google_reviews, google_urls)
         pool.close()
         pool.join()
+
+if __name__ == "__main__":
+    get_businesses()
+    scrape_reviews()

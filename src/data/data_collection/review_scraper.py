@@ -112,7 +112,7 @@ def _search_google_halal_review(webdriver):
     WebDriverWait(webdriver, 10).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
     open_search_input = webdriver.find_element_by_xpath(open_search_button_xpath)
     _scroll_into_view(open_search_input)
-    time.sleep(random.randint(3, 15))
+    time.sleep(random.rand0cccccccccccint(3, 15))
     # _open_review_search_input(webdriver)
     WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
 
