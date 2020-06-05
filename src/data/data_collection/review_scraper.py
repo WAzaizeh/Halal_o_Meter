@@ -14,34 +14,34 @@ import os
 from dotenv import load_dotenv
 import time, random
 
-def scrape_google_reviews(google_id, google_url):
+def scrape_google_reviews(google_url, google_id):
     webdriver = _get_webdriver()
     webdriver.get(google_url)
     _search_google_halal_review(webdriver) # a function that will carry the search and infinite scroll
     reviews_list = _scrape_google_halal_reviews(webdriver) # a function that will retreive the list of reviews after clicking all the 'more'
     db = Database()
     # for testing compare count of added rows
-    start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    # start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
     update_sql = '''INSERT INTO reviews (restaurant_id, review_text, review_date)
                     VALUES (%s, %s, %s)'''
     db_list = [(google_id, *review) for review in reviews_list]
     db.insert_rows(update_sql, *db_list)
     _close_webdriver(webdriver)
 
-    # for testing compare count of added rows
-    final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
-    print(final_row_num, start_row_num)
+    # # for testing compare count of added rows
+    # final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    # print(final_row_num, start_row_num)
 
 
-def scrape_yelp_reviews(yelp_id, yelp_url):
+def scrape_yelp_reviews(yelp_url, yelp_id):
     webdriver = _get_webdriver()
     # get business url with halal-relevant reviews only
     webdriver.get(yelp_url + '&q=halal')
     review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
 
     db = Database()
-    # for testing compare count of added rows
-    start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    # # for testing compare count of added rows
+    # start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
     update_sql = '''INSERT INTO reviews (restaurant_id, review_text, review_date)
                     VALUES (%s, %s, %s)'''
 
@@ -60,9 +60,9 @@ def scrape_yelp_reviews(yelp_id, yelp_url):
 
     _close_webdriver(webdriver)
 
-    # for testing compare count of added rows
-    final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
-    print(final_row_num, start_row_num)
+    # # for testing compare count of added rows
+    # final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    # print(final_row_num, start_row_num)
 
 
 def _get_webdriver():
@@ -103,7 +103,7 @@ def _scroll_into_view(element):
 
 def _open_review_search_input(webdriver):
     # spcific javascript to click the button that's not accessible from selenium
-    webdriver.execute_script("document.body.getElementsByClassName('iRxY3GoUYUY__button gm2-hairline-border section-action-chip-button')[17].click()")
+    webdriver.execute_script("var button=document.body.getElementsByClassName('iRxY3GoUYUY__button gm2-hairline-border section-action-chip-button')[17]; button.click();")
 
 def _search_google_halal_review(webdriver):
     # click button to open search input field
@@ -113,8 +113,8 @@ def _search_google_halal_review(webdriver):
     open_search_input = webdriver.find_element_by_xpath(open_search_button_xpath)
     _scroll_into_view(open_search_input)
     time.sleep(random.randint(3, 15))
-    _open_review_search_input(webdriver)
-    # WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
+    # _open_review_search_input(webdriver)
+    WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
 
     # insert input then RETURN
     search_input_xpath = '//input[@aria-label="Search reviews"]'
