@@ -11,7 +11,7 @@ load_dotenv()
 API_key = os.getenv('YELP_API_KEY')
 
 
-def get_yelp_places_by_location(search_location, search_type, search_term):
+def get_yelp_places_by_location(search_location, search_type='restaurant', search_term='halal'):
     url = "https://api.yelp.com/v3/businesses/search"
     params = {
         'location': search_location,
@@ -27,7 +27,8 @@ def get_yelp_places_by_location(search_location, search_type, search_term):
     # initialize database functions
     db = Database()
     update_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address)
-                    VALUES (%s, %s, %s, %s, %s)"""
+                    VALUES (%s, %s, %s, %s, %s)
+                    ON CONFLICT (url) DO NOTHING"""
 
     while len(params['offset']) == 0 or int(params['offset']) < offset_max:
         response = requests.request("GET", url, headers=headers, params=params)

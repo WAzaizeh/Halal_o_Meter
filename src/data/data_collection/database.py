@@ -29,14 +29,13 @@ class Database:
             except psycopg2.DatabaseError as e:
                 print('Error in connecting to database ', e)
                 sys.exit()
-            finally:
-                print('Connection opened successfully.')
 
-    def select_rows(self, query):
+
+    def select_rows(self, query, *args):
         """Run a SQL query to select rows from table."""
         self.connect()
         with self.conn.cursor() as cur:
-            cur.execute(query)
+            cur.execute(query, args)
             records = [row for row in cur.fetchall()]
         cur.close()
         return records

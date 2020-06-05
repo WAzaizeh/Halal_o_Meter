@@ -12,8 +12,7 @@ from selenium.common.exceptions import TimeoutException
 from database import Database
 import os
 from dotenv import load_dotenv
-import time
-
+import time, random
 
 def scrape_google_reviews(google_id, google_url):
     webdriver = _get_webdriver()
@@ -72,9 +71,9 @@ def _get_webdriver():
     options = ChromeOptions()
     # will need more configuration when deployed
     options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('window-size=1920x1480') # to overcome _scroll_into_view failure in headless mode
+    options.add_argument("start-maximized")
+    options.add_argument("disable-infobars")
+    options.add_argument("--disable-extensions") # to overcome _scroll_into_view failure in headless mode
     webdriver = Webdriver.Chrome(executable_path=chromedriver_path, chrome_options=options)
     return webdriver
 
@@ -102,6 +101,10 @@ def _infinite_scroll(element):
 def _scroll_into_view(element):
     element._parent.execute_script("arguments[0].scrollIntoView(false)", element)
 
+def _open_review_search_input(webdriver):
+    # spcific javascript to click the button that's not accessible from selenium
+    webdriver.execute_script("document.body.getElementsByClassName('iRxY3GoUYUY__button gm2-hairline-border section-action-chip-button')[17].click()")
+
 def _search_google_halal_review(webdriver):
     # click button to open search input field
     open_search_button_xpath = '//button[@aria-label="Search reviews"]'
@@ -109,8 +112,9 @@ def _search_google_halal_review(webdriver):
     WebDriverWait(webdriver, 10).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
     open_search_input = webdriver.find_element_by_xpath(open_search_button_xpath)
     _scroll_into_view(open_search_input)
-    time.sleep(2)
-    WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
+    time.sleep(random.randint(3, 15))
+    _open_review_search_input(webdriver)
+    # WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
 
     # insert input then RETURN
     search_input_xpath = '//input[@aria-label="Search reviews"]'

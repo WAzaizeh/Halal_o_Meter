@@ -24,9 +24,9 @@ def get_corrdinates_from_name(location_name):
     return [lat, lng]
 
 def get_google_place_url_and_review_count(place_id):
-    url = ('https://maps.googleapis.com/maps/api/place/details/json?placeid='
+    URL = ('https://maps.googleapis.com/maps/api/place/details/json?placeid='
     +place_id+'&key='+API_key)
-    r = requests.get(url)
+    r = requests.get(URL)
     response = r.text
     json_obj = json.loads(response)
     place_details = json_obj["result"]
@@ -38,13 +38,7 @@ def get_google_place_url_and_review_count(place_id):
     return google_url, review_count
 
 
-def get_google_places_by_location(business_type, search_term, location_name = '', coordinates =None, radius = '16093', next_page=''):
-    # Google places API request requires coordinates
-    if len(location_name):
-        coordinates = ','.join(map(str, get_corrdinates_from_name(location_name=location_name)))
-    elif not len(coordinates):
-        # change to raise an error
-        print('Must provide an area name or coordinates for the search')
+def get_google_places_by_location(coordinates, business_type='restaurant', search_term='halal', radius = '16093', next_page=''):
     URL = ('https://maps.googleapis.com/maps/api/place/textsearch/json?location='
     	+ coordinates + '&radius=' + radius + 'query=' + search_term + '&type='
     	+ business_type + '&pagetoken=' + next_page + '&key='+ API_key)
@@ -52,10 +46,11 @@ def get_google_places_by_location(business_type, search_term, location_name = ''
     json_obj = json.loads(response.text)
     results = json_obj["results"]
 
-    # initialize database functions
+    # SQL query to add business to table
     db = Database()
     update_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address)
-                    VALUES (%s, %s, %s, %s, %s)"""
+                    VALUES (%s, %s, %s, %s, %s)
+                    ON CONFLICT (url) DO NOTHING"""
 
     for result in results:
         name = result['name']
@@ -69,4 +64,4 @@ def get_google_places_by_location(business_type, search_term, location_name = ''
         #no next page
         return
     time.sleep(1)
-    get_google_places_by_location(business_type, search_term, coordinates=coordinates, next_page=next_page_token)
+    get_google_places_by_location(coordinates=coordinates, business_type=business_type, search_term=search_term, next_page=next_page_token)
