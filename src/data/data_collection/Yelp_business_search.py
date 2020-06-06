@@ -45,3 +45,5 @@ def get_yelp_places_by_location(search_location, search_type='restaurant', searc
         # load more results using the offset param
         params['offset'] = str(int(params['offset']) + 50) if params['offset'] != '' else '51'
         time.sleep(5)
+
+    print('Yelp search in {0} yielded {1} business added to database'.format(search_location.replace('+',' '), offset_max))

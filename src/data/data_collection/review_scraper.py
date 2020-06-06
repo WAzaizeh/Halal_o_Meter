@@ -53,12 +53,16 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
         db.insert_rows(update_sql, *db_list)
         # call next page
         webdriver.get(yelp_url + '&start='+str(i*20) + '&q=halal')
+        time.sleep(random.randint(2,5))
     # scrape last page
     reviews_list = _scrape_yelp_halal_reviews(webdriver)
     db_list = [(yelp_id, *review) for review in reviews_list]
     db.insert_rows(update_sql, *db_list)
 
     _close_webdriver(webdriver)
+    print('Scraped {0} reviews from yelp business id #{1}'.format(len(reviews_list, yelp_id)))
+    total_review_count = db.select_rows('''SELECT COUNT(*) FROM reviews''')[0][0]
+    print('Num of total reviews scraped: {}'.format(total_review_count))
 
     # # for testing compare count of added rows
     # final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
@@ -112,7 +116,7 @@ def _search_google_halal_review(webdriver):
     WebDriverWait(webdriver, 10).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
     open_search_input = webdriver.find_element_by_xpath(open_search_button_xpath)
     _scroll_into_view(open_search_input)
-    time.sleep(random.rand0cccccccccccint(3, 15))
+    time.sleep(random.randint(3, 15))
     # _open_review_search_input(webdriver)
     WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
 
