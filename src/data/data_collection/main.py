@@ -9,12 +9,6 @@ import multiprocessing
 from Google_business_search import get_google_places_by_location
 from Yelp_business_search import get_yelp_places_by_location
 from review_scraper import scrape_yelp_reviews, scrape_google_reviews
-from review_scraper import
-
-
-if __name__ == "__main__":
-    get_businesses()
-    scrape_reviews()
 
 
 def get_businesses():
@@ -27,19 +21,21 @@ def get_businesses():
     coordinates = [','.join(map(str, coordinates)) for coordinates in coordinates_list]
 
     # searching for businesses and updating database
-    with multiprocessing.Pool(processes=3) as pool:
-        pool.map_async(get_google_places_by_location, coordinates)
-        pool.map_async(get_yelp_places_by_location, coordinates)
+    agents = 3
+    chunksize = 10
+    with multiprocessing.Pool(processes=agents) as pool:
+        # pool.map_async(get_google_places_by_location, coordinates)
+        pool.map(get_yelp_places_by_location, coordinates, chunksize)
         pool.close()
         pool.join()
 
     count_sql = '''SELECT count(*)
                     FROM businesses
                     WHERE url LIKE %s '''
-    google_count = db.select_rows(count_sql, ('%google%', ))[0][0]
+    # google_count = db.select_rows(count_sql, ('%google%', ))[0][0]
     yelp_count = db.select_rows(count_sql, ('%yelp%'))[0][0]
-    print('Successfully found {0} google businesses and {1} yelp businesses'.format(google_count, yelp_count))
-
+    # print('Successfully found {0} google businesses and {1} yelp businesses'.format(google_count, yelp_count))
+    print('Successfully found {} yelp businesses'.format(yelp_count))
 
 def scrape_reviews():
     # get list of google and yelp urls
@@ -51,8 +47,14 @@ def scrape_reviews():
     # google_urls = db.select_rows(get_urls, ('%google%', ))
 
     # scrape reviews info
+    agents = 3
+    chunksize = 10
     with multiprocessing.Pool(processes=3) as pool:
-        pool.map_async(scrape_yelp_reviews, yelp_urls)
+        pool.map(scrape_yelp_reviews, yelp_urls, 10)
         # pool.map_async(scrape_google_reviews, google_urls)
         pool.close()
         pool.join()
+
+if __name__ == "__main__":
+    get_businesses()
+    scrape_reviews()
