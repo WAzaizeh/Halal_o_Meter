@@ -19,14 +19,15 @@ def scrape_google_reviews(google_url, google_id):
     webdriver.get(google_url)
     _search_google_halal_review(webdriver) # a function that will carry the search and infinite scroll
     reviews_list = _scrape_google_halal_reviews(webdriver) # a function that will retreive the list of reviews after clicking all the 'more'
-    db = Database()
-    # for testing compare count of added rows
-    # start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
-    update_sql = '''INSERT INTO reviews (restaurant_id, review_text, review_date)
-                    VALUES (%s, %s, %s)'''
-    db_list = [(google_id, *review) for review in reviews_list]
-    db.insert_rows(update_sql, *db_list)
+    # db = Database()
+    # # for testing compare count of added rows
+    # # start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
+    # update_sql = '''INSERT INTO reviews (restaurant_id, review_text, review_date)
+    #                 VALUES (%s, %s, %s)'''
+    # db_list = [(google_id, *review) for review in reviews_list]
+    # db.insert_rows(update_sql, *db_list)
     _close_webdriver(webdriver)
+    return reviews_list
 
     # # for testing compare count of added rows
     # final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
