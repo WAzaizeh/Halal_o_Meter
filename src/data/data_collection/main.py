@@ -19,13 +19,16 @@ def get_businesses():
     results = db.select_rows(get_lat_lng_list)
     coordinates_list = [coord for coord in results]
     coordinates = [','.join(map(str, coordinates)) for coordinates in coordinates_list]
+    # adjust to only what haven't gotten called bc of network outage
+    last_call = '34.9843176,-80.4492319'
+    last_call_index = coordinates.index(last_call)
 
     # searching for businesses and updating database
     agents = 3
     chunksize = 10
     with multiprocessing.Pool(processes=agents) as pool:
         # pool.map_async(get_google_places_by_location, coordinates)
-        pool.map(get_yelp_places_by_location, coordinates, chunksize)
+        pool.map(get_yelp_places_by_location, coordinates[last_call_index+1:], chunksize)
         pool.close()
         pool.join()
 
@@ -46,15 +49,20 @@ def scrape_reviews():
     yelp_urls = db.select_rows(get_urls, ('%yelp%', ))
     # google_urls = db.select_rows(get_urls, ('%google%', ))
 
+    # exclude businesses that have already been scraped
+    scraped_ids = db.select_rows('''SELECT DISTINCT ON (restaurant_id) restaurant_id FROM reviews''')
+    exclusion_list = [item[0] for item in scraped_ids]
+    yelp_urls_keep = [t for t in yelp_urls if t[1] not in exclusion_list]
+
     # scrape reviews info
     agents = 3
     chunksize = 10
-    with multiprocessing.Pool(processes=3) as pool:
-        pool.map(scrape_yelp_reviews, yelp_urls, 10)
+    with multiprocessing.Pool(processes=agents) as pool:
+        pool.starmap(scrape_yelp_reviews, yelp_urls_keep, chunksize)
         # pool.map_async(scrape_google_reviews, google_urls)
         pool.close()
         pool.join()
 
 if __name__ == "__main__":
-    get_businesses()
+    # get_businesses()
     scrape_reviews()

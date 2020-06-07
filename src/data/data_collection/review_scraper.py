@@ -44,23 +44,24 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
     # start_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
     update_sql = '''INSERT INTO reviews (restaurant_id, review_text, review_date)
                     VALUES (%s, %s, %s)'''
-
     reviews_list = []
-    for i in range(1 ,int(review_num / 20) + (review_num % 20 > 0)):
-        # get list of reviews text and dates and append to database
+
+    if review_num > 0 :
+        for i in range(1 ,int(review_num / 20) + (review_num % 20 > 0)):
+            # get list of reviews text and dates and append to database
+            reviews_list = _scrape_yelp_halal_reviews(webdriver)
+            db_list = [(yelp_id, *review) for review in reviews_list]
+            db.insert_rows(update_sql, *db_list)
+            # call next page
+            webdriver.get(yelp_url + '&start='+str(i*20) + '&q=halal')
+            time.sleep(random.randint(2,5))
+        # scrape last page
         reviews_list = _scrape_yelp_halal_reviews(webdriver)
         db_list = [(yelp_id, *review) for review in reviews_list]
         db.insert_rows(update_sql, *db_list)
-        # call next page
-        webdriver.get(yelp_url + '&start='+str(i*20) + '&q=halal')
-        time.sleep(random.randint(2,5))
-    # scrape last page
-    reviews_list = _scrape_yelp_halal_reviews(webdriver)
-    db_list = [(yelp_id, *review) for review in reviews_list]
-    db.insert_rows(update_sql, *db_list)
 
     _close_webdriver(webdriver)
-    print('Scraped {0} reviews from yelp business id #{1}'.format(len(reviews_list, yelp_id)))
+    print('Scraped {0} reviews from yelp business id #{1}'.format(len(reviews_list), yelp_id))
     total_review_count = db.select_rows('''SELECT COUNT(*) FROM reviews''')[0][0]
     print('Num of total reviews scraped: {}'.format(total_review_count))
 
