@@ -46,22 +46,24 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
     json_obj = json.loads(response.text)
     results = json_obj["results"]
 
-    # SQL query to add business to table
-    db = Database()
-    update_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address)
-                    VALUES (%s, %s, %s, %s, %s)
-                    ON CONFLICT (url) DO NOTHING"""
-
+    # # SQL query to add business to table
+    # db = Database()
+    # update_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address)
+    #                 VALUES (%s, %s, %s, %s, %s)
+    #                 ON CONFLICT (url) DO NOTHING"""
+    businesses_list = []
     for result in results:
         name = result['name']
         google_id = result['place_id']
         google_url , review_count = get_google_place_url_and_review_count(google_id)
         address = result['formatted_address']
-        db.insert_row( update_sql, *(name, google_id, google_url, review_count, address))
+        businesses_list.append([name, google_id, google_url, review_count, address])
+        # db.insert_row( update_sql, *(name, google_id, google_url, review_count, address))
     try:
         next_page_token = json_obj["next_page_token"]
     except:
         #no next page
-        return
+        return businesses_list
     time.sleep(1)
     get_google_places_by_location(coordinates=coordinates, business_type=business_type, search_term=search_term, next_page=next_page_token)
+    return businesses_list

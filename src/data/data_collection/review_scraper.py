@@ -14,7 +14,7 @@ import os
 from dotenv import load_dotenv
 import time, random
 
-def scrape_google_reviews(google_url, google_id):
+def scrape_google_reviews(google_url):
     webdriver = _get_webdriver()
     webdriver.get(google_url)
     _search_google_halal_review(webdriver) # a function that will carry the search and infinite scroll
@@ -119,8 +119,8 @@ def _search_google_halal_review(webdriver):
     open_search_input = webdriver.find_element_by_xpath(open_search_button_xpath)
     _scroll_into_view(open_search_input)
     time.sleep(random.randint(3, 15))
-    # _open_review_search_input(webdriver)
-    WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
+    _open_review_search_input(webdriver)
+    # WebDriverWait(webdriver, 20).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath))).click()
 
     # insert input then RETURN
     search_input_xpath = '//input[@aria-label="Search reviews"]'
@@ -139,6 +139,7 @@ def _search_google_halal_review(webdriver):
     scrollable = webdriver.find_element_by_css_selector(scrollable_pane_css)
     _infinite_scroll(scrollable)
 
+    # load all reviews' text by clicking all 'More' buttons
 
 def _scrape_google_halal_reviews(webdriver):
     reviews_text_xpath = '//span[@class="section-review-text"]'
