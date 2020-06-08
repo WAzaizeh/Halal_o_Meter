@@ -63,7 +63,9 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
         next_page_token = json_obj["next_page_token"]
     except:
         #no next page
+        print('Found {} businesses near coordinates {}'.format(len(businesses_list), coordinates))
         return businesses_list
     time.sleep(1)
-    get_google_places_by_location(coordinates=coordinates, business_type=business_type, search_term=search_term, next_page=next_page_token)
+    data = get_google_places_by_location(coordinates=coordinates, next_page=next_page_token)
+    businesses_list.extend(data)
     return businesses_list
