@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-API_key = os.getenv('GOOGLE_API_KEY_2')
+API_key = os.getenv('GOOGLE_API_KEY_3')
 
 def get_corrdinates_from_name(location_name):
     URL = ('https://maps.googleapis.com/maps/api/geocode/json?address='
@@ -63,7 +63,10 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
         next_page_token = json_obj["next_page_token"]
     except:
         #no next page
+
         return businesses_list
     time.sleep(1)
-    get_google_places_by_location(coordinates=coordinates, business_type=business_type, search_term=search_term, next_page=next_page_token)
+    data = get_google_places_by_location(coordinates=coordinates, next_page=next_page_token)
+    businesses_list.extend(data)
+    print('Found {} businesses near coordinates {}'.format(len(businesses_list), coordinates))
     return businesses_list
