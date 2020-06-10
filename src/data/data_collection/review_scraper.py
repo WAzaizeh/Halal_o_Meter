@@ -32,6 +32,7 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
     webdriver = _get_webdriver()
     # get business url with halal-relevant reviews only
     webdriver.get(yelp_url + '&q=halal')
+    print(yelp_id)
     review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
 
     reviews_list = []
@@ -46,6 +47,7 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
         reviews_list.extend(_scrape_yelp_reviews_text(webdriver))
     _close_webdriver(webdriver)
     print('Scraped {0} reviews from yelp business id #{1}'.format(len(reviews_list), yelp_id))
+    time.sleep(random.randint(2,5))
     return reviews_list
 
 def _get_webdriver():
@@ -63,6 +65,7 @@ def _get_webdriver():
 
 def _close_webdriver(webdriver):
     webdriver.close()
+    webdriver.quit()
 
 
 def _infinite_scroll(element):
@@ -87,7 +90,14 @@ def _scroll_into_view(element):
 
 def _open_review_search_input(webdriver):
     # spcific javascript to click the button that's not accessible from selenium
-    webdriver.execute_script("var button=document.body.getElementsByClassName('iRxY3GoUYUY__button gm2-hairline-border section-action-chip-button')[17]; button.click();")
+    try:
+        ## using Selenium
+        open_search_button_xpath = '//button[@aria-label="Search reviews"]'
+        WebDriverWait(webdriver, 10).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath)))
+    except TimeoutException:
+        ## using javascript
+        webdriver.execute_script("var button=document.body.getElementsByClassName('iRxY3GoUYUY__button gm2-hairline-border section-action-chip-button')[17]; button.click();")
+
 
 
 def _search_google_halal_review(webdriver):
@@ -130,14 +140,14 @@ def _scrape_google_reviews_text(webdriver):
 
 
 def _get_yelp_reviews_num(webdriver):
-    review_num_xpath = '//span[contains(text(), "reviews mentioning")]'
-    WebDriverWait(webdriver, 10).until(EC.visibility_of_element_located((By.XPATH, review_num_xpath)))
+    review_num_xpath = '//span[contains(text(), " mentioning")]'
+    WebDriverWait(webdriver, 20).until(EC.visibility_of_element_located((By.XPATH, review_num_xpath)))
     review_num_str = webdriver.find_element_by_xpath(review_num_xpath).text
     # returns 0 when no reviews are found
     return int(review_num_str.split()[0])
 
 
-def _scrape_yelp_halal_reviews(webdriver):
+def _scrape_yelp_reviews_text(webdriver):
     reviews_text_xpath = '//span[@lang="en"]'
     dates_xpath_from_text = './../../../div/div/div[2]/span'
     reviews = webdriver.find_elements_by_xpath(reviews_text_xpath)

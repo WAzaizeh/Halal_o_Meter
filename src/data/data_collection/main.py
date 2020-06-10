@@ -8,7 +8,7 @@ from database import Database
 import multiprocessing
 from Google_business_search import get_google_places_by_location
 from Yelp_business_search import get_yelp_places_by_location
-from review_scraper import scrape_yelp_reviews, scrape_google_reviews
+from review_scraper import scrape_yelp_reviews, scrape_google_reviews, _close_webdriver
 import sys
 
 
@@ -21,7 +21,7 @@ def get_businesses():
         businesses_list = []
         with multiprocessing.Pool(processes=agents) as pool:
             businesses_list.extend(pool.map(get_google_places_by_location, coordinates, chunksize))
-            # businesses_list.extend(pool.map(get_yelp_places_by_location, coordinates, chunksize))
+            businesses_list.extend(pool.map(get_yelp_places_by_location, coordinates, chunksize))
             pool.close()
             pool.join()
         _update_businesses_and_final_print(businesses_list)
@@ -69,7 +69,7 @@ def scrape_reviews():
         chunksize = 10
         reviews_list = []
         with multiprocessing.Pool(processes=agents) as pool:
-            reviews_list.extend(pool.starmap(scrape_yelp_reviews, yelp_urls[:2], chunksize=chunksize))
+            # reviews_list.extend(pool.starmap(scrape_yelp_reviews, yelp_urls[:2], chunksize=chunksize))
             reviews_list.extend(pool.starmap(scrape_google_reviews, google_urls[:2], chunksize))
             pool.close()
             pool.join()
