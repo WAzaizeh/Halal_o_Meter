@@ -92,8 +92,9 @@ def _open_review_search_input(webdriver):
     # spcific javascript to click the button that's not accessible from selenium
     try:
         ## using Selenium
-        open_search_button_xpath = '//button[@aria-label="Search reviews"]'
-        WebDriverWait(webdriver, 10).until(EC.element_to_be_clickable((By.XPATH, open_search_button_xpath)))
+        # open_search_button_xpath = '//button[@aria-label="Search reviews"]'
+        open_search_button_css = ' div.kt69ovbk911__expand-button.section-expandable-text-input-expand-button-container > div > div > button'
+        WebDriverWait(webdriver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, open_search_button_css)))
     except TimeoutException:
         ## using javascript
         webdriver.execute_script("var button=document.body.getElementsByClassName('iRxY3GoUYUY__button gm2-hairline-border section-action-chip-button')[17]; button.click();")
