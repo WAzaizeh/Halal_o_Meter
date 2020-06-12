@@ -3,9 +3,10 @@
 import sys, os
 import psycopg2
 from dotenv import load_dotenv
+import pandas as pd
 
 class Database:
-    """PostgreSQL Database class."""
+    """PostgreSQL Database class"""
 
     def __init__(self):
         load_dotenv()
@@ -32,7 +33,7 @@ class Database:
 
 
     def select_rows(self, query, *args):
-        """Run a SQL query to select rows from table."""
+        """Run a SQL query to select rows from table"""
         self.connect()
         with self.conn.cursor() as cur:
             cur.execute(query, args)
@@ -41,8 +42,15 @@ class Database:
         return records
 
 
+    def select_df(self, query, *args):
+        """Run a SQL query to select rows from table and return pandas dataframe"""
+        self.connect()
+        dat = pd.read_sql_query(query, self.conn)
+        self.conn = None
+        return dat
+
     def insert_row(self, query, *args):
-        """Run a SQL query to update rows in table."""
+        """Run a SQL query to update rows in table"""
         self.connect()
         with self.conn.cursor() as cur:
             cur.execute(query, args)
@@ -51,7 +59,7 @@ class Database:
 
 
     def insert_rows(self, query, *args):
-        """Run a SQL query to update rows in table."""
+        """Run a SQL query to update rows in table"""
         self.connect()
         with self.conn.cursor() as cur:
             cur.executemany(query, args)
