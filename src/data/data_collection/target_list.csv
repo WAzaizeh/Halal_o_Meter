@@ -1,749 +1,1088 @@
-restaurant_name,restaurant_address,borough,validated_address
-United Fried Chicken & Pizza,"567 Lenox Avenue, Manhattan,   NY",Manhattan,"567 Malcolm X Blvd, New York NY 10037-1742"
-Junoon,"27 West 24th Street, Manhattan,   NY",Manhattan,"27 W 24th St, New York NY 10010-3290"
-Ambizza Café Truck,"Water Street & Old Slip, Manhattan,   NY",Manhattan,
-Falafel on Broadway,"3151 Broadway, Manhattan,   NY",Manhattan,"3151 Broadway, New York NY 10027-4111"
-Malai Marke,"318 East 6th Street, Manhattan,   NY",Manhattan,"318 E 6th St, New York NY 10003-8709"
-Moustache Pitza,"265 East 10th Street, Manhattan,   NY",Manhattan,"265 E 10th St, New York NY 10009-4833"
-Bawarchi,"1546 Madison Avenue, Manhattan,   NY",Manhattan,"1546 Madison Ave, New York NY 10029-4551"
-Kopi Kopi,"68 West 3rd Street, Manhattan,   NY",Manhattan,"68 W 3rd St, New York NY 10012-1029"
-The Halal Guys,"307 East 14th Street, Manhattan,   NY",Manhattan,"307 E 14th St, New York NY 10003-4202"
-Simit Sarayi,"435 5th Avenue, Manhattan,   NY",Manhattan,"435 5th Ave, New York NY 10016-2208"
-Awadh,"2588 Broadway, Manhattan,   NY",Manhattan,"2588 Broadway, New York NY 10025-5654"
-Tallgrass Burger,"214 1st Avenue, Manhattan,   NY",Manhattan,"214 1st Ave, New York NY 10009-3709"
-Ravagh Persian Grill,"125 1st Avenue, Manhattan,   NY",Manhattan,"125 1st Ave, New York NY 10003-2954"
-Atomic Wings,"184 1st Avenue, Manhattan,   NY",Manhattan,"184 1st Ave, New York NY 10009-4001"
-Deccan Spice,"120 Lexington Avenue, Manhattan,   NY",Manhattan,"120 Lexington Ave, New York NY 10016-8128"
-Dera,"103 Lexington Avenue, Manhattan,   NY",Manhattan,"103 Lexington Ave, New York NY 10016-8918"
-Turkuaz,"255 West 55th Street, Manhattan,   NY",Manhattan,"255 W 55th St, New York NY 10019-5232"
-Farah Anatolia,"401 East 62nd Street, Manhattan,   NY",Manhattan,
-Farida,"498 9th Avenue, Manhattan,   NY",Manhattan,"498 9th Ave, New York NY 10018-4102"
-Holy Cow,"15 West 29th Street, Manhattan,   NY",Manhattan,"15 W 29th St, New York NY 10001-4515"
-NY Gyro Xpress,"154 8th Avenue, Manhattan,   NY",Manhattan,"154 8th Ave, New York NY 10011-5150"
-Les Ambassades,"2200 Frederick Douglass Blvd., Manhattan,   NY",Manhattan,
-Manhattan Halal Restaurant,"156 West 29th Street, Manhattan,   NY",Manhattan,"156 W 29th St, New York NY 10001-5302"
-Zeytin Mediterranean,"160 Pearl Street, Manhattan,   NY",Manhattan,"160 Pearl St, New York NY 10005-1617"
-Aleef Café,"333 West 39th Street, Manhattan,   NY",Manhattan,"333 W 39th St, New York NY 10018-1410"
-Rasa,"25 West 8th Street, Manhattan,   NY",Manhattan,"25 W 8th St, New York NY 10011-9001"
-Afghan Kabob Express,"6th Avenue & West 55th Street, Manhattan,   NY",Manhattan,
-Turkuaz,"310 West 53rd Street, Manhattan,   NY",Manhattan,"310 W 53rd St, New York NY 10019-5743"
-Shahi Biryani & Grill,"71 West 109th Street, Manhattan,   NY",Manhattan,"71 W 109th St, New York NY 10025-2650"
-Turco Mediterranean Grill,"604 9th Avenue, Manhattan,   NY",Manhattan,"604 9th Ave, New York NY 10036-3613"
-Ravagh Persian Grill,"11 East 30th Street, Manhattan,   NY",Manhattan,"11 E 30th St, New York NY 10016-7027"
-Pars Grill House & Bar,"249 West 26th Street, Manhattan,   NY",Manhattan,"249 W 26th St, New York NY 10001-6713"
-Africa Kiné,"256 West 116th Street, Manhattan,   NY",Manhattan,
-Keur Sokhna,"2249 Adam Clayton Powell Jr. Blvd., Manhattan,   NY",Manhattan,"2249 Adam Clayton Powell Jr Blvd, New York NY 10027-7807"
-Lasani,"14 West 29th Street, Manhattan,   NY",Manhattan,"14 W 29th St, New York NY 10001-4517"
-Pizza & Pita,"344 East 34th Street, Manhattan,   NY",Manhattan,"344 E 34th St, New York NY 10016-4975"
-Halal Cart,"Beach Street & Greenwich Street, Manhattan,   NY",Manhattan,
-Ali Baba's Turkish Cuisine,"862 2nd Avenue, Manhattan,   NY",Manhattan,"862 2nd Ave, New York NY 10017-2902"
-Ariana,"787 9th Avenue, Manhattan,   NY",Manhattan,"787 9th Ave, New York NY 10019-5621"
-Smokey Burger Organic,"339 West 44th Street, Manhattan,   NY",Manhattan,"339 W 44th St, New York NY 10036-5405"
-Patiala,"371 West 34th Street, Manhattan,   NY",Manhattan,"371 W 34th St, New York NY 10001-2402"
-Afghan Kebab House #2,"1345 Second Avenue, Manhattan,   NY",Manhattan,"1345 2nd Ave, New York NY 10021-5224"
-BURGERS by Honest Chops,"99 Macdougal Street, Manhattan,   NY",Manhattan,"99 Macdougal St, New York NY 10012-5031"
-Joy,"148 East 46th Street, Manhattan,   NY",Manhattan,"148 E 46th St, New York NY 10017-2615"
-ABA Turkish Restaurant,"325 West 57th Street, Manhattan,   NY",Manhattan,"325 W 57th St, New York NY 10019-3105"
-The Halal Guys,"6th Avenue & West 53rd Street, Manhattan,   NY",Manhattan,
-Wall Street Halal Truck Guy,"Wall Street, Manhattan,   NY",Manhattan,
-Gyro Guy,"West 49th Street and 6th Avenue, Manhattan,   NY",Manhattan,
-Halal Cart,"28th Avenue and Madison, Manhattan,   NY",Manhattan,
-Halal Cart Guy,"Park Place & Greenwich Street, Manhattan,   NY",Manhattan,
-Aamir Halal Food Cart,"85 West 46th Street, Manhattan,   NY",Manhattan,
-Ravagh Persian Grill,"1135 1st Avenue, Manhattan,   NY",Manhattan,
-Baba Ghanouge,"165 Church Street, Manhattan,   NY",Manhattan,"165 Church St, New York NY 10007-1830"
-Masala Times,"194 Bleecker Street, Manhattan,   NY",Manhattan,"194 Bleecker St, New York NY 10012-1447"
-Istanbul Kebab House,"712 9th Avenue, Manhattan,   NY",Manhattan,"712 9th Ave, New York NY 10019-7330"
-48th & 6th Halal Cart,"6th Avenue & West 48th Street, Manhattan,   NY",Manhattan,
-Agora,"1565 2nd Avenue, Manhattan,   NY",Manhattan,"1565 2nd Ave, New York NY 10028-2606"
-Joy Curry & Tandoor,"32 West 39th Street, Manhattan,   NY",Manhattan,"32 W 39th St, New York NY 10018-3810"
-Shendey's Halal Cart,"52th Street at 6th Avenue, Manhattan,   NY",Manhattan,
-Kennedy Fried Chicken,"536 East 14th Street, Manhattan,   NY",Manhattan,"536 E 14th St, New York NY 10009-3345"
-Platter,"52nd Street & 6th Avenue, Manhattan,   NY",Manhattan,
-Prince of Egypt Cart,"47th Street at 6th Avenue, Manhattan,   NY",Manhattan,
-Sip Sak,"928 2nd Avenue, Manhattan,   NY",Manhattan,"928 2nd Ave, New York NY 10022-7860"
-Gyro Stand,"46th Street and 3rd Avenue, Manhattan,   NY",Manhattan,
-Swagat,"205 West 29th Street, Manhattan,   NY",Manhattan,"205 W 29th St, New York NY 10001-0062"
-Tandoor Palace,"88 Fulton Street, Manhattan,   NY",Manhattan,"88 Fulton St, New York NY 10038-2807"
-Kennedy Fried Chicken,"158 Nagle Avenue, Manhattan,   NY",Manhattan,"158 Nagle Ave, New York NY 10040-1436"
-Tagine,"221 West 38th Street, Manhattan,   NY",Manhattan,"221 W 38th St, New York NY 10018-4777"
-Haveli,"100 Second Avenue, Manhattan,   NY",Manhattan,"100 2nd Ave, New York NY 10003-8307"
-Djerdan Burak,"22-83 East 65th Street, Manhattan,   NY",Manhattan,
-Express Power Lunch Halal Food Cart,"3rd Avenue & E 48th Street, Manhattan,   NY",Manhattan,
-Xpress Energy Halal Food Cart,"Whitehall Street & Stone Street, Manhattan,   NY",Manhattan,
-Big Boss Halal Chicken and Rice,"York Avenue & East 69th Street, Manhattan,   NY",Manhattan,
-Hooda's Halal Food,"West 115th St & Broadway, Manhattan,   NY",Manhattan,
-Little Gujrat Deli,"946 Columbus Avenue, Manhattan,   NY",Manhattan,"946 Columbus Ave, New York NY 10025-3107"
-Halal Food Cart,"Avenue of the Americas & West 47th Street, Manhattan,   NY",Manhattan,
-Halal Food Cart,"5th Avenue & East 34th Street, Manhattan,   NY",Manhattan,
-Uskudar,"1405 2nd Avenue, Manhattan,   NY",Manhattan,"1405 2nd Ave, New York NY 10021-3768"
-Mouez Halal Food Cart,"East 33rd Street & 1st Avenue, Manhattan,   NY",Manhattan,
-A La Turka,"1417 2nd Avenue, Manhattan,   NY",Manhattan,"1417 2nd Ave, New York NY 10021-3703"
-Fahima Halal Food Cart,"6th Avenue & West 45th Street, Manhattan,   NY",Manhattan,
-Le Baobab,"120 West 116th Street, Manhattan,   NY",Manhattan,
-Gourmet Palace,"13 West 29th Street, Manhattan,   NY",Manhattan,"13 W 29th St, New York NY 10001-4514"
-Penn Station Halal Cart,"West 33rd Street & 7th Avenue, Manhattan,   NY",Manhattan,
-Kebab & Curry In A Hurry,"2409 2nd Avenue, Manhattan,   NY",Manhattan,"2409 2nd Ave, New York NY 10035-2118"
-Casablanca Grill,"1132 1st Avenue, Manhattan,   NY",Manhattan,
-The Halal Guys,"East 14th Street & 2nd Avenue, Manhattan,   NY",Manhattan,
-Chote Nawab,"115 Lexington Avenue, Manhattan,   NY",Manhattan,"115 Lexington Ave, New York NY 10016-8979"
-Dhaba,"108 Lexington Avenue, Manhattan,   NY",Manhattan,"108 Lexington Ave, New York NY 10016-8927"
-Kharian Deli,"184 7th Avenue, Manhattan,   NY",Manhattan,"184 7th Ave, New York NY 10011-1809"
-Indian Fast Food,"123 MacDougal Street, Manhattan,   NY",Manhattan,"123 Macdougal St, New York NY 10012-1202"
-Casa La Femme,"140 Charles Street, Manhattan,   NY",Manhattan,"140 Charles St, New York NY 10014-6519"
-Chola,"232 East 58th Street, Manhattan,   NY",Manhattan,"232 E 58th St, New York NY 10022-2023"
-Ilili,"236 5th Avenue, Manhattan,   NY",Manhattan,"236 5th Ave, New York NY 10001-7606"
-Aangan,"2701 Broadway, Manhattan,   NY",Manhattan,"2701 Broadway, New York NY 10025-4442"
-Brick Lane Curry House,"1664 3rd Avenue, Manhattan,   NY",Manhattan,"1664 3rd Ave, New York NY 10128-3743"
-Little Rascal,"163 Elizabeth Street, Manhattan,   NY",Manhattan,"163 Elizabeth St, New York NY 10012-4607"
-Naya Mezze & Grill,"1057 2nd Avenue, Manhattan,   NY",Manhattan,"1057 2nd Ave, New York NY 10022-4068"
-B&B,"165 West 26th Street, Manhattan,   NY",Manhattan,"165 W 26th St, New York NY 10001-6830"
-Bombay's,"60 Pearl Street, Manhattan,   NY",Manhattan,"60 Pearl St, New York NY 10004-2455"
-Jerusalem Restaurant,"2715 Broadway, Manhattan,   NY",Manhattan,"2715 Broadway, New York NY 10025-4442"
-Kennedy Fried Chicken,"1270 Saint Nicholas Avenue, Manhattan,   NY",Manhattan,"1270 Saint Nicholas Ave, New York NY 10033-7202"
-Kennedy Chicken & Sandwiches,"3789 Broadway, Manhattan,   NY",Manhattan,"3789 Broadway, New York NY 10032-1524"
-Pause Café,"3 Clinton Street, Manhattan,   NY",Manhattan,"3 Clinton St, New York NY 10002-1746"
-Zerza Moroccan Home Cooking,"320 East 6th Street, Manhattan,   NY",Manhattan,"320 E 6th St, New York NY 10003-8711"
-Arabesque,"4 East 36th Street, Manhattan,   NY",Manhattan,"4 E 36th St, New York NY 10016-3331"
-Sahara's,"513 2nd Avenue, Manhattan,   NY",Manhattan,"513 2nd Ave, New York NY 10016-8642"
-Milon,"93 1st Avenue, Manhattan,   NY",Manhattan,"93 1st Ave, New York NY 10003-2922"
-Lincoln Fried Chicken,"576 West 125th Street, Manhattan,   NY",Manhattan,"576 W 125th St, New York NY 10027-3407"
-Kati Roll Company,"128 2nd Avenue, Manhattan,   NY",Manhattan,"128 2nd Ave, New York NY 10003-8329"
-Kati Roll Company,"685 3rd Avenue, Manhattan,   NY",Manhattan,"685 3rd Ave, New York NY 10017-4024"
-Hayaty,"103 Avenue A, Manhattan,   NY",Manhattan,"103 Avenue A, New York NY 10009-6104"
-Le Rêve Restaurant & Lounge,"125 East 54th Street, Manhattan,   NY",Manhattan,"125 E 54th St, New York NY 10022-4506"
-Moustache Pitza,"90 Bedford Street, Manhattan,   NY",Manhattan,"90 Bedford St, New York NY 10014-3764"
-Le Souk,"510 LaGuardia Place, Manhattan,   NY",Manhattan,"510 Laguardia Pl, New York NY 10012-4919"
-Taste of Persia,"12 West 18th Street, Manhattan,   NY",Manhattan,"12 W 18th St, New York NY 10011-4614"
-Pasha,"70 West 71st Street, Manhattan,   NY",Manhattan,"70 W 71st St, New York NY 10023-4236"
-Balade,"208 1st Avenue, Manhattan,   NY",Manhattan,"208 1st Ave, New York NY 10009-3705"
-Andaz,"1378 1st Avenue, Manhattan,   NY",Manhattan,"1378 1st Ave, New York NY 10021-3802"
-La Nomade,"2795 8th Avenue, Manhattan,   NY",Manhattan,"2795 Frederick Douglass Blvd, New York NY 10039-3020"
-Sheezan,"183 Church Street, Manhattan,   NY",Manhattan,"183 Church St, New York NY 10007-1829"
-Shawarma Doner House,"70 West 39th Street, Manhattan,   NY",Manhattan,"70 W 39th St, New York NY 10018-3802"
-Utsav,"1185 Avenue of the Americas, Manhattan,   NY",Manhattan,"1185 Avenue of the Americas, New York NY 10036-2601"
-Bombay Duck Co.,"190 Bleecker Street, Manhattan,   NY",Manhattan,"190 Bleecker St, New York NY 10012-1433"
-Moti Mahal Delux,"1149 1st Avenue, Manhattan,   NY",Manhattan,
-Mirch Masala,"95 Macdougal Street, Manhattan,   NY",Manhattan,"95 Macdougal St, New York NY 10012-1258"
-Semsom Eatery,"2 Astor Place, Manhattan,   NY",Manhattan,"2 Astor Pl, New York NY 10003-6955"
-Halaal Food Cart,"302 West 37th Street, Manhattan,   NY",Manhattan,"302 W 37th St, New York NY 10018-4299"
-Café Fresco,"205 East 60th Street, Manhattan,   NY",Manhattan,"205 E 60th St, New York NY 10022-1434"
-Manousheh,"193 Bleecker Street, Manhattan,   NY",Manhattan,"193 Bleecker St, New York NY 10012-1443"
-Texas Chicken & Burgers,"3486 Broadway, Manhattan,   NY",Manhattan,"3486 Broadway, New York NY 10031-5611"
-Texas Chicken & Burgers,"471 Lenox Avenue, Manhattan,   NY",Manhattan,"471 Malcolm X Blvd, New York NY 10037-3000"
-Texas Chicken & Burgers,"151 East 103rd Street, Manhattan,   NY",Manhattan,"151 E 103rd St, New York NY 10029-5333"
-Texas Chicken & Burgers,"2144 Frederick Douglass Blvd., Manhattan,   NY",Manhattan,
-Alachi Masala,"488 Amsterdam Avenue, Manhattan,   NY",Manhattan,"488 Amsterdam Ave, New York NY 10024-4636"
-Persepolis,"1407 2nd Avenue, Manhattan,   NY",Manhattan,"1407 2nd Ave, New York NY 10021-3769"
-Spice Symphony,"182 Lexington Avenue, Manhattan,   NY",Manhattan,"182 Lexington Ave, New York NY 10016-6849"
-Desi Galli,"101 Lexington Avenue, Manhattan,   NY",Manhattan,"101 Lexington Ave, New York NY 10016-8932"
-indikitch,"25 West 23rd Street, Manhattan,   NY",Manhattan,"25 W 23rd St, New York NY 10010-4210"
-indikitch,"940 8th Avenue, Manhattan,   NY",Manhattan,"940 8th Ave, New York NY 10019-4287"
-Akdeniz,"19 West 46th Street, Manhattan,   NY",Manhattan,"19 W 46th St, New York NY 10036-4118"
-Kabab Bites,"369 Broome Street, Manhattan,   NY",Manhattan,"369 Broome St, New York NY 10013-4244"
-Souk & Sandwich,"117 6th Avenue, Manhattan,   NY",Manhattan,"117 Avenue of the Americas, New York NY 10013-1933"
-Indian Project,"243 West 38th Street, Manhattan,   NY",Manhattan,"243 W 38th St, New York NY 10018-4444"
-Balade Your Way,"144 West 37th Street, Manhattan,   NY",Manhattan,"144 W 37th St, New York NY 10018-6910"
-City Spice Café,"203 East 26th Street, Manhattan,   NY",Manhattan,"203 E 26th St, New York NY 10010-1911"
-Cava Grill,"143 4th Avenue, Manhattan,   NY",Manhattan,"143 4th Ave, New York NY 10003-4938"
-Fogo de Chão,"40 West 53rd Street, Manhattan,   NY",Manhattan,"40 W 53rd St, New York NY 10019-6106"
-Galata,"212 East 34th Street, Manhattan,   NY",Manhattan,"212 E 34th St, New York NY 10016-4846"
-Village Fried Chicken,"1739 Amsterdam Avenue, Manhattan,   NY",Manhattan,"1739 Amsterdam Ave, New York NY 10031-4622"
-Kottu House,"250 Broome Street, Manhattan,   NY",Manhattan,"250 Broome St, New York NY 10002-3857"
-Marc Forgione,"134 Reade Street, Manhattan,   NY",Manhattan,"134 Reade St, New York NY 10013-3958"
-Da Falafel Guys,"127 Rivington Street, Manhattan,   NY",Manhattan,"127 Rivington St, New York NY 10002-2316"
-Berber Street Food,"35 Carmine Street, Manhattan,   NY",Manhattan,"35 Carmine St, New York NY 10014-4429"
-Minetta Tavern,"113 Macdougal Street, Manhattan,   NY",Manhattan,"113 Macdougal St, New York NY 10012-1201"
-Sumela Mediterranean Café & Grill,"1606 1st Avenue, Manhattan,   NY",Manhattan,"1606 1st Ave, New York NY 10028-4311"
-Cinnamon Garden,"328 East 6th Street, Manhattan,   NY",Manhattan,"328 E 6th St, New York NY 10003-8716"
-Top Thai,"235 Sullivan Street, Manhattan,   NY",Manhattan,"235 Sullivan St, New York NY 10012-4805"
-Tabouleh,"673 9th Avenue, Manhattan,   NY",Manhattan,"673 9th Ave, New York NY 10036-3621"
-Zeytin,"110 William Street, Manhattan,   NY",Manhattan,"110 William St, New York NY 10038-3901"
-Kusharista,"106 Macdougal Street, Manhattan,   NY",Manhattan,"106 Macdougal St, New York NY 10012-1268"
-Bali Kitchen,"128 East 4th Street, Manhattan,   NY",Manhattan,"128 E 4th St, New York NY 10003-9068"
-Salam Café,"104 West 13th Street, Manhattan,   NY",Manhattan,"104 W 13th St, New York NY 10011-7802"
-Byblos,"80 Madison Avenue, Manhattan,   NY",Manhattan,"80 Madison Ave, New York NY 10016-7420"
-Gardenia Terrace,"826 10th Avenue, Manhattan,   NY",Manhattan,"826 10th Ave, New York NY 10019-5029"
-Miraj Healthy Grill,"120 East 34th Street, Manhattan,   NY",Manhattan,"120 E 34th St, New York NY 10016-4609"
-Panorama,"820 Broadway, Manhattan,   NY",Manhattan,"820 Broadway, New York NY 10003-4804"
-Masala King,"64 West 34th Street, Manhattan,   NY",Manhattan,
-This is Gyro,"178 Church Street, Manhattan,   New York,   NY",Manhattan,
-NYU Lipton Dining Hall,"33 Washington Square West, Manhattan,   NY",Manhattan,"33 Washington Sq W, New York NY 10011-9154"
-Kennedy Fried Chicken,"1316 5th Avenue, Manhattan,   NY",Manhattan,
-Crown Fried Chicken,"1774 Lexington Avenue, Manhattan,   New York,   NY",Manhattan,
-Cava Grill,"678 6th Avenue, Manhattan,   NY",Manhattan,"678 Avenue of the Americas, New York NY 10010-5137"
-Cava Grill,"325 Park Avenue South, Manhattan,   NY",Manhattan,
-Cava Grill,"1385 Broadway, Manhattan,   NY",Manhattan,"1385 Broadway, New York NY 10018-6001"
-Cava Grill,"11 West 42nd Street, Manhattan,   NY",Manhattan,"11 W 42nd St, New York NY 10036-8002"
-Cava Grill,"50 Spring Street, Manhattan,   NY",Manhattan,"50 Spring St, New York NY 10012-4181"
-Afandi Asian Grill,"149 1st Avenue, Manhattan,   NY",Manhattan,"149 1st Ave, New York NY 10003-2930"
-Accra,"2065 Adam Clayton Powell Jr. Blvd., Manhattan,   NY",Manhattan,"2065 Adam Clayton Powell Jr Blvd, New York NY 10027-4903"
-Skewr Kabob Kitchen,"34 East 23rd Street, Manhattan,   NY",Manhattan,"34 E 23rd St, New York NY 10010-4483"
-Teranga,"1280 5th Avenue, Manhattan,   NY",Manhattan,"1280 5th Ave, New York NY 10029-8405"
-Toum,"38 West 38th Street, Manhattan,   NY",Manhattan,"38 W 38th St, New York NY 10018-6281"
-Lezzet,"132 East 61st Street, Manhattan,   NY",Manhattan,
-The Hummus & Pita Co.,"585 6th Avenue, Manhattan,   NY",Manhattan,"585 Avenue of the Americas, New York NY 10011-2004"
-The Hummus & Pita Co.,"79 Chambers Street, Manhattan,   NY",Manhattan,"79 Chambers St, New York NY 10007-1824"
-The Hummus & Pita Co.,"616 8th Avenue, Manhattan,   NY",Manhattan,"616 8th Ave, New York NY 10018-3002"
-Champion Pizza,"123 Essex Street, Manhattan,   NY",Manhattan,"123 Essex St, New York NY 10002-3277"
+United Fried Chicken & Pizza,"567 Lenox Avenue, New York, NY",Manhattan,Zabiha
+Junoon,"27 West 24th Street, New York, NY",Manhattan,Zabiha
+Ambizza Café Truck,"Water Street & Old Slip, New York, NY",Manhattan,Zabiha
+Falafel on Broadway,"3151 Broadway, New York, NY",Manhattan,Zabiha
+Malai Marke,"318 East 6th Street, Newrk, NY",Manhattan,Zabiha
+Moustache Pitza,"265 East 10th Street, New York, NY",Manhattan,Zabiha
+Bawarchi,"1546 Madison Avenue, New York, NY",Manhattan,Zabiha
+Kopi Kopi,"68 West 3rd Street, New York, NY",Manhattan,Zabiha
+The Halal Guys,"307 East 14th Street, New York, NY",Manhattan,Zabiha
+Simit Sarayi,"435 5th Avenue, New York, NY",Manhattan,Zabiha
+Awadh,"2588 Broadway, New York, NY",Manhattan,Zabiha
+Tallgrass Burger,"214 1st Avenue, New York, NY",Manhattan,Zabiha
+Ravagh Persian Grill,"125 1st Avenue, New York, NY",Manhattan,Zabiha
+Atomic Wings,"184 1st Avenue, New York, NY",Manhattan,Zabiha
+Deccan Spice,"120 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Dera,"103 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Turkuaz,"255 West 55th Street, New York, NY",Manhattan,Zabiha
+Farah Anatolia,"401 East 62nd Street, New York, NY",Manhattan,Zabiha
+Farida,"498 9th Avenue, New York, NY",Manhattan,Zabiha
+Holy Cow,"15 West 29th Street, New York, NY",Manhattan,Zabiha
+NY Gyro Xpress,"154 8th Avenue, New York, NY",Manhattan,Zabiha
+Les Ambassades,"2200 Frederick Douglass Blvd., New York, NY",Manhattan,Zabiha
+Manhattan Halal Restaurant,"156 West 29th Street, New York, NY",Manhattan,Zabiha
+Zeytin Mediterranean,"160 Pearl Street, New York, NY",Manhattan,Zabiha
+Aleef Café,"333 West 39th Street, New York, NY",Manhattan,Zabiha
+Rasa,"25 West 8th Street, New York, NY",Manhattan,Zabiha
+Afghan Kabob Express,"6th Avenue & West 55th Street, New York, NY",Manhattan,Zabiha
+Turkuaz,"310 West 53rd Street, New York, NY",Manhattan,Zabiha
+Shahi Biryani & Grill,"71 West 109th Street, New York, NY",Manhattan,Zabiha
+Turco Mediterranean Grill,"604 9th Avenue, New York, NY",Manhattan,Zabiha
+Ravagh Persian Grill,"11 East 30th Street, New York, NY",Manhattan,Zabiha
+Pars Grill House & Bar,"249 West 26th Street, New York, NY",Manhattan,Zabiha
+Africa Kiné,"256 West 116th Street, New York, NY",Manhattan,Zabiha
+Keur Sokhna,"2249 Adam Clayton Powell Jr. Blvd., New York, NY",Manhattan,Zabiha
+Lasani,"14 West 29th Street, New York, NY",Manhattan,Zabiha
+Pizza & Pita,"344 East 34th Street, New York, NY",Manhattan,Zabiha
+Halal Cart,"Beach Street & Greenwich Street, New York, NY",Manhattan,Zabiha
+Ali Baba's Turkish Cuisine,"862 2nd Avenue, New York, NY",Manhattan,Zabiha
+Ariana,"787 9th Avenue, New York, NY",Manhattan,Zabiha
+Smokey Burger Organic,"339 West 44th Street, New York, NY",Manhattan,Zabiha
+Patiala,"371 West 34th Street, New York, NY",Manhattan,Zabiha
+Afghan Kebab House #2,"1345 Second Avenue, New York, NY",Manhattan,Zabiha
+BURGERS by Honest Chops,"99 Macdougal Street, New York, NY",Manhattan,Zabiha
+Joy,"148 East 46th Street, New York, NY",Manhattan,Zabiha
+ABA Turkish Restaurant,"325 West 57th Street, New York, NY",Manhattan,Zabiha
+The Halal Guys,"6th Avenue & West 53rd Street, New York, NY",Manhattan,Zabiha
+Wall Street Halal Truck Guy,"Wall Street, New York, NY",Manhattan,Zabiha
+Gyro Guy,"West 49th Street and 6th Avenue, New York, NY",Manhattan,Zabiha
+Halal Cart,"28th Avenue and Madison, New York, NY",Manhattan,Zabiha
+Halal Cart Guy,"Park Place & Greenwich Street, New York, NY",Manhattan,Zabiha
+Aamir Halal Food Cart,"85 West 46th Street, New York, NY",Manhattan,Zabiha
+Ravagh Persian Grill,"1135 1st Avenue, New York, NY",Manhattan,Zabiha
+Baba Ghanouge,"165 Church Street, New York, NY",Manhattan,Zabiha
+Masala Times,"194 Bleecker Street, New York, NY",Manhattan,Zabiha
+Istanbul Kebab House,"712 9th Avenue, New York, NY",Manhattan,Zabiha
+48th & 6th Halal Cart,"6th Avenue & West 48th Street, New York, NY",Manhattan,Zabiha
+Agora,"1565 2nd Avenue, New York, NY",Manhattan,Zabiha
+Joy Curry & Tandoor,"32 West 39th Street, New York, NY",Manhattan,Zabiha
+Shendey's Halal Cart,"52th Street at 6th Avenue, New York, NY",Manhattan,Zabiha
+Kennedy Fried Chicken,"536 East 14th Street, New York, NY",Manhattan,Zabiha
+Platter,"52nd Street & 6th Avenue, New York, NY",Manhattan,Zabiha
+Prince of Egypt Cart,"47th Street at 6th Avenue, New York, NY",Manhattan,Zabiha
+Sip Sak,"928 2nd Avenue, New York, NY",Manhattan,Zabiha
+Gyro Stand,"46th Street and 3rd Avenue, New York, NY",Manhattan,Zabiha
+Swagat,"205 West 29th Street, New York, NY",Manhattan,Zabiha
+Tandoor Palace,"88 Fulton Street, New York, NY",Manhattan,Zabiha
+Kennedy Fried Chicken,"158 Nagle Avenue, New York, NY",Manhattan,Zabiha
+Tagine,"221 West 38th Street, New York, NY",Manhattan,Zabiha
+Haveli,"100 Second Avenue, New York, NY",Manhattan,Zabiha
+Djerdan Burak,"22-83 East 65th Street, New York, NY",Manhattan,Zabiha
+Express Power Lunch Halal Food Cart,"3rd Avenue & E 48th Street, New York, NY",Manhattan,Zabiha
+Xpress Energy Halal Food Cart,"Whitehall Street & Stone Street, New York, NY",Manhattan,Zabiha
+Big Boss Halal Chicken and Rice,"York Avenue & East 69th Street, New York, NY",Manhattan,Zabiha
+Hooda's Halal Food,"West 115th St & Broadway, New York, NY",Manhattan,Zabiha
+Little Gujrat Deli,"946 Columbus Avenue, New York, NY",Manhattan,Zabiha
+Halal Food Cart,"Avenue of the Americas & West 47th Street, New York, NY",Manhattan,Zabiha
+Halal Food Cart,"5th Avenue & East 34th Street, New York, NY",Manhattan,Zabiha
+Uskudar,"1405 2nd Avenue, New York, NY",Manhattan,Zabiha
+Mouez Halal Food Cart,"East 33rd Street & 1st Avenue, New York, NY",Manhattan,Zabiha
+A La Turka,"1417 2nd Avenue, New York, NY",Manhattan,Zabiha
+Fahima Halal Food Cart,"6th Avenue & West 45th Street, New York, NY",Manhattan,Zabiha
+Le Baobab,"120 West 116th Street, New York, NY",Manhattan,Zabiha
+Gourmet Palace,"13 West 29th Street, New York, NY",Manhattan,Zabiha
+Penn Station Halal Cart,"West 33rd Street & 7th Avenue, New York, NY",Manhattan,Zabiha
+Kebab & Curry In A Hurry,"2409 2nd Avenue, New York, NY",Manhattan,Zabiha
+Casablanca Grill,"1132 1st Avenue, New York, NY",Manhattan,Zabiha
+The Halal Guys,"East 14th Street & 2nd Avenue, New York, NY",Manhattan,Zabiha
+Chote Nawab,"115 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Dhaba,"108 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Kharian Deli,"184 7th Avenue, New York, NY",Manhattan,Zabiha
+Indian Fast Food,"123 MacDougal Street, New York, NY",Manhattan,Zabiha
+Casa La Femme,"140 Charles Street, New York, NY",Manhattan,Zabiha
+Chola,"232 East 58th Street, New York, NY",Manhattan,Zabiha
+Ilili,"236 5th Avenue, New York, NY",Manhattan,Zabiha
+Aangan,"2701 Broadway, New York, NY",Manhattan,Zabiha
+Brick Lane Curry House,"1664 3rd Avenue, New York, NY",Manhattan,Zabiha
+Little Rascal,"163 Elizabeth Street, New York, NY",Manhattan,Zabiha
+Naya Mezze & Grill,"1057 2nd Avenue, New York, NY",Manhattan,Zabiha
+B&B,"165 West 26th Street, New York, NY",Manhattan,Zabiha
+Bombay's,"60 Pearl Street, New York, NY",Manhattan,Zabiha
+Jerusalem Restaurant,"2715 Broadway, New York, NY",Manhattan,Zabiha
+Kennedy Fried Chicken,"1270 Saint Nicholas Avenue, New York, NY",Manhattan,Zabiha
+Kennedy Chicken & Sandwiches,"3789 Broadway, New York, NY",Manhattan,Zabiha
+Pause Café,"3 Clinton Street, New York, NY",Manhattan,Zabiha
+Zerza Moroccan Home Cooking,"320 East 6th Street, New York, NY",Manhattan,Zabiha
+Arabesque,"4 East 36th Street, New York, NY",Manhattan,Zabiha
+Sahara's,"513 2nd Avenue, New York, NY",Manhattan,Zabiha
+Milon,"93 1st Avenue, New York, NY",Manhattan,Zabiha
+Lincoln Fried Chicken,"576 West 125th Street, New York, NY",Manhattan,Zabiha
+Kati Roll Company,"128 2nd Avenue, New York, NY",Manhattan,Zabiha
+Kati Roll Company,"685 3rd Avenue, New York, NY",Manhattan,Zabiha
+Hayaty,"103 Avenue A, New York, NY",Manhattan,Zabiha
+Le Rêve Restaurant & Lounge,"125 East 54th Street, New York, NY",Manhattan,Zabiha
+Moustache Pitza,"90 Bedford Street, New York, NY",Manhattan,Zabiha
+Le Souk,"510 LaGuardia Place, New York, NY",Manhattan,Zabiha
+Taste of Persia,"12 West 18th Street, New York, NY",Manhattan,Zabiha
+Pasha,"70 West 71st Street, New York, NY",Manhattan,Zabiha
+Balade,"208 1st Avenue, New York, NY",Manhattan,Zabiha
+Andaz,"1378 1st Avenue, New York, NY",Manhattan,Zabiha
+La Nomade,"2795 8th Avenue, New York, NY",Manhattan,Zabiha
+Sheezan,"183 Church Street, New York, NY",Manhattan,Zabiha
+Shawarma Doner House,"70 West 39th Street, New York, NY",Manhattan,Zabiha
+Utsav,"1185 Avenue of the Americas, New York, NY",Manhattan,Zabiha
+Bombay Duck Co.,"190 Bleecker Street, New York, NY",Manhattan,Zabiha
+Moti Mahal Delux,"1149 1st Avenue, New York, NY",Manhattan,Zabiha
+Mirch Masala,"95 Macdougal Street, New York, NY",Manhattan,Zabiha
+Semsom Eatery,"2 Astor Place, New York, NY",Manhattan,Zabiha
+Halaal Food Cart,"302 West 37th Street, New York, NY",Manhattan,Zabiha
+Café Fresco,"205 East 60th Street, New York, NY",Manhattan,Zabiha
+Manousheh,"193 Bleecker Street, New York, NY",Manhattan,Zabiha
+Texas Chicken & Burgers,"3486 Broadway, New York, NY",Manhattan,Zabiha
+Texas Chicken & Burgers,"471 Lenox Avenue, New York, NY",Manhattan,Zabiha
+Texas Chicken & Burgers,"151 East 103rd Street, New York, NY",Manhattan,Zabiha
+Texas Chicken & Burgers,"2144 Frederick Douglass Blvd., New York, NY",Manhattan,Zabiha
+Alachi Masala,"488 Amsterdam Avenue, New York, NY",Manhattan,Zabiha
+Persepolis,"1407 2nd Avenue, New York, NY",Manhattan,Zabiha
+Spice Symphony,"182 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Desi Galli,"101 Lexington Avenue, New York, NY",Manhattan,Zabiha
+indikitch,"25 West 23rd Street, New York, NY",Manhattan,Zabiha
+indikitch,"940 8th Avenue, New York, NY",Manhattan,Zabiha
+Akdeniz,"19 West 46th Street, New York, NY",Manhattan,Zabiha
+Kabab Bites,"369 Broome Street, New York, NY",Manhattan,Zabiha
+Souk & Sandwich,"117 6th Avenue, New York, NY",Manhattan,Zabiha
+Indian Project,"243 West 38th Street, New York, NY",Manhattan,Zabiha
+Balade Your Way,"144 West 37th Street, New York, NY",Manhattan,Zabiha
+City Spice Café,"203 East 26th Street, New York, NY",Manhattan,Zabiha
+Cava Grill,"143 4th Avenue, New York, NY",Manhattan,Zabiha
+Fogo de Chão,"40 West 53rd Street, New York, NY",Manhattan,Zabiha
+Galata,"212 East 34th Street, New York, NY",Manhattan,Zabiha
+Village Fried Chicken,"1739 Amsterdam Avenue, New York, NY",Manhattan,Zabiha
+Kottu House,"250 Broome Street, New York, NY",Manhattan,Zabiha
+Marc Forgione,"134 Reade Street, New York, NY",Manhattan,Zabiha
+Da Falafel Guys,"127 Rivington Street, New York, NY",Manhattan,Zabiha
+Berber Street Food,"35 Carmine Street, New York, NY",Manhattan,Zabiha
+Minetta Tavern,"113 Macdougal Street, New York, NY",Manhattan,Zabiha
+Sumela Mediterranean Café & Grill,"1606 1st Avenue, New York, NY",Manhattan,Zabiha
+Cinnamon Garden,"328 East 6th Street, New York, NY",Manhattan,Zabiha
+Top Thai,"235 Sullivan Street, New York, NY",Manhattan,Zabiha
+Tabouleh,"673 9th Avenue, New York, NY",Manhattan,Zabiha
+Zeytin,"110 William Street, New York, NY",Manhattan,Zabiha
+Kusharista,"106 Macdougal Street, New York, NY",Manhattan,Zabiha
+Bali Kitchen,"128 East 4th Street, New York, NY",Manhattan,Zabiha
+Salam Café,"104 West 13th Street, New York, NY",Manhattan,Zabiha
+Byblos,"80 Madison Avenue, New York, NY",Manhattan,Zabiha
+Gardenia Terrace,"826 10th Avenue, New York, NY",Manhattan,Zabiha
+Miraj Healthy Grill,"120 East 34th Street, New York, NY",Manhattan,Zabiha
+Panorama,"820 Broadway, New York, NY",Manhattan,Zabiha
+Masala King,"64 West 34th Street, New York, NY",Manhattan,Zabiha
+This is Gyro,"178 Church Street, Unit A, New York, NY",Manhattan,Zabiha
+NYU Lipton Dining Hall,"33 Washington Square West, New York, NY",Manhattan,Zabiha
+Kennedy Fried Chicken,"1316 5th Avenue, New York, NY",Manhattan,Zabiha
+Crown Fried Chicken,"1774 Lexington Avenue, Unit 2, New York, NY",Manhattan,Zabiha
+Cava Grill,"678 6th Avenue, New York, NY",Manhattan,Zabiha
+Cava Grill,"325 Park Avenue South, New York, NY",Manhattan,Zabiha
+Cava Grill,"1385 Broadway, New York, NY",Manhattan,Zabiha
+Cava Grill,"11 West 42nd Street, New York, NY",Manhattan,Zabiha
+Cava Grill,"50 Spring Street, New York, NY",Manhattan,Zabiha
+Afandi Asian Grill,"149 1st Avenue, New York, NY",Manhattan,Zabiha
+Accra,"2065 Adam Clayton Powell Jr. Blvd., New York, NY",Manhattan,Zabiha
+Skewr Kabob Kitchen,"34 East 23rd Street, New York, NY",Manhattan,Zabiha
+Teranga,"1280 5th Avenue, New York, NY",Manhattan,Zabiha
+Toum,"38 West 38th Street, New York, NY",Manhattan,Zabiha
+Lezzet,"132 East 61st Street, New York, NY",Manhattan,Zabiha
+The Hummus & Pita Co.,"585 6th Avenue, New York, NY",Manhattan,Zabiha
+The Hummus & Pita Co.,"79 Chambers Street, New York, NY",Manhattan,Zabiha
+The Hummus & Pita Co.,"616 8th Avenue, New York, NY",Manhattan,Zabiha
+Champion Pizza,"123 Essex Street, New York, NY",Manhattan,Zabiha
 "Aladdin Grill & Rice
-NEW!","736 West 181st Street, Manhattan,   NY",Manhattan,"736 W 181st St, New York NY 10033-4735"
-Afghan Kebab House,"764 9th Avenue, Manhattan,   NY",Manhattan,"764 9th Ave, New York NY 10019-6321"
-Cuisine of Pakistan,"478 9th Avenue, Manhattan,   NY",Manhattan,"478 9th Ave, New York NY 10018-5621"
-Omar's Mediterranean Grill,"154 East 55th Street #E, Manhattan,   NY",Manhattan,"154 E 55th St # E, New York NY 10022-4513"
-Kati Roll Company,"229 East 53rd Street, Manhattan,   NY",Manhattan,"229 E 53rd St, New York NY 10022-4849"
-Bukhara Grill,"217 East 49th Street, Manhattan,   NY",Manhattan,"217 E 49th St, New York NY 10017-1501"
-Chandni,"13 West 29th Street, Manhattan,   NY",Manhattan,"13 W 29th St, New York NY 10001-4514"
-Rafiqi's Halal Food Cart,"768 Broadway, Manhattan,   NY",Manhattan,
-Biryani Cart,"6th Avenue & West 46th Street, Manhattan,   NY",Manhattan,
-KFC,"3645 Broadway, Manhattan,   NY",Manhattan,"3645 Broadway, New York NY 10031-2519"
-AnTalia,"17 West 45th Street, Manhattan,   NY",Manhattan,"17 W 45th St, New York NY 10036-4907"
-Khyber Pass,"34 St. Marks Place, Manhattan,   NY",Manhattan,"34 Saint Marks Pl, New York NY 10003-8035"
-Pakistan Tea House,"176 Church Street, Manhattan,   NY",Manhattan,"176 Church St, New York NY 10013-3819"
-Curry Hut,"534 9th Avenue, Manhattan,   NY",Manhattan,"534 9th Ave, New York NY 10018-1307"
-Big Arc Chicken,"233 1st Avenue, Manhattan,   NY",Manhattan,"233 1st Ave, New York NY 10003-3755"
-Queen Sheeba,"317 West 141st Street, Manhattan,   NY",Manhattan,"317 W 141st St, New York NY 10030-1409"
-Kati Roll Company,"99 Macdougal Street, Manhattan,   NY",Manhattan,"99 Macdougal St, New York NY 10012-5031"
-Hudson Halal Food Cart,"250 Greenwich Street, Manhattan,   NY",Manhattan,"250 Greenwich St, New York NY 10007-2140"
-Sammi's Halal Cart,"West 4th Street & 6th Avenue, Manhattan,   NY",Manhattan,
-Salt and Pepper,"139 West 33rd Street, Manhattan,   NY",Manhattan,"139 W 33rd St, New York NY 10001-2941"
-No Pork Halal Kitchen,"2135 2nd Avenue, Manhattan,   NY",Manhattan,"2135 2nd Ave, New York NY 10029-3228"
-Haandi,"113 Lexington Avenue, Manhattan,   NY",Manhattan,"113 Lexington Ave, New York NY 10016-8971"
-Halal Chicken at Columbia U,"116th Street and Broadway, Manhattan,   NY",Manhattan,
-Halal Cart Vendor,"Water Street at Pearl Street, Manhattan,   NY",Manhattan,
-Halal Village,"35 First Avenue, Manhattan,   NY",Manhattan,"35 1st Ave, New York NY 10003-9430"
-Chicken Guy Cart,"Haven Avenue at Fort Washington Avenue, Manhattan,   NY",Manhattan,
-Sammy's Halal Cart,"West 4th & Broadway, Manhattan,   NY",Manhattan,
-Kimmel Market Place,"60 Washington Square South, Manhattan,   NY",Manhattan,"60 Washington Sq S, New York NY 10012-1019"
-Halal Cart,"Varick Street & Canal Street, Manhattan,   NY",Manhattan,
-Adel's Halal Food,"6th Avenue & West 50th Street, Manhattan,   NY",Manhattan,
-Halal Food Cart,"Broadway & West 37th Street, Manhattan,   NY",Manhattan,
-Bombay Deli,"367 West 36th Street, Manhattan,   NY",Manhattan,"367 W 36th St, New York NY 10018-6401"
-Sheezaan,"183 Church Street, Manhattan,   NY",Manhattan,"183 Church St, New York NY 10007-1829"
-The MasalaWala,"179 Essex Street, Manhattan,   NY",Manhattan,"179 Essex St, New York NY 10002-1547"
-The Halal Guys,"6th Avenue & West 53rd Street, Manhattan,   NY",Manhattan,
-The Halal Guys,"7th Avenue & West 53rd Street, Manhattan,   NY",Manhattan,
-Salaam Bombay,"319 Greenwich Street, Manhattan,   NY",Manhattan,"319 Greenwich St, New York NY 10013-3339"
-B & D Halal,"163 West 29th Street, Manhattan,   NY",Manhattan,"163 W 29th St, New York NY 10001-5101"
-Indo Pak Halal,"2173 2nd Avenue, Manhattan,   NY",Manhattan,"2173 2nd Ave, New York NY 10029-2909"
-Kati Roll Company,"49 West 39th Street, Manhattan,   NY",Manhattan,"49 W 39th St, New York NY 10018-3887"
-Bhatti Indian Grill,"100 Lexington Avenue, Manhattan,   NY",Manhattan,"100 Lexington Ave, New York NY 10016-8975"
-Au Za'atar,"188 Avenue A, Manhattan,   NY",Manhattan,"188 Avenue A, New York NY 10009-4013"
-Baluchi's,"37 West 43rd Street, Manhattan,   NY",Manhattan,"37 W 43rd St, New York NY 10036-7403"
-The Halal Guys,"722 Amsterdam Avenue, Manhattan,   NY",Manhattan,"722 Amsterdam Ave, New York NY 10025-6328"
-Pikine African Restaurant,"243 West 116th Street, Manhattan,   NY",Manhattan,
-Nusr-Et Steakhouse,"60 West 53rd Street, Manhattan,   NY",Manhattan,"60 W 53rd St, New York NY 10019-6106"
-Z Deli & Pizza,"803 8th Avenue, Manhattan,   NY",Manhattan,"803 8th Ave, New York NY 10019-7418"
-Curry in a Hurry,"119 Lexington Avenue, Manhattan,   NY",Manhattan,"119 Lexington Ave, New York NY 10016-8129"
-Seven's Turkish Grill,"158 West 72nd Street, Manhattan,   NY",Manhattan,"158 W 72nd St, New York NY 10023-3320"
-Anka Grill,"642 Lexington Avenue, Manhattan,   NY",Manhattan,"642 Lexington Ave, New York NY 10022-4533"
-Diwan e Khaas,"53 Nassau Street #A, Manhattan,   NY",Manhattan,"53 Nassau St Frnt A, New York NY 10038-4572"
-Crown Fried Chicken,"1867 Lexington Avenue, Manhattan,   NY",Manhattan,"1867 Lexington Ave, New York NY 10029-2004"
-Great Sphinx Halal Food,"74 9th Avenue, Manhattan,   NY",Manhattan,"74 9th Ave, New York NY 10011-4980"
-Halal Food Cart,"West 48th Street & Broadway, Manhattan,   NY",Manhattan,
-Lemony Greek Yeero Bar,"224 West 35th Street, Manhattan,   NY",Manhattan,"224 W 35th St, New York NY 10001-2507"
-Love Mama,"174 2nd Avenue, Manhattan,   NY",Manhattan,"174 2nd Ave, New York NY 10003-5751"
-Ashoka Grill,"1436 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"1436 Flatbush Ave, Brooklyn NY 11210-2377"
-Lutheran Halal Café,"5121 2nd Avenue, Brooklyn,   NY",Brooklyn,"5121 2nd Ave, Brooklyn NY 11232-2629"
-Istanbul Park,"293 7th Avenue, Brooklyn,   NY",Brooklyn,"293 7th Ave, Brooklyn NY 11215-7262"
-Sahara Sweets & Bakery,"1026 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1026 Coney Island Ave, Brooklyn NY 11230-1384"
-Crown Fried Chicken,"1519 Fulton Street, Brooklyn,   NY",Brooklyn,"1519 Fulton St, Brooklyn NY 11216-2506"
-Mazedar Zabiha Halal Meat & Grocery,"671 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"671 Coney Island Ave, Brooklyn NY 11218-4306"
-Kashmir Grill,"816 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"816 Coney Island Ave, Brooklyn NY 11218-5310"
-Opera Café Lounge,"2255 Emmons Avenue, Brooklyn,   NY",Brooklyn,"2255 Emmons Ave, Brooklyn NY 11235-2709"
-Greenhouse,"90 Church Avenue, Brooklyn,   NY",Brooklyn,"90 Church Ave, Brooklyn NY 11218-2208"
-Kofte Piyaz,"881 5th Avenue, Brooklyn,   NY",Brooklyn,"881 5th Ave, Brooklyn NY 11232-2999"
-Khan's Gyro & Fried Chicken,"1947 Bath Avenue, Brooklyn,   NY",Brooklyn,"1947 Bath Ave, Brooklyn NY 11214-4705"
-Flatbush Halal Restaurant,"1210 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"1210 Flatbush Ave, Brooklyn NY 11226-7005"
-Sweetness USA,"1150 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1150 Coney Island Ave, Brooklyn NY 11230-2307"
-Java Rijsttafel,"455 7th Avenue, Brooklyn,   NY",Brooklyn,"455 7th Ave, Brooklyn NY 11215-5512"
-Beyti Turkish Kebab,"414 Brighton Beach Avenue, Brooklyn,   NY",Brooklyn,"414 Brighton Beach Ave, Brooklyn NY 11235-6402"
-Dar 525,"525 Grand Street, Brooklyn,   NY",Brooklyn,"525 Grand St, Brooklyn NY 11211-3535"
-Sahara Ark,"887 Fulton Street, Brooklyn,   Brooklyn,   NY",Brooklyn,
-New York Falafel,"127 Wyckoff Avenue, Brooklyn,   NY",Brooklyn,"127 Wyckoff Ave, Brooklyn NY 11237-8066"
-David's Brisket House & Deli,"533 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"533 Nostrand Ave, Brooklyn NY 11216-5875"
-Your House Café,"6916 4th Avenue, Brooklyn,   NY",Brooklyn,"6916 4th Ave, Brooklyn NY 11209-1557"
-Halal International,"574 Atlantic Avenue, Brooklyn,   NY",Brooklyn,"574 Atlantic Ave, Brooklyn NY 11217-4954"
-Anatolian Gyro,"2623 East 16th Street, Brooklyn,   NY",Brooklyn,"2623 E 16th St, Brooklyn NY 11235-3805"
-Mis Grill,"370 5th Avenue, Brooklyn,   NY",Brooklyn,"370 5th Ave, Brooklyn NY 11215-8141"
-Taheni Mediterranean Grill,"224 4th Avenue, Brooklyn,   NY",Brooklyn,"224 4th Ave, Brooklyn NY 11215-1006"
-Brooklyn Halal Grill,"1148 Liberty Avenue, Brooklyn,   NY",Brooklyn,"1148 Liberty Ave, Brooklyn NY 11208-3332"
-Momo's Mediterranean Grill,"29 101st Avenue, Brooklyn,   NY",Brooklyn,"29 101st Ave, Brooklyn NY 11208-3404"
-Burger Box,"2930 Avenue X, Brooklyn,   NY",Brooklyn,"2930 Avenue X, Brooklyn NY 11235-1802"
-My House Burgers & Shakes,"1650 Sheepshead Bay Road, Brooklyn,   NY",Brooklyn,"1650 Sheepshead Bay Rd, Brooklyn NY 11235-3803"
-Ali's Roti Shop,"1267 Fulton Street, Brooklyn,   NY",Brooklyn,"1267 Fulton St, Brooklyn NY 11216-2011"
-Gyro King,"1017 Foster Avenue, Brooklyn,   NY",Brooklyn,"1017 Foster Ave, Brooklyn NY 11230-1315"
-Pakiza,"1032 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1032 Coney Island Ave, Brooklyn NY 11230-1313"
-Moon Café,"496 Atlantic Avenue, Brooklyn,   NY",Brooklyn,"496 Atlantic Ave, Brooklyn NY 11217-1813"
-Café Kashker,"1141 Brighton Beach Avenue, Brooklyn,   NY",Brooklyn,"1141 Brighton Beach Ave, Brooklyn NY 11235-5903"
-Pak Nasheman,"3149 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"3149 Coney Island Ave, Brooklyn NY 11235-6443"
-Curry Heights,"151 Remsen Street, Brooklyn,   NY",Brooklyn,"151 Remsen St, Brooklyn NY 11201-4338"
-King Falafel,"7408 3rd Avenue, Brooklyn,   NY",Brooklyn,"7408 3rd Ave, Brooklyn NY 11209-2408"
-The Soul Spot,"302 Atlantic Avenue, Brooklyn,   NY",Brooklyn,"302 Atlantic Ave, Brooklyn NY 11201-5822"
-Yemen Café,"176 Atlantic Avenue, Brooklyn,   NY",Brooklyn,"176 Atlantic Ave, Brooklyn NY 11201-5656"
-China Pagoda,"6918 5th Avenue, Brooklyn,   NY",Brooklyn,"6918 5th Ave, Brooklyn NY 11209-1507"
-SkyIce Sweet & Savory,"63 5th Avenue, Brooklyn,   NY",Brooklyn,"63 5th Ave, Brooklyn NY 11217-2012"
-No Pork Halal Kitchen,"50 4th Avenue, Brooklyn,   NY",Brooklyn,"50 4th Ave, Brooklyn NY 11217-1927"
-Taci's Beyti,"1955 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1955 Coney Island Ave, Brooklyn NY 11223-2328"
-First Oasis,"9218 4th Avenue, Brooklyn,   NY",Brooklyn,"9218 4th Ave, Brooklyn NY 11209-6376"
-La Bella Pizza Express,"2178 86th Street, Brooklyn,   NY",Brooklyn,"2178 86th St, Brooklyn NY 11214-3213"
-Istanbul Restaurant,"1715 Emmons Avenue, Brooklyn,   NY",Brooklyn,"1715 Emmons Ave, Brooklyn NY 11235-2714"
-Al-Noor Halal Deli,"672 4th Avenue, Brooklyn,   NY",Brooklyn,"672 4th Ave, Brooklyn NY 11232-1264"
-Abir Halal,"526 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"526 Nostrand Ave, Brooklyn NY 11216-2012"
-Jamal's Halal Restaurant & Bakery,"308 Ralph Avenue, Brooklyn,   NY",Brooklyn,"308 Ralph Ave, Brooklyn NY 11233-6042"
-Joloff,"1168 Bedford Avenue, Brooklyn,   NY",Brooklyn,"1168 Bedford Ave, Brooklyn NY 11216-1617"
-Kennedy Fried Chicken,"2904 Stillwell Avenue, Brooklyn,   NY",Brooklyn,"2904 Stillwell Ave, Brooklyn NY 11224-2610"
-Punjab Grocery,"1083 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1083 Coney Island Ave, Brooklyn NY 11230-2305"
-Gourmet Sweets,"1107 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1107 Coney Island Ave, Brooklyn NY 11230-2385"
-Güllüoğlu Café,"1985 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1985 Coney Island Ave, Brooklyn NY 11223-2328"
-KFC,"208 McGuinness Blvd., Brooklyn,   NY",Brooklyn,"208 McGuinness Blvd, Brooklyn NY 11222-2306"
-Shawarma Cart,"116 Wyckoff Avenue, Brooklyn,   NY",Brooklyn,"116 Wyckoff Ave, Brooklyn NY 11237-4300"
-Halal Paradise Truck,"20 4th Avenue, Brooklyn,   NY",Brooklyn,"20 4th Ave, Brooklyn NY 11217-1928"
-Famous Turkish Gyro,"1915 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1915 Coney Island Ave, Brooklyn NY 11230-6573"
-Gyro Café,"580 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"580 Coney Island Ave, Brooklyn NY 11218-4334"
-Abdullah Sweets & Restaurant,"91 Church Avenue, Brooklyn,   NY",Brooklyn,"91 Church Ave, Brooklyn NY 11218-2207"
-Chicken Express,"1013 Avenue H, Brooklyn,   NY",Brooklyn,"1013 Avenue H, Brooklyn NY 11230-2403"
-Kennedy Fried Chicken,"5424 7th Avenue, Brooklyn,   NY",Brooklyn,"5424 7th Ave, Brooklyn NY 11220-3123"
-Café Kashkar,"1141 Brighton Beach Avenue, Brooklyn,   NY",Brooklyn,"1141 Brighton Beach Ave, Brooklyn NY 11235-5903"
-Crown Chicken & Biscuit,"96-15 Flatlands Avenue, Brooklyn,   NY",Brooklyn,"9615 Flatlands Ave, Brooklyn NY 11236-3711"
-Gandhi Fine Indian Cuisine,"2032 Bedford Avenue, Brooklyn,   NY",Brooklyn,"2032 Bedford Ave, Brooklyn NY 11226-1402"
-Crown Fried Chicken,"1263 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"1263 Nostrand Ave, Brooklyn NY 11226-1503"
-Bedawi Café,"266 Prospect Park West, Brooklyn,   NY",Brooklyn,
-Halal Food Cart,"Avenue X & W 2nd St, Brooklyn,   NY",Brooklyn,
-Crown Fried Chicken,"1357 Fulton Street, Brooklyn,   NY",Brooklyn,"1357 Fulton St, Brooklyn NY 11216-5225"
-Kennedy Fried Chicken,"1922 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"1922 Nostrand Ave, Brooklyn NY 11226-7918"
-Halal Cart,"1268 Bedford Avenue, Brooklyn,   NY",Brooklyn,"1268 Bedford Ave, Brooklyn NY 11216-1814"
-Crazy Fried Chicken,"55-30 Myrtle Avenue, Brooklyn,   NY",Brooklyn,
-Sakman Deli & Grill,"6821 4th Avenue, Brooklyn,   NY",Brooklyn,"6821 4th Ave, Brooklyn NY 11220-5312"
-Damas Falafel House,"407 Myrtle Avenue, Brooklyn,   NY",Brooklyn,"407 Myrtle Ave, Brooklyn NY 11205-2409"
-Kennedy Fried Chicken & Pizza,"1508 Saint Johns Place, Brooklyn,   NY",Brooklyn,"1508 Saint Johns Pl, Brooklyn NY 11213-3911"
-Al-Safa,"8002 5th Avenue, Brooklyn,   NY",Brooklyn,"8002 5th Ave, Brooklyn NY 11209-4004"
-Shandar Sweets & Restaurant,"679 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"679 Coney Island Ave, Brooklyn NY 11218-4306"
-Mr. Falafel,"226 7th Avenue, Brooklyn,   NY",Brooklyn,"226 7th Ave, Brooklyn NY 11215-3476"
-Fava Mediterranean Grill,"6917 5th Avenue, Brooklyn,   NY",Brooklyn,"6917 5th Ave, Brooklyn NY 11209-1506"
-Halal Cart Food,"Fresh Pond Road & Madison Street, Brooklyn,   NY",Brooklyn,
-Shama,"232 Neptune Avenue, Brooklyn,   NY",Brooklyn,"232 Neptune Ave, Brooklyn NY 11235-6303"
-Bombay Heights,"1047 Bedford Avenue, Brooklyn,   NY",Brooklyn,"1047 Bedford Ave, Brooklyn NY 11216-1123"
-Nepalese Indian Restaurant,"907 Seneca Avenue, Brooklyn,   NY",Brooklyn,
-Agra Heights,"226 Wilson Avenue, Brooklyn,   NY",Brooklyn,"226 Wilson Ave, Brooklyn NY 11237-4515"
-Hadramout,"172 Atlantic Avenue, Brooklyn,   NY",Brooklyn,"172 Atlantic Ave, Brooklyn NY 11201-5652"
-Masal Café & Lounge,"1901 Emmons Avenue, Brooklyn,   NY",Brooklyn,"1901 Emmons Ave, Brooklyn NY 11235-2756"
-Baluchi's,"310 5th Avenue, Brooklyn,   NY",Brooklyn,"310 5th Ave, Brooklyn NY 11215-2584"
-Taksim Square (II),"776 4th Avenue, Brooklyn,   NY",Brooklyn,"776 4th Ave, Brooklyn NY 11232-1401"
-Halal Shish Kebab & Gyro,"487 73rd Street, Brooklyn,   NY",Brooklyn,
-Kestane Kebab,"110 Nassau Avenue #B, Brooklyn,   NY",Brooklyn,
-Sido Gourmet,"849 46th Street, Brooklyn,   NY",Brooklyn,"849 46th St, Brooklyn NY 11220-1612"
-Yemen Alsaeed Café,"7130 5th Avenue, Brooklyn,   NY",Brooklyn,"7130 5th Ave, Brooklyn NY 11209-1609"
-Yemen Cuisine,"145 Court Street, Brooklyn,   NY",Brooklyn,"145 Court St, Brooklyn NY 11201-4292"
-Halal Restaurant Corp.,"1174 Fulton Street, Brooklyn,   NY",Brooklyn,"1174 Fulton St, Brooklyn NY 11216-2079"
-Aksaray Turkish Café,"1618 East 16th Street, Brooklyn,   NY",Brooklyn,"1618 E 16th St, Brooklyn NY 11229-1108"
-Meena House Café,"476 Bay Ridge Avenue, Brooklyn,   NY",Brooklyn,"476 Bay Ridge Ave, Brooklyn NY 11220-5906"
-Madina Restaurant & Sweets,"563 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"563 Coney Island Ave, Brooklyn NY 11218-4303"
-King of Tandoor,"7407 3rd Avenue, Brooklyn,   NY",Brooklyn,"7407 3rd Ave, Brooklyn NY 11209-2407"
-King of Tandoor,"600 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"600 Flatbush Ave, Brooklyn NY 11225-5066"
-La Goulette,"159 Grand Street, Brooklyn,   NY",Brooklyn,"159 Grand St, Brooklyn NY 11249-4210"
-Curry Heaven,"513 Grand Street, Brooklyn,   NY",Brooklyn,"513 Grand St, Brooklyn NY 11211-4393"
-Oasis of Greenpoint,"230 Calyer Street, Brooklyn,   NY",Brooklyn,"230 Calyer St, Brooklyn NY 11222-2415"
-God Bless Deli,"818 Manhattan Avenue, Brooklyn,   NY",Brooklyn,"818 Manhattan Ave, Brooklyn NY 11222-7056"
-Nostrand Express Deli,"2184 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"2184 Nostrand Ave, Brooklyn NY 11210-3024"
-Tripoli,"156 Atlantic Avenue, Brooklyn,   NY",Brooklyn,"156 Atlantic Ave, Brooklyn NY 11201-5502"
-Organic Halal Deli,"3602 Neptune Avenue, Brooklyn,   NY",Brooklyn,"3602 Neptune Ave, Brooklyn NY 11224-1505"
-Rocca Café Lounge,"2712 Emmons Avenue, Brooklyn,   NY",Brooklyn,"2712 Emmons Ave, Brooklyn NY 11235-2245"
-Bushwick Pita Palace,"243 Bushwick Avenue, Brooklyn,   NY",Brooklyn,"243 Bushwick Ave, Brooklyn NY 11206-2721"
-Emir Palace,"4210 18th Avenue, Brooklyn,   NY",Brooklyn,"4210 18th Ave, Brooklyn NY 11218-5720"
-Uzbechka,"42 Avenue O, Brooklyn,   NY",Brooklyn,"42 Avenue O, Brooklyn NY 11204-6361"
-Güllüoglu Baklava Café,"231 Brighton Beach Avenue, Brooklyn,   NY",Brooklyn,"231 Brighton Beach Ave, Brooklyn NY 11235-8394"
-Deniz,"662 Fulton Street, Brooklyn,   NY",Brooklyn,"662 Fulton St, Brooklyn NY 11217-1517"
-Buka,"946 Fulton Street, Brooklyn,   NY",Brooklyn,"946 Fulton St, Brooklyn NY 11238-2494"
-Café Rue Dix,"1451 Bedford Avenue, Brooklyn,   NY",Brooklyn,"1451 Bedford Ave, Brooklyn NY 11216-3801"
-Le Sajj,"8221 5th Avenue, Brooklyn,   NY",Brooklyn,"8221 5th Ave, Brooklyn NY 11209-4508"
-Crown Fried Chicken,"1604 Newkirk Avenue, Brooklyn,   NY",Brooklyn,"1604 Newkirk Ave, Brooklyn NY 11226-6612"
-Kennedy Fried Chicken,"1258 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"1258 Flatbush Ave, Brooklyn NY 11226-7621"
-Bab Alhara,"376 86th Street, Brooklyn,   NY",Brooklyn,"376 86th St, Brooklyn NY 11209-5002"
-Cocoa Grinder,"8521 4th Avenue, Brooklyn,   NY",Brooklyn,"8521 4th Ave, Brooklyn NY 11209-4607"
-Mumbai Place,"655 Vanderbilt Avenue, Brooklyn,   NY",Brooklyn,"655 Vanderbilt Ave, Brooklyn NY 11238-3829"
-Lazzat,"1969 Bath Avenue, Brooklyn,   NY",Brooklyn,"1969 Bath Ave, Brooklyn NY 11214-4705"
-All About Indian Food,"443 Bushwick Avenue, Brooklyn,   NY",Brooklyn,"443 Bushwick Ave, Brooklyn NY 11206-3706"
-Chubby's Chicken & Burgers,"7021 3rd Avenue, Brooklyn,   NY",Brooklyn,"7021 3rd Ave, Brooklyn NY 11209-1306"
-Bombay Grill,"8716 3rd Avenue, Brooklyn,   NY",Brooklyn,"8716 3rd Ave, Brooklyn NY 11209-5174"
-Mocha Mocha Coffee,"8602 4th Avenue, Brooklyn,   NY",Brooklyn,"8602 4th Ave, Brooklyn NY 11209-5108"
-Keep It Halal,"1162 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1162 Coney Island Ave, Brooklyn NY 11230-2912"
-Agra King,"1961 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"1961 Flatbush Ave, Brooklyn NY 11234-2836"
-Clubs Gyro,"1026 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"1026 Nostrand Ave, Brooklyn NY 11225-3509"
-Istanbul Kitchen,"535 86th Street, Brooklyn,   NY",Brooklyn,"535 86th St, Brooklyn NY 11209-4894"
-Crisp & Crunch,"1258 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"1258 Flatbush Ave, Brooklyn NY 11226-7621"
-Safari,"219 West 116th Street, Brooklyn,   NY",Brooklyn,
-Café Dushanbe,"1788 Sheepshead Bay Road, Brooklyn,   NY",Brooklyn,"1788 Sheepshead Bay Rd, Brooklyn NY 11235-2755"
-Azerbaijan House,"2612 East 14th Street, Brooklyn,   NY",Brooklyn,"2612 E 14th St, Brooklyn NY 11235-3916"
-Crown Fried Chicken,"2813 Glenwood Road, Brooklyn,   NY",Brooklyn,"2813 Glenwood Rd, Brooklyn NY 11210-2401"
-Atomic Wings,"188 Parkside Avenue, Brooklyn,   NY",Brooklyn,"188 Parkside Ave, Brooklyn NY 11226-1336"
-Kennedy Fried Chicken,"1676 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"1676 Nostrand Ave, Brooklyn NY 11226-5516"
-Palace on Fulton,"1882 Fulton Street, Brooklyn,   NY",Brooklyn,"1882 Fulton St, Brooklyn NY 11233-3791"
-Gusho Healthy Choice,"1747 Fulton Street, Brooklyn,   NY",Brooklyn,"1747 Fulton St, Brooklyn NY 11233-1811"
-US Fried Chicken & Pizza,"1231 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"1231 Nostrand Ave, Brooklyn NY 11225-3846"
-BK JANI,"276 Knickerbocker Avenue, Brooklyn,   NY",Brooklyn,"276 Knickerbocker Ave, Brooklyn NY 11237-8035"
-Harway Pizza Gyro Falafel,"2863 Harway Avenue, Brooklyn,   NY",Brooklyn,"2863 Harway Ave, Brooklyn NY 11214-6925"
-Sultan,"144 Atlantic Avenue, Brooklyn,   NY",Brooklyn,"144 Atlantic Ave, Brooklyn NY 11201-6760"
-Gyro Mania,"2151 Bath Avenue, Brooklyn,   NY",Brooklyn,"2151 Bath Ave, Brooklyn NY 11214-5007"
-Anarkali,"1125 Church Avenue, Brooklyn,   NY",Brooklyn,"1125 Church Ave, Brooklyn NY 11218-2803"
-NY Fried Chicken & Pizza,"2193 Bedford Avenue, Brooklyn,   NY",Brooklyn,"2193 Bedford Ave, Brooklyn NY 11226-4001"
-Sal's Restaurant,"810 Franklin Avenue, Brooklyn,   NY",Brooklyn,"810 Franklin Ave, Brooklyn NY 11225-1202"
-Motin Spices & Sweets,"1215 Liberty Avenue, Brooklyn,   NY",Brooklyn,"1215 Liberty Ave, Brooklyn NY 11208-3411"
-Kennedy Fried Chicken & Pizza,"2837 86th Street, Brooklyn,   NY",Brooklyn,"2837 86th St, Brooklyn NY 11223-4634"
-Darna Falafel,"200 Court Street, Brooklyn,   NY",Brooklyn,"200 Court St, Brooklyn NY 11201-6424"
-Hadi,"683 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"683 Coney Island Ave, Brooklyn NY 11218-4306"
-Mazeish Grill,"137 Rivington Street, Brooklyn,   NY",Brooklyn,
-Le Baobab Gouygi 2,"1235 Fulton Street, Brooklyn,   NY",Brooklyn,"1235 Fulton St, Brooklyn NY 11216-2004"
-Krown Fried Chicken,"1843 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"1843 Nostrand Ave, Brooklyn NY 11226-7922"
-Cortelyou Bazaar,"211 Cortelyou Road, Brooklyn,   NY",Brooklyn,"211 Cortelyou Rd, Brooklyn NY 11218-4511"
-Bombay Xpress,"964 Dekalb Avenue, Brooklyn,   NY",Brooklyn,"964 DeKalb Ave, Brooklyn NY 11221-2001"
-Taj Masala,"256 Malcolm X Blvd., Brooklyn,   NY",Brooklyn,"256 Malcolm X Blvd, Brooklyn NY 11233-1132"
-Pita Pan,"167 7th Avenue, Brooklyn,   NY",Brooklyn,"167 7th Ave, Brooklyn NY 11215-2223"
-Lahori Chilli,"1026 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1026 Coney Island Ave, Brooklyn NY 11230-1384"
-The Halal Spot,"474 Myrtle Avenue, Brooklyn,   NY",Brooklyn,"474 Myrtle Ave, Brooklyn NY 11205-2679"
-Dixie Chicken & Grill,"7504 5th Avenue, Brooklyn,   NY",Brooklyn,"7504 5th Ave, Brooklyn NY 11209-3302"
-KFC,"534 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"534 Coney Island Ave, Brooklyn NY 11218-3422"
-H&W Gourmet Deli,"3423 Church Avenue, Brooklyn,   NY",Brooklyn,"3423 Church Ave, Brooklyn NY 11203-2713"
-Efes Café & Bakery,"601 Brighton Beach Avenue, Brooklyn,   NY",Brooklyn,"601 Brighton Beach Ave, Brooklyn NY 11235-6892"
-M&S Deli & Grocery,"1294 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"1294 Nostrand Ave, Brooklyn NY 11226-1504"
-Tutt Café,"47 Hicks Street, Brooklyn,   NY",Brooklyn,"47 Hicks St, Brooklyn NY 11201-6902"
-Texas Chicken & Burgers,"521 Ocean Avenue, Brooklyn,   NY",Brooklyn,"521 Ocean Ave, Brooklyn NY 11226-3803"
-Crown Fried Chicken,"3402 Church Avenue, Brooklyn,   NY",Brooklyn,"3402 Church Ave, Brooklyn NY 11203-2714"
-Zatar Café Bistro,"1294 Myrtle Avenue, Brooklyn,   NY",Brooklyn,
-Mandela Halal Buffet,"267 Troy Avenue, Brooklyn,   NY",Brooklyn,"267 Troy Ave, Brooklyn NY 11213-3601"
-My House Burgers & Shakes,"367 Avenue X, Brooklyn,   NY",Brooklyn,"367 Avenue X, Brooklyn NY 11223-5965"
-Döner Kebab NYC,"34 Willoughby Street, Brooklyn,   NY",Brooklyn,"34 Willoughby St, Brooklyn NY 11201-3705"
-Grill Hut,"887 Fulton Street, Brooklyn,   NY",Brooklyn,"887 Fulton St, Brooklyn NY 11238-1745"
-Old Baku,"115 Ditmas Avenue, Brooklyn,   NY",Brooklyn,"115 Ditmas Ave, Brooklyn NY 11218-4901"
-Habib 1 Deli,"631 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"631 Flatbush Ave, Brooklyn NY 11225-5609"
-Kusharista,"518 86th Street, Brooklyn,   NY",Brooklyn,"518 86th St, Brooklyn NY 11209-5253"
-Bab Marrakech,"7317 5th Avenue, Brooklyn,   NY",Brooklyn,"7317 5th Ave, Brooklyn NY 11209-2603"
-Halal Xpress,"7524 18th Avenue, Brooklyn,   NY",Brooklyn,"7524 18th Ave, Brooklyn NY 11214-1178"
-Burgerim,"518 86th Street, Brooklyn,   NY",Brooklyn,"518 86th St, Brooklyn NY 11209-5253"
-3 Guys Gyro,"129 Graham Avenue, Brooklyn,   NY",Brooklyn,"129 Graham Ave, Brooklyn NY 11206-2623"
-Istanblue Kings,"428 Kings Highway, Brooklyn,   NY",Brooklyn,"428 Kings Hwy, Brooklyn NY 11223-1630"
-Liman,"2710 Emmons Avenue, Brooklyn,   NY",Brooklyn,"2710 Emmons Ave, Brooklyn NY 11235-2245"
-Tava,"318 5th Avenue, Brooklyn,   NY",Brooklyn,"318 5th Ave, Brooklyn NY 11215-7379"
-Jasper Kane Café,"6 MetroTech Center, Brooklyn,   NY",Brooklyn,"6 Metrotech Ctr, Brooklyn NY 11201-3840"
-Cava Grill,"345 Adams Street, Brooklyn,   NY",Brooklyn,"345 Adams St, Brooklyn NY 11201-3739"
-Cocoa Grinder,"313 Knickerbocker Avenue, Brooklyn,   NY",Brooklyn,"313 Knickerbocker Ave, Brooklyn NY 11237-3601"
-Seed,"242 5th Avenue, Brooklyn,   NY",Brooklyn,"242 5th Ave, Brooklyn NY 11215-1232"
-Hills Kitchen,"252 Knickerbocker Avenue, Brooklyn,   NY",Brooklyn,"252 Knickerbocker Ave, Brooklyn NY 11237-2469"
-Ata,"887 Fulton Street, Brooklyn,   NY",Brooklyn,"887 Fulton St, Brooklyn NY 11238-1745"
-Asaba Kitchen,"550 Bainbridge Street, Brooklyn,   NY",Brooklyn,"550 Bainbridge St, Brooklyn NY 11233-2080"
-India House,"586 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"586 Nostrand Ave, Brooklyn NY 11216-2806"
-Texas Chicken & Burgers,"551 Nostrand Avenue, Brooklyn,   NY",Brooklyn,"551 Nostrand Ave, Brooklyn NY 11216-2804"
-Sakib,"349 Bedford Avenue, Brooklyn,   NY",Brooklyn,"349 Bedford Ave, Brooklyn NY 11211-5512"
+NEW!","736 West 181st Street, New York, NY",Manhattan,Zabiha
+Afghan Kebab House,"764 9th Avenue, New York, NY",Manhattan,Zabiha
+Cuisine of Pakistan,"478 9th Avenue, New York, NY",Manhattan,Zabiha
+Omar's Mediterranean Grill,"154 East 55th Street #E, New York, NY",Manhattan,Zabiha
+Kati Roll Company,"229 East 53rd Street, New York, NY",Manhattan,Zabiha
+Bukhara Grill,"217 East 49th Street, New York, NY",Manhattan,Zabiha
+Chandni,"13 West 29th Street, New York, NY",Manhattan,Zabiha
+Rafiqi's Halal Food Cart,"768 Broadway, New York, NY",Manhattan,Zabiha
+Biryani Cart,"6th Avenue & West 46th Street, New York, NY",Manhattan,Zabiha
+KFC,"3645 Broadway, New York, NY",Manhattan,Zabiha
+AnTalia,"17 West 45th Street, New York, NY",Manhattan,Zabiha
+Khyber Pass,"34 St. Marks Place, New York, NY",Manhattan,Zabiha
+Pakistan Tea House,"176 Church Street, New York, NY",Manhattan,Zabiha
+Curry Hut,"534 9th Avenue, New York, NY",Manhattan,Zabiha
+Big Arc Chicken,"233 1st Avenue, New York, NY",Manhattan,Zabiha
+Queen Sheeba,"317 West 141st Street, New York, NY",Manhattan,Zabiha
+Kati Roll Company,"99 Macdougal Street, New York, NY",Manhattan,Zabiha
+Hudson Halal Food Cart,"250 Greenwich Street, New York, NY",Manhattan,Zabiha
+Sammi's Halal Cart,"West 4th Street & 6th Avenue, New York, NY",Manhattan,Zabiha
+Salt and Pepper,"139 West 33rd Street, New York, NY",Manhattan,Zabiha
+No Pork Halal Kitchen,"2135 2nd Avenue, New York, NY",Manhattan,Zabiha
+Haandi,"113 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Halal Chicken at Columbia U,"116th Street and Broadway, New York, NY",Manhattan,Zabiha
+Halal Cart Vendor,"Water Street at Pearl Street, New York, NY",Manhattan,Zabiha
+Halal Village,"35 First Avenue, New York, NY",Manhattan,Zabiha
+Chicken Guy Cart,"Haven Avenue at Fort Washington Avenue, New York, NY",Manhattan,Zabiha
+Sammy's Halal Cart,"West 4th & Broadway, New York, NY",Manhattan,Zabiha
+Kimmel Market Place,"60 Washington Square South, New York, NY",Manhattan,Zabiha
+Halal Cart,"Varick Street & Canal Street, New York, NY",Manhattan,Zabiha
+Adel's Halal Food,"6th Avenue & West 50th Street, New York, NY",Manhattan,Zabiha
+Halal Food Cart,"Broadway & West 37th Street, New York, NY",Manhattan,Zabiha
+Bombay Deli,"367 West 36th Street, New York, NY",Manhattan,Zabiha
+Sheezaan,"183 Church Street, New York, NY",Manhattan,Zabiha
+The MasalaWala,"179 Essex Street, New York, NY",Manhattan,Zabiha
+The Halal Guys,"6th Avenue & West 53rd Street, New York, NY",Manhattan,Zabiha
+The Halal Guys,"7th Avenue & West 53rd Street, New York, NY",Manhattan,Zabiha
+Salaam Bombay,"319 Greenwich Street, New York, NY",Manhattan,Zabiha
+B & D Halal,"163 West 29th Street, New York, NY",Manhattan,Zabiha
+Indo Pak Halal,"2173 2nd Avenue, New York, NY",Manhattan,Zabiha
+Kati Roll Company,"49 West 39th Street, New York, NY",Manhattan,Zabiha
+Bhatti Indian Grill,"100 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Au Za'atar,"188 Avenue A, New York, NY",Manhattan,Zabiha
+Baluchi's,"37 West 43rd Street, New York, NY",Manhattan,Zabiha
+The Halal Guys,"722 Amsterdam Avenue, New York, NY",Manhattan,Zabiha
+Pikine African Restaurant,"243 West 116th Street, New York, NY",Manhattan,Zabiha
+Nusr-Et Steakhouse,"60 West 53rd Street, New York, NY",Manhattan,Zabiha
+Z Deli & Pizza,"803 8th Avenue, New York, NY",Manhattan,Zabiha
+Curry in a Hurry,"119 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Seven's Turkish Grill,"158 West 72nd Street, New York, NY",Manhattan,Zabiha
+Anka Grill,"642 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Diwan e Khaas,"53 Nassau Street #A, New York, NY",Manhattan,Zabiha
+Crown Fried Chicken,"1867 Lexington Avenue, New York, NY",Manhattan,Zabiha
+Great Sphinx Halal Food,"74 9th Avenue, New York, NY",Manhattan,Zabiha
+Halal Food Cart,"West 48th Street & Broadway, New York, NY",Manhattan,Zabiha
+Lemony Greek Yeero Bar,"224 West 35th Street, New York, NY",Manhattan,Zabiha
+Love Mama,"174 2nd Avenue, New York, NY",Manhattan,Zabiha
+Ashoka Grill,"1436 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Lutheran Halal Café,"5121 2nd Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Istanbul Park,"293 7th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Sahara Sweets & Bakery,"1026 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Crown Fried Chicken,"1519 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Mazedar Zabiha Halal Meat & Grocery,"671 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kashmir Grill,"816 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Opera Café Lounge,"2255 Emmons Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Greenhouse,"90 Church Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kofte Piyaz,"881 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Khan's Gyro & Fried Chicken,"1947 Bath Avenue, New York, NY",Brooklyn,Zabiha
+Flatbush Halal Restaurant,"1210 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Sweetness USA,"1150 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Java Rijsttafel,"455 7th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Beyti Turkish Kebab,"414 Brighton Beach Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Dar 525,"525 Grand Street, Brooklyn, NY",Brooklyn,Zabiha
+Sahara Ark,"887 Fulton Street, Unit C, Brooklyn, NY",Brooklyn,Zabiha
+New York Falafel,"127 Wyckoff Avenue, Brooklyn, NY",Brooklyn,Zabiha
+David's Brisket House & Deli,"533 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Your House Café,"6916 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Halal International,"574 Atlantic Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Anatolian Gyro,"2623 East 16th Street, Brooklyn, NY",Brooklyn,Zabiha
+Mis Grill,"370 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Taheni Mediterranean Grill,"224 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Brooklyn Halal Grill,"1148 Liberty Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Momo's Mediterranean Grill,"29 101st Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Burger Box,"2930 Avenue X, Brooklyn, NY",Brooklyn,Zabiha
+My House Burgers & Shakes,"1650 Sheepshead Bay Road, Brooklyn, NY",Brooklyn,Zabiha
+Ali's Roti Shop,"1267 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Gyro King,"1017 Foster Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Pakiza,"1032 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Moon Café,"496 Atlantic Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Café Kashker,"1141 Brighton Beach Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Pak Nasheman,"3149 Coney Island Avenue, New York, NY",Brooklyn,Zabiha
+Curry Heights,"151 Remsen Street, Brooklyn, NY",Brooklyn,Zabiha
+King Falafel,"7408 3rd Avenue, Brooklyn, NY",Brooklyn,Zabiha
+The Soul Spot,"302 Atlantic Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Yemen Café,"176 Atlantic Avenue, New York, NY",Brooklyn,Zabiha
+China Pagoda,"6918 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+SkyIce Sweet & Savory,"63 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+No Pork Halal Kitchen,"50 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Taci's Beyti,"1955 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+First Oasis,"9218 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+La Bella Pizza Express,"2178 86th Street, Brooklyn, NY",Brooklyn,Zabiha
+Istanbul Restaurant,"1715 Emmons Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Al-Noor Halal Deli,"672 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Abir Halal,"526 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Jamal's Halal Restaurant & Bakery,"308 Ralph Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Joloff,"1168 Bedford Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kennedy Fried Chicken,"2904 Stillwell Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Punjab Grocery,"1083 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Gourmet Sweets,"1107 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Güllüoğlu Café,"1985 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+KFC,"208 McGuinness Blvd., Brooklyn, NY",Brooklyn,Zabiha
+Shawarma Cart,"116 Wyckoff Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Halal Paradise Truck,"20 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Famous Turkish Gyro,"1915 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Gyro Café,"580 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Abdullah Sweets & Restaurant,"91 Church Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Chicken Express,"1013 Avenue H, Brooklyn, NY",Brooklyn,Zabiha
+Kennedy Fried Chicken,"5424 7th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Café Kashkar,"1141 Brighton Beach Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Crown Chicken & Biscuit,"96-15 Flatlands Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Gandhi Fine Indian Cuisine,"2032 Bedford Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Crown Fried Chicken,"1263 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Bedawi Café,"266 Prospect Park West, Brooklyn, NY",Brooklyn,Zabiha
+Halal Food Cart,"Avenue X & W 2nd St, Brooklyn, NY",Brooklyn,Zabiha
+Crown Fried Chicken,"1357 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Kennedy Fried Chicken,"1922 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Halal Cart,"1268 Bedford Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Crazy Fried Chicken,"55-30 Myrtle Avenue, Ridgewood, NY",Brooklyn,Zabiha
+Sakman Deli & Grill,"6821 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Damas Falafel House,"407 Myrtle Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kennedy Fried Chicken & Pizza,"1508 Saint Johns Place, Brooklyn, NY",Brooklyn,Zabiha
+Al-Safa,"8002 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Shandar Sweets & Restaurant,"679 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Mr. Falafel,"226 7th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Fava Mediterranean Grill,"6917 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Halal Cart Food,"Fresh Pond Road & Madison Street, Ridgewood, NY",Brooklyn,Zabiha
+Shama,"232 Neptune Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Bombay Heights,"1047 Bedford Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Nepalese Indian Restaurant,"907 Seneca Avenue, Ridgewood, NY",Brooklyn,Zabiha
+Agra Heights,"226 Wilson Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Hadramout,"172 Atlantic Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Masal Café & Lounge,"1901 Emmons Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Baluchi's,"310 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Taksim Square (II),"776 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Halal Shish Kebab & Gyro,"487 73rd Street, New York, NY",Brooklyn,Zabiha
+Kestane Kebab,"110 Nassau Avenue #B, Brooklyn, NY",Brooklyn,Zabiha
+Sido Gourmet,"849 46th Street, Brooklyn, NY",Brooklyn,Zabiha
+Yemen Alsaeed Café,"7130 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Yemen Cuisine,"145 Court Street, Brooklyn, NY",Brooklyn,Zabiha
+Halal Restaurant Corp.,"1174 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Aksaray Turkish Café,"1618 East 16th Street, Brooklyn, NY",Brooklyn,Zabiha
+Meena House Café,"476 Bay Ridge Avenue, New York, NY",Brooklyn,Zabiha
+Madina Restaurant & Sweets,"563 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+King of Tandoor,"7407 3rd Avenue, Brooklyn, NY",Brooklyn,Zabiha
+King of Tandoor,"600 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+La Goulette,"159 Grand Street, Brooklyn, NY",Brooklyn,Zabiha
+Curry Heaven,"513 Grand Street, Brooklyn, NY",Brooklyn,Zabiha
+Oasis of Greenpoint,"230 Calyer Street, Brooklyn, NY",Brooklyn,Zabiha
+God Bless Deli,"818 Manhattan Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Nostrand Express Deli,"2184 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Tripoli,"156 Atlantic Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Organic Halal Deli,"3602 Neptune Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Rocca Café Lounge,"2712 Emmons Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Bushwick Pita Palace,"243 Bushwick Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Emir Palace,"4210 18th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Uzbechka,"42 Avenue O, Bensonhurst, NY",Brooklyn,Zabiha
+Güllüoglu Baklava Café,"231 Brighton Beach Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Deniz,"662 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Buka,"946 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Café Rue Dix,"1451 Bedford Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Le Sajj,"8221 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Crown Fried Chicken,"1604 Newkirk Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kennedy Fried Chicken,"1258 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Bab Alhara,"376 86th Street, Brooklyn, NY",Brooklyn,Zabiha
+Cocoa Grinder,"8521 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Mumbai Place,"655 Vanderbilt Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Lazzat,"1969 Bath Avenue, Brooklyn, NY",Brooklyn,Zabiha
+All About Indian Food,"443 Bushwick Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Chubby's Chicken & Burgers,"7021 3rd Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Bombay Grill,"8716 3rd Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Mocha Mocha Coffee,"8602 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Keep It Halal,"1162 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Agra King,"1961 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Clubs Gyro,"1026 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Istanbul Kitchen,"535 86th Street, Brooklyn, NY",Brooklyn,Zabiha
+Crisp & Crunch,"1258 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Safari,"219 West 116th Street, New York, NY",Brooklyn,Zabiha
+Café Dushanbe,"1788 Sheepshead Bay Road, Brooklyn, NY",Brooklyn,Zabiha
+Azerbaijan House,"2612 East 14th Street, Brooklyn, NY",Brooklyn,Zabiha
+Crown Fried Chicken,"2813 Glenwood Road, Brooklyn, NY",Brooklyn,Zabiha
+Atomic Wings,"188 Parkside Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kennedy Fried Chicken,"1676 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Palace on Fulton,"1882 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Gusho Healthy Choice,"1747 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+US Fried Chicken & Pizza,"1231 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+BK JANI,"276 Knickerbocker Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Harway Pizza Gyro Falafel,"2863 Harway Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Sultan,"144 Atlantic Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Gyro Mania,"2151 Bath Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Anarkali,"1125 Church Avenue, Brooklyn, NY",Brooklyn,Zabiha
+NY Fried Chicken & Pizza,"2193 Bedford Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Sal's Restaurant,"810 Franklin Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Motin Spices & Sweets,"1215 Liberty Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kennedy Fried Chicken & Pizza,"2837 86th Street, Brooklyn, NY",Brooklyn,Zabiha
+Darna Falafel,"200 Court Street, Brooklyn, NY",Brooklyn,Zabiha
+Hadi,"683 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Mazeish Grill,"137 Rivington Street, New York, NY",Brooklyn,Zabiha
+Le Baobab Gouygi 2,"1235 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Krown Fried Chicken,"1843 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Cortelyou Bazaar,"211 Cortelyou Road, Brooklyn, NY",Brooklyn,Zabiha
+Bombay Xpress,"964 Dekalb Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Taj Masala,"256 Malcolm X Blvd., Brooklyn, NY",Brooklyn,Zabiha
+Pita Pan,"167 7th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Lahori Chilli,"1026 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+The Halal Spot,"474 Myrtle Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Dixie Chicken & Grill,"7504 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+KFC,"534 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+H&W Gourmet Deli,"3423 Church Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Efes Café & Bakery,"601 Brighton Beach Avenue, Brooklyn, NY",Brooklyn,Zabiha
+M&S Deli & Grocery,"1294 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Tutt Café,"47 Hicks Street, Brooklyn, NY",Brooklyn,Zabiha
+Texas Chicken & Burgers,"521 Ocean Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Crown Fried Chicken,"3402 Church Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Zatar Café Bistro,"1294 Myrtle Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Mandela Halal Buffet,"267 Troy Avenue, Brooklyn, NY",Brooklyn,Zabiha
+My House Burgers & Shakes,"367 Avenue X, Brooklyn, NY",Brooklyn,Zabiha
+Döner Kebab NYC,"34 Willoughby Street, Brooklyn, NY",Brooklyn,Zabiha
+Grill Hut,"887 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Old Baku,"115 Ditmas Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Habib 1 Deli,"631 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kusharista,"518 86th Street, Brooklyn, NY",Brooklyn,Zabiha
+Bab Marrakech,"7317 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Halal Xpress,"7524 18th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Burgerim,"518 86th Street, Brooklyn, NY",Brooklyn,Zabiha
+3 Guys Gyro,"129 Graham Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Istanblue Kings,"428 Kings Highway, Brooklyn, NY",Brooklyn,Zabiha
+Liman,"2710 Emmons Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Tava,"318 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Jasper Kane Café,"6 MetroTech Center, Brooklyn, NY",Brooklyn,Zabiha
+Cava Grill,"345 Adams Street, Brooklyn, NY",Brooklyn,Zabiha
+Cocoa Grinder,"313 Knickerbocker Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Seed,"242 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Hills Kitchen,"252 Knickerbocker Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Ata,"887 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Asaba Kitchen,"550 Bainbridge Street, Brooklyn, NY",Brooklyn,Zabiha
+India House,"586 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Texas Chicken & Burgers,"551 Nostrand Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Sakib,"349 Bedford Avenue, Brooklyn, NY",Brooklyn,Zabiha
 "Papa's Halal Crispy Chicken & Gyros
-NEW!","622 Chester Street, Brooklyn,   NY",Brooklyn,"622 Chester St, Brooklyn NY 11212-5278"
+NEW!","622 Chester Street, Brooklyn, NY",Brooklyn,Zabiha
 "Mezbani Sweets & Restaurant
-NEW!","473 McDonald Avenue, Brooklyn,   NY",Brooklyn,"473 McDonald Ave, Brooklyn NY 11218-3811"
-Punjab Restaurant,"691 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"691 Coney Island Ave, Brooklyn NY 11218-4306"
-Istanbul Fast Food,"2202 86th Street, Brooklyn,   NY",Brooklyn,"2202 86th St, Brooklyn NY 11214-4108"
-Papa's Halal Fried Chicken & Pizza,"1036 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1036 Coney Island Ave, Brooklyn NY 11230-1313"
-Bismillah Kabab & Curry,"1203 Liberty Avenue, Brooklyn,   NY",Brooklyn,"1203 Liberty Ave, Brooklyn NY 11208-3411"
-Blue Nile West Indian,"621 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"621 Flatbush Ave, Brooklyn NY 11225-4904"
-Affy's Premium Grill,"1909 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1909 Coney Island Ave, Brooklyn NY 11230-6562"
-Karam Restaurant,"8519 4th Avenue, Brooklyn,   NY",Brooklyn,"8519 4th Ave, Brooklyn NY 11209-4663"
-Man'ouche,"7701 5th Avenue, Brooklyn,   NY",Brooklyn,"7701 5th Ave, Brooklyn NY 11209-3311"
-Grill N Dine,"786 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"786 Coney Island Ave, Brooklyn NY 11218-5310"
-Hazar Turkish Kebab,"7224 5th Avenue, Brooklyn,   NY",Brooklyn,"7224 5th Ave, Brooklyn NY 11209-2616"
-Tanoreen,"7704 3rd Avenue, Brooklyn,   NY",Brooklyn,"7704 3rd Ave, Brooklyn NY 11209-3002"
-Pizza Chef,"1512 Fulton Street, Brooklyn,   NY",Brooklyn,"1512 Fulton St, Brooklyn NY 11216-2514"
-Bosna Express,"791 Fairview Avenue, Brooklyn,   NY",Brooklyn,
-Kabob Shack,"182 Havemeyer Street, Brooklyn,   NY",Brooklyn,"182 Havemeyer St, Brooklyn NY 11211-9113"
-Skyway Restaurant & Kabab House,"2032 Bath Avenue, Brooklyn,   NY",Brooklyn,"2032 Bath Ave, Brooklyn NY 11214-4863"
-Kebab Garden,"2943 Stillwell Avenue, Brooklyn,   NY",Brooklyn,"2943 Stillwell Ave, Brooklyn NY 11224-2729"
-Bukhari,"1095 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"1095 Coney Island Ave, Brooklyn NY 11230-2362"
-Bahar Masala,"984 Coney Island Avenue, Brooklyn,   NY",Brooklyn,"984 Coney Island Ave, Brooklyn NY 11230-1312"
-Memo Shishkebob,"1821 Kings Highway, Brooklyn,   NY",Brooklyn,"1821 Kings Hwy, Brooklyn NY 11229-1307"
-New Texas Fried Chicken,"803 Cypress Avenue, Brooklyn,   NY",Brooklyn,
-Nablus Sweets & Pastries,"6812 5th Avenue, Brooklyn,   NY",Brooklyn,"6812 5th Ave, Brooklyn NY 11220-6010"
-The Bahche,"191 7th Street, Brooklyn,   NY",Brooklyn,"191 7th St, Brooklyn NY 11215-3106"
-Lasiaf Taco & Lounge,"2368 Flatbush Avenue, Brooklyn,   NY",Brooklyn,"2368 Flatbush Ave, Brooklyn NY 11234-5037"
-Al-Sham Sweets & Pastries,"24-39 Steinway Street, Queens,   NY",Queens,"2439 Steinway St, Astoria NY 11103-3662"
-Duzan Mediterranean Grill,"24-11 Crescent Street South, Queens,   NY",Queens,"2411 Crescent St, Astoria NY 11102-2838"
-El Souk,"25-85 Steinway Street, Queens,   NY",Queens,"2585 Steinway St, Astoria NY 11103-3701"
-Teal,"22-79 Steinway Street, Queens,   NY",Queens,
-One Stop Pizza & Restaurant,"28-15 36th Avenue, Queens,   NY",Queens,"2815 36th Ave, Astoria NY 11106-3105"
-Alfarha Deli,"25-32 Steinway Street, Queens,   NY",Queens,"2532 Steinway St, Astoria NY 11103-3779"
-C-Town Supermarket,"169-13 Hillside Avenue, Queens,   NY",Queens,"16913 Hillside Ave, Jamaica NY 11432-4434"
-On The Nile Café,"33-09 36th Avenue, Queens,   NY",Queens,"3309 36th Ave, Astoria NY 11106-1941"
-Taci's,"102-07 Metropolitan Avenue, Queens,   NY",Queens,"10207 Metropolitan Ave, Forest Hills NY 11375-6751"
-El-Omda,"33-10 28th Avenue, Queens,   NY",Queens,"3310 28th Ave, Astoria NY 11103-4913"
-Xhale Hookah Lounge,"70-11 Austin Street, Queens,   NY",Queens,"7011 Austin St, Forest Hills NY 11375-1013"
-Shawarmania,"22-49 31st Street, Queens,   NY",Queens,
-Shah's Halal Food,"Homelawn Street & Hillside Avenue, Queens,   NY",Queens,
-54th Street Halal Express Deli,"3-10 Beach 54th Street, Queens,   NY",Queens,"310 Beach 54th St, Arverne NY 11692-1782"
-Uma's,"92-07 Rockaway Beach Blvd., Queens,   NY",Queens,"9207 Rockaway Beach Blvd, Rockaway Beach NY 11693-1526"
-Turkish Grill,"42-03 Queens Blvd., Queens,   NY",Queens,"4203 Queens Blvd, Sunnyside NY 11104-2805"
-Kennedy Deli,"157-05 Rockaway Blvd., Queens,   NY",Queens,"15705 Rockaway Blvd, Jamaica NY 11434-4841"
-Khyber Kabab,"112-11 Jamaica Avenue, Queens,   NY",Queens,"11211 Jamaica Ave, Richmond Hill NY 11418-2452"
-Singas Famous Pizza,"2500 Central Park Avenue, Queens,   NY",Queens,
-Texas Chicken & Burgers,"255-21 Hillside Avenue, Queens,   NY",Queens,
-Pamir Kabab House & Grill,"70-74 Kissena Blvd., Queens,   NY",Queens,"7074 Kissena Blvd, Flushing NY 11367-2245"
-Dhanshiri,"169-28 Hillside Avenue, Queens,   NY",Queens,"16928 Hillside Ave, Jamaica NY 11432-4435"
-Madina Halal,"64-02 35th Avenue, Queens,   NY",Queens,"6402 35th Ave, Woodside NY 11377-2332"
-Truva Café & Grill,"22-41 31st Street, Queens,   NY",Queens,
-Samis Kabab House,"35-57 Crescent Street, Queens,   NY",Queens,"3557 Crescent St, Astoria NY 11106-3919"
-Kebab Empire,"136-20 Roosevelt Avenue, Queens,   NY",Queens,"13620 Roosevelt Ave, Flushing NY 11354-5661"
-Platinum Hookah Lounge & Café,"140-14 Rockaway Blvd., Queens,   NY",Queens,"14014 Rockaway Blvd, Jamaica NY 11436-1416"
-Bakhter Halal Kabab,"68-16 Fresh Meadow Lane, Queens,   NY",Queens,"6816 Fresh Meadow Ln, Fresh Meadows NY 11365-3421"
-Addy's BBQ,"30-94 Steinway Street, Queens,   NY",Queens,"3094 Steinway St, Astoria NY 11103-3847"
-Halalbee's,"182-26 Hillside Avenue, Queens,   NY",Queens,"18226 Hillside Ave, Jamaica NY 11432-4781"
-Aria Kabab,"72-55 Kissena Blvd, Queens,   NY",Queens,"7255 Kissena Blvd, Flushing NY 11367-2703"
-KFC,"3042 Steinway Street, Queens,   NY",Queens,"3042 Steinway St, Astoria NY 11103-3802"
-Munch,"70-19 Austin Street, Queens,   NY",Queens,"7019 Austin St, Forest Hills NY 11375-4883"
-Darbar's Chicken & Ribs,"126-9 Liberty Avenue, Queens,   NY",Queens,
-Kennedy Fried Chicken,"170-02 Hillside Avenue, Queens,   NY",Queens,"17002 Hillside Ave, Jamaica NY 11432-4547"
-Fatima's Halal Kitchen,"25-25 Broadway, Queens,   NY",Queens,"2525 Broadway, Astoria NY 11106-3413"
-Carifesta,"12615 Liberty Avenue, Queens,   NY",Queens,"12615 Liberty Ave, South Richmond Hill NY 11419-2219"
-Tokyo Hibachi,"184-16 Horace Harding Expressway, Queens,   NY",Queens,"18416 Horace Harding Expy, Fresh Meadows NY 11365-2124"
-Nur Thai,"63-32 Woodhaven Blvd., Queens,   NY",Queens,"6332 Woodhaven Blvd, Rego Park NY 11374-2830"
-Halal Kitchen,"187-14 Hillside Avenue, Queens,   NY",Queens,"18714 Hillside Ave, Jamaica NY 11432-3216"
-Crown Fried Chicken,"182-26 Hillside Avenue, Queens,   NY",Queens,"18226 Hillside Ave, Jamaica NY 11432-4781"
-Balkh Shish Kabab House,"23-10 31st Street, Queens,   NY",Queens,
-Upi Jaya,"76-04 Woodside Avenue, Queens,   NY",Queens,"7604 Woodside Ave, Elmhurst NY 11373-1939"
-Sarajevo Fast Foods,"3718 34th Avenue, Queens,   NY",Queens,"3718 34th Ave, Long Island City NY 11101-1102"
-Firdos Grill & Café,"25-21 Steinway Street, Queens,   NY",Queens,"2521 Steinway St, Astoria NY 11103-3783"
-Halal Sandwich Shop,"25-61 Steinway Street, Queens,   NY",Queens,"2561 Steinway St, Astoria NY 11103-3793"
-Marhabah Halal,"128-16 Liberty Avenue, Queens,   NY",Queens,"12816 Liberty Ave, South Richmond Hill NY 11419-2218"
-Halal Kitchen (II),"71-12 Grand Avenue, Queens,   NY",Queens,"7112 Grand Ave, Maspeth NY 11378-1871"
-Bakhtar Afghan Halal Kababs,"68-16 Fresh Meadow Lane, Queens,   NY",Queens,"6816 Fresh Meadow Ln, Fresh Meadows NY 11365-3421"
-Halal Dynasty,"172-33 Hillside Avenue, Queens,   NY",Queens,"17233 Hillside Ave, Jamaica NY 11432-4643"
-Istanbul Restaurant,"95-36 Queens Blvd., Queens,   NY",Queens,"9536 Queens Blvd, Rego Park NY 11374-1136"
-Starlight Grill,"80-02 Astoria Blvd., Queens,   NY",Queens,"8002 Astoria Blvd, East Elmhurst NY 11370-1641"
-Choopan Kabab,"4327 Main Street, Queens,   NY",Queens,"4327 Main St, Flushing NY 11355-4743"
-Kabab Diner,"133-23 Rockaway Blvd., Queens,   NY",Queens,"13323 Rockaway Blvd, South Ozone Park NY 11420-3018"
-Little Morocco,"24-39 Steinway Street, Queens,   NY",Queens,"2439 Steinway St, Astoria NY 11103-3662"
-Mangal Turkish Restaurant,"46-20 Queens Blvd., Queens,   NY",Queens,"4620 Queens Blvd, Sunnyside NY 11104-1712"
-Tangra Asian Fusion (II),"39-23 Queens Blvd., Queens,   NY",Queens,"3923 Queens Blvd, Sunnyside NY 11104-3305"
-Kabul Kabab House,"42-51 Main Street, Queens,   NY",Queens,"4251 Main St, Flushing NY 11355-4721"
-Al-Mehran,"87-46 Parsons Blvd., Queens,   NY",Queens,
-S&A West Indian Restaurant,"103-06 Liberty Avenue, Queens,   NY",Queens,"10306 Liberty Ave, Ozone Park NY 11417-1729"
-Kabab Café,"25-12 Steinway Street, Queens,   NY",Queens,"2512 Steinway St, Astoria NY 11103-3781"
-Shah's Halal Food,"121st Street & Liberty Avenue, Queens,   NY",Queens,
-Afghan Kebab House #5,"25-89 Steinway Street, Queens,   NY",Queens,"2589 Steinway St, Astoria NY 11103-3701"
-Indo Foods Halal Cart,"120th Street and Liberty Avenue, Queens,   Queens,   NY",Queens,
-Halal Kitchen,"42-14 Greenpoint Avenue, Queens,   NY",Queens,"4214 Greenpoint Ave, Sunnyside NY 11104-3004"
-Ariana Kebab Palace,"169-10 Hillside Avenue, Queens,   NY",Queens,"16910 Hillside Ave, Jamaica NY 11432-4435"
-Palace Fried Chicken,"21-02 36th Avenue, Queens,   NY",Queens,"2102 36th Ave, Astoria NY 11106-4422"
-Crown Grill Fried Chicken & Pizza,"71-12 Kissena Blvd., Queens,   NY",Queens,"7112 Kissena Blvd, Flushing NY 11367-2720"
-Abdul Halal Food Cart,"Liberty Avenue & Lefferts Blvd, Queens,   NY",Queens,
-Mombar,"25-22 Steinway Street, Queens,   NY",Queens,"2522 Steinway St, Astoria NY 11103-3780"
-Abou Bakery,"210-23 Jamaica Avenue, Queens,   NY",Queens,"21023 Jamaica Ave, Queens Village NY 11428-1585"
-Curry Point Halal Grill,"41-02 Greenpoint Avenue, Queens,   NY",Queens,"4102 Greenpoint Ave, Sunnyside NY 11104-3008"
-Palace Chicken,"104-02 Jamaica Avenue, Queens,   NY",Queens,"10402 Jamaica Ave, Richmond Hill NY 11418-2011"
-Halal Gyro & Chicken,"64th Avenue & 108th Street, Queens,   NY",Queens,
-Kennedy Fried Chicken,"13604 Northern Blvd, Queens,   NY",Queens,"13604 Northern Blvd, Flushing NY 11354-6557"
-Rose Bengal,"77-01 101st Avenue, Queens,   NY",Queens,"7701 101st Ave, Ozone Park NY 11416-1915"
-Nanking,"134-07 Rockaway Blvd., Queens,   NY",Queens,"13407 Rockaway Blvd, South Ozone Park NY 11420-3020"
-Aden Restaurant,"24-42 Steinway Street, Queens,   NY",Queens,"2442 Steinway St, Astoria NY 11103-3612"
-Hot N Sour,"396 64th Street, Queens,   NY",Queens,
-Our Village Roti Shop,"211-61 Jamaica Avenue, Queens,   NY",Queens,"21161 Jamaica Ave, Queens Village NY 11428-1621"
-Silk Hookah Lounge & Grill,"192-08 Northern Blvd., Queens,   NY",Queens,"19208 Northern Blvd, Flushing NY 11358-2955"
-Anando,"29-14 36th Avenue, Queens,   NY",Queens,"2914 36th Ave, Astoria NY 11106-3108"
-Jerusalem Pita House,"25-15 30th Avenue, Queens,   NY",Queens,"2515 30th Ave, Astoria NY 11102-2447"
-Just Combo,"21-01 21st Avenue, Queens,   NY",Queens,"21 E 21st Rd # 01, Broad Channel NY 11693-1202"
-Namaste,"31-15 30th Avenue, Queens,   NY",Queens,"3115 30th Ave, Astoria NY 11102-1566"
-Saffron Indian Cuisine,"44-04 Broadway, Queens,   NY",Queens,"4404 Broadway, Astoria NY 11103-1919"
-Chang Pai,"166-12 Hillside Avenue, Queens,   NY",Queens,"16612 Hillside Ave, Jamaica NY 11432-4251"
-Taste of Bengal,"30-27 31st Street, Queens,   NY",Queens,"3027 31st St, Astoria NY 11102-1872"
-Djerdan Burek,"33-15 Greenpoint Avenue, Queens,   NY",Queens,"3315 Greenpoint Ave, Long Island City NY 11101-2011"
-Dhaka Garden,"72-23 37th Avenue, Queens,   NY",Queens,"7223 37th Ave, Jackson Heights NY 11372-6215"
-Asian Halal Food Restaurant,"39-44 21st Street, Queens,   NY",Queens,"3944 21st St, Long Island City NY 11101-6122"
-Halal Tikka,"87-17 Lefferts Blvd., Queens,   NY",Queens,"8717 Lefferts Blvd, Richmond Hill NY 11418-2514"
-Tutu's Halal Kitchen,"91-31 Queens Blvd., Queens,   NY",Queens,"9131 Queens Blvd, Elmhurst NY 11373-5555"
-SABA Restaurant & Grill,"25-75 Steinway Street, Queens,   NY",Queens,"2575 Steinway St, Astoria NY 11103-3701"
-Aladdin Sweets & Restaurant,"29-06 36th Avenue, Queens,   NY",Queens,"2906 36th Ave, Astoria NY 11106-3108"
-Richi Rich Palace,"110-19 Atlantic Avenue, Queens,   NY",Queens,"11019 Atlantic Ave, Richmond Hill NY 11418-3044"
-Patoug,"220-06 Horace Harding Expressway South, Queens,   NY",Queens,"22006 Horace Harding Expy, Oakland Gardens NY 11364-2227"
-Shah's Halal Food Cart,"Queens Blvd & Union Turnpike, Queens,   NY",Queens,
-Swaad,"29-14 36th Avenue, Queens,   NY",Queens,"2914 36th Ave, Astoria NY 11106-3108"
-King Kabab,"130-09 Hillside Avenue, Queens,   NY",Queens,
-Green Apple Delight,"29-12 Crescent Street, Queens,   NY",Queens,"2912 Crescent St, Astoria NY 11102-3140"
-Naz Bakery & Roti Shop,"204-17 Jamaica Avenue, Queens,   NY",Queens,"20417 Jamaica Ave, Hollis NY 11423-3037"
-Crown Fried Chicken,"204-20 Hillside Avenue, Queens,   NY",Queens,"20420 Hillside Ave, Hollis NY 11423-2224"
-Halal Cart,"Hollis Court Blvd & Hillside Avenue, Queens,   NY",Queens,
-Halal Cart,"Hillside Avenue & Francis Lewis Blvd, Queens,   NY",Queens,
-Arya Kabob House,"33-35 Francis Lewis Blvd., Queens,   NY",Queens,"3335 Francis Lewis Blvd, Flushing NY 11358-1928"
-Tasty Fried Chicken Pizza & Grill,"134-19 Liberty Avenue, Queens,   NY",Queens,"13419 Liberty Ave, South Richmond Hill NY 11419-2354"
-Farid Grill,"25-15 Steinway Street, Queens,   NY",Queens,"2515 Steinway St, Astoria NY 11103-3382"
-Ignited Restaurant & Lounge,"30-27 Steinway Street, Queens,   NY",Queens,"3027 Steinway St, Astoria NY 11103-4972"
-Desi Food Market,"109-19 Liberty Avenue, Queens,   NY",Queens,"10919 Liberty Ave, South Richmond Hill NY 11419-1703"
-Tayaba Gyro,"150-5 14th Road, Queens,   NY",Queens,
-Jackfruit Garden,"83-27 Parsons Blvd, Queens,   NY",Queens,
-New Bakhtar,"110-23 Jamaica Avenue, Queens,   NY",Queens,"11023 Jamaica Ave, Richmond Hill NY 11418-2321"
-Uncle's Fried Chicken,"163-04 Hillside Avenue, Queens,   NY",Queens,"16304 Hillside Ave, Jamaica NY 11432-4077"
-Joe's Pasta & Pizza,"95-08 Jamaica Avenue, Queens,   NY",Queens,"9508 Jamaica Ave, Woodhaven NY 11421-2292"
-Kurry Qulture,"36-05 30th Avenue, Queens,   NY",Queens,"3605 30th Ave, Astoria NY 11103-4367"
-Rockaway Roti,"122-21 Rockaway Blvd., Queens,   NY",Queens,"12221 Rockaway Blvd, South Ozone Park NY 11420-2591"
-Lhasa Fast Food,"37-50 74th Street, Queens,   NY",Queens,"3750 74th St, Jackson Heights NY 11372-6368"
-Zahid's Halal Food,"Braddock Avenue, Queens,   NY",Queens,
-Tawa Food,"37-38 72nd Street, Queens,   NY",Queens,"3738 72nd St, Jackson Heights NY 11372-6143"
-Yi Lan Halal,"42-79 Main Street, Queens,   NY",Queens,"4279 Main St, Flushing NY 11355-4721"
-Yaar,"22-55 31st Street, Queens,   NY",Queens,
-Asian Taste 86,"86-10 Whitney Avenue, Queens,   NY",Queens,"8610 Whitney Ave, Elmhurst NY 11373-3658"
-Punda,"39-35 47th Avenue, Queens,   NY",Queens,"3935 47th Ave, Sunnyside NY 11104-3503"
-Mirch,"172-27 Hillside Avenue, Queens,   NY",Queens,"17227 Hillside Ave, Jamaica NY 11432-4643"
-Namaste Tashi Delek,"37-66 74th Street, Queens,   NY",Queens,"3766 74th St, Jackson Heights NY 11372-6343"
-Krispy Krunchy Chicken,"179-33 Hillside Avenue, Queens,   NY",Queens,"17933 Hillside Ave, Jamaica NY 11432-4631"
-King of Falafel & Shawarma,"3015 Broadway, Queens,   NY",Queens,"3015 Broadway, Astoria NY 11106-2897"
-Brother's Pizzeria,"30-50 14th Street, Queens,   NY",Queens,"3050 14th St, Astoria NY 11102-3990"
-Tikka Grill,"2402 82nd Street, Queens,   NY",Queens,"2402 82nd St, East Elmhurst NY 11370-1627"
-Punjabi Kabab & Gyro,"108-3 101st Avenue, Queens,   NY",Queens,
-Gaw Gai,"23-06 Jackson Avenue, Queens,   NY",Queens,"2306 Jackson Ave, Long Island City NY 11101-4358"
-Malingo,"43-16 Queens Blvd., Queens,   NY",Queens,"4316 Queens Blvd, Sunnyside NY 11104-4610"
-Dumpling,"147-18 45th Avenue, Queens,   NY",Queens,"14718 45th Ave, Flushing NY 11355-1708"
-Heat Caribbean Kitchen & Lounge,"100-05 Atlantic Avenue, Queens,   NY",Queens,"10005 Atlantic Ave, Richmond Hill NY 11418-2932"
-Erqal,"136-20 Roosevelt Avenue, Queens,   NY",Queens,"13620 Roosevelt Ave, Flushing NY 11354-5661"
-Apnar Sweets & Bakery,"167-19 Hillside Avenue, Queens,   NY",Queens,"16719 Hillside Ave, Jamaica NY 11432-4289"
-Mis Kebab,"142 Main Street, Queens,   NY",Queens,
-Kabab & Gyro Grill,"131-07 Liberty Avenue, Queens,   NY",Queens,"13107 Liberty Ave, South Richmond Hill NY 11419-3123"
-Hamza & Medina Halal Food,"254-05 Hillside Avenue, Queens,   NY",Queens,
-Trinciti Roti Shop,"111-05 Lefferts Blvd., Queens,   NY",Queens,"11105 Lefferts Blvd, South Ozone Park NY 11420-1344"
-Mejbaan,"74-24 37th Avenue, Queens,   NY",Queens,"7424 37th Ave, Jackson Heights NY 11372-6340"
-Prince Kabab,"37-54 74th Street, Queens,   NY",Queens,"3754 74th St, Jackson Heights NY 11372-6338"
-Abdullah Sweets & Restaurant,"73-06 37th Avenue, Queens,   NY",Queens,"7306 37th Ave, Jackson Heights NY 11372-6327"
-Meghna Grocery & Halal Meat,"74-18 37th Avenue, Queens,   NY",Queens,"7418 37th Ave, Jackson Heights NY 11372-6340"
-Mannan Halal Meat,"37-08 73rd Street, Queens,   NY",Queens,"3708 73rd St, Jackson Heights NY 11372-6246"
-Merit Kabab,"37-67 74th Street, Queens,   NY",Queens,"3767 74th St, Jackson Heights NY 11372-6344"
-Zaytoun,"40-13 82nd Street, Queens,   NY",Queens,"4013 82nd St, Elmhurst NY 11373-1320"
-PappaRich,"39-16 Prince Street, Queens,   Flushing,   NY",Queens,
-Junoon Café & Grill,"179-22 Union Turnpike, Queens,   NY",Queens,"17922 Union Tpke, Fresh Meadows NY 11366-1636"
-Shahi Deggi Grill,"43-39 Main Street, Queens,   NY",Queens,"4339 Main St, Flushing NY 11355-4743"
-Souk El Shater,"43-03 Queens Blvd., Queens,   NY",Queens,"4303 Queens Blvd, Sunnyside NY 11104-4642"
-Ukus,"42-08 30th Avenue, Queens,   NY",Queens,"4208 30th Ave, Astoria NY 11103-2911"
-Al Nour Foods,"41-08 30th Avenue, Queens,   NY",Queens,"4108 30th Ave, Astoria NY 11103-2909"
-Atomic Wings,"153-23A Hillside Avenue, Queens,   NY",Queens,"15323 A Hillside Ave, Jamaica NY 11432-3334"
-Kennedy Fried Chicken,"167-19 Hillside Avenue, Queens,   NY",Queens,"16719 Hillside Ave, Jamaica NY 11432-4289"
-New Texas Chicken & Pizza,"64-01 Broadway, Queens,   NY",Queens,"6401 Broadway, Woodside NY 11377-2336"
-Il Miglio Pizza,"11-03 36th Avenue, Queens,   NY",Queens,"1103 36th Ave, Astoria NY 11106-5023"
-LIC Grill,"39-44 21st Street, Queens,   NY",Queens,"3944 21st St, Long Island City NY 11101-6122"
-Hot Peppers,"78-33 Springfield Blvd., Queens,   NY",Queens,"7833 Springfield Blvd, Oakland Gardens NY 11364-3628"
-CimCim,"33-08 Ditmars Blvd, Queens,   NY",Queens,
-AwesomeSauce,"40-06 Astoria Blvd. South, Queens,   NY",Queens,"4006 Astoria Blvd, Astoria NY 11103-3610"
-Cevabdzinica Sarajevo,"37-18 34th Avenue, Queens,   NY",Queens,"3718 34th Ave, Long Island City NY 11101-1102"
-Halal Munchies,"69-21 164th Street, Queens,   NY",Queens,"6921 164th St, Fresh Meadows NY 11365-3199"
-Halal Boyz,"183-20 Horace Harding Expressway, Queens,   NY",Queens,"18320 Horace Harding Expy, Fresh Meadows NY 11365-2123"
-Bakhtar Halal Kabab,"67-29 Main Street, Queens,   NY",Queens,"6729 Main St, Flushing NY 11367-1340"
-Agra Palace Restaurant & Party Hall,"116-33 Queens Blvd., Queens,   NY",Queens,"11633 Queens Blvd, Forest Hills NY 11375-6533"
-Adana Türkish Grill,"178-25 Hillside Avenue, Queens,   NY",Queens,"17825 Hillside Ave, Jamaica NY 11432-4624"
-Burgerim,"162-16 Union Turnpike, Queens,   NY",Queens,"16216 Union Tpke, Fresh Meadows NY 11366-1958"
-Chicago's Pizza With-A-Twist,"117-02 Atlantic Avenue, Queens,   NY",Queens,"11702 Atlantic Ave, South Richmond Hill NY 11419-1219"
-Farine Baking Company,"74-24 37th Avenue, Queens,   NY",Queens,"7424 37th Ave, Jackson Heights NY 11372-6340"
-Khan Halal Food,"118-18 Jamaica Avenue, Queens,   NY",Queens,"11818 Jamaica Ave, Richmond Hill NY 11418-2509"
-El-Rawsheh,"25-48 Steinway Street, Queens,   NY",Queens,"2548 Steinway St, Astoria NY 11103-3702"
-Tangra Masala,"8709 Grand Avenue, Queens,   NY",Queens,"8709 Grand Ave, Elmhurst NY 11373-4416"
-Kababish,"70-64 Broadway, Queens,   NY",Queens,"7064 Broadway, Jackson Heights NY 11372-6134"
-Sagar Restaurant,"168-25 Hillside Avenue, Queens,   NY",Queens,"16825 Hillside Ave, Jamaica NY 11432-4340"
-Sunshine Restaurant,"6915 Northern Blvd., Queens,   NY",Queens,"6915 Northern Blvd, Woodside NY 11377-2246"
-Al-Naimat Sweets & Restaurant,"37-03 74th Street, Queens,   NY",Queens,"3703 74th St, Jackson Heights NY 11372-6337"
-34th Avenue Halal Cart,"34th Avenue & Steinway Street, Queens,   NY",Queens,
-BBQ Village Palace,"181-12 Hillside Avenue, Queens,   NY",Queens,"18112 Hillside Ave, Jamaica NY 11432-4852"
-Amina Thai,"169-22 Hillside Avenue, Queens,   NY",Queens,"16922 Hillside Ave, Jamaica NY 11432-4435"
-Talk of the Town,"37-21 72nd Street, Queens,   NY",Queens,"3721 72nd St, Jackson Heights NY 11372-6159"
-Queens College Halal Cart,"Kissena Blvd. & Horace Harding Expressway, Queens,   NY",Queens,
-Sagar Chinese,"87-47 Homelawn Street, Queens,   NY",Queens,"8747 Homelawn St, Jamaica NY 11432-2748"
-Bakhtar Afghan Halal Kababs,"67-29 Main Street, Queens,   NY",Queens,"6729 Main St, Flushing NY 11367-1340"
-Sammy's Halal,"73rd Street & Broadway, Queens,   NY",Queens,
-Chick Inn,"233-16 Hillside Avenue, Queens,   NY",Queens,
-Tandoori Hut,"119-04 94th Avenue, Queens,   NY",Queens,"11904 94th Ave, South Richmond Hill NY 11419-1332"
-Dhaka Sweets & Restaurant,"168-32 Hillside Avenue, Queens,   NY",Queens,"16832 Hillside Ave, Jamaica NY 11432-4441"
-Madina Halal Food Cart,"39-99 Main Street, Queens,   NY",Queens,
-Original American Chicken,"7807 37th Avenue, Queens,   NY",Queens,"7807 37th Ave, Jackson Heights NY 11372-6641"
-Kabab King Diner,"72-23 37th Avenue, Queens,   NY",Queens,"7223 37th Ave, Jackson Heights NY 11372-6215"
-Ali Baba,"183-08 Horace Harding Expressway, Queens,   NY",Queens,"18308 Horace Harding Expy, Fresh Meadows NY 11365-2123"
-Tawa Tandoor,"35-56 74th Street, Queens,   NY",Queens,
-Halal Cart,"North Conduit & 130th Street, Queens,   NY",Queens,
-Ghoroa,"168-41 Hillside Avenue, Queens,   NY",Queens,"16841 Hillside Ave, Jamaica NY 11432-4440"
-Halal Food/BBQ Chicken,"132-28 41st Road, Queens,   NY",Queens,
-Cedars Halal Meat,"41-08 30th Avenue, Queens,   NY",Queens,"4108 30th Ave, Astoria NY 11103-2909"
-Super China Pagoda,"47-20 30th Avenue, Queens,   NY",Queens,"4720 30th Ave, Astoria NY 11103-1266"
-Jackson Heights Food Court,"73-07 37th Road, Queens,   NY",Queens,"7307 37th Rd, Jackson Heights NY 11372-6363"
-Taste of Lahore,"73-10 Northern Blvd., Queens,   NY",Queens,"7310 Northern Blvd, Jackson Heights NY 11372-1145"
-Mia Halal Food,"1057 Cross Bay Blvd., Queens,   NY",Queens,
-JFK Airport Travel Plaza,"150th Avenue & 147th Street, Queens,   NY",Queens,
-Afghan Kebab House #4,"74-16 37th Avenue, Queens,   NY",Queens,"7416 37th Ave, Jackson Heights NY 11372-6340"
-New Sunshine Grill & Restaurant,"255-09 Hillside Avenue, Queens,   NY",Queens,
-Bownie,"143-05 45th Avenue, Queens,   NY",Queens,"14305 45th Ave, Flushing NY 11355-2230"
-Roti Boti,"27-09 21st Street, Queens,   NY",Queens,"2709 21st St, Astoria NY 11102-3636"
-Taipan Fusion & Hookah Lounge,"184-22 Horace Harding Expressway South, Queens,   NY",Queens,"18422 Horace Harding Expy, Fresh Meadows NY 11365-2124"
-Maurya,"63-108 Woodhaven Blvd, Queens,   NY",Queens,"63108 Woodhaven Blvd, Rego Park NY 11374-4841"
-Eat & Go,"JFK Airport, Queens,   Queens,   NY",Queens,
-The Halal Guys,"27-10 Thomson Avenue, Queens,   NY",Queens,
-Layali Beirut,"25-60 Steinway Street, Queens,   NY",Queens,"2560 Steinway St, Astoria NY 11103-3675"
-Angelina's Panini Bar,"LaGuardia Road, Queens,   Flushing,   NY",Queens,
-Dera,"72-09 Broadway, Queens,   NY",Queens,"7209 Broadway, Jackson Heights NY 11372-6330"
-Al-Aqsa,"2109 Starling Avenue, The Bronx,   NY",The Bronx,
-Ziyadeh Halal Meat Market & Grocery,"1903 White Plains Road, The Bronx,   NY",The Bronx,
-Norwood Food Co-op,"302 East 206th Street, The Bronx,   NY",The Bronx,
-US Fried Chicken,"860 Gerard Avenue, The Bronx,   NY",The Bronx,
-Musa Halal Chinese,"2023 Westchester Avenue, The Bronx,   NY",The Bronx,
-AKS Halal Deli & Grill,"319 East 204th Street, The Bronx,   NY",The Bronx,
-Halal Hot Fried Chicken,"1401 White Plains Road, The Bronx,   NY",The Bronx,
-Arth AlJanatain,"700 Rhinelander Avenue, The Bronx,   NY",The Bronx,
-Oasis,"1907 White Plains Road, The Bronx,   NY",The Bronx,
-Curry & Kabob,"3111 Bainbridge Avenue, The Bronx,   NY",The Bronx,
-Halal Coffee Shop,"225 Mcclellan Street, The Bronx,   NY",The Bronx,
-Fordham Fried Seafood & Chicken,"2468 Grand Concourse, The Bronx,   NY",The Bronx,"2468 Grand Concourse, Bronx NY 10458-5201"
-Kebab Curry Halal Food,"2165 Starling Avenue, The Bronx,   NY",The Bronx,
-Mehman Sweets,"1445 Olmstead Avenue, The Bronx,   NY",The Bronx,
-Tajdar,"2475 Boston Road, The Bronx,   NY",The Bronx,
-Tastebud Foods,"791 Westchester Avenue, The Bronx,   NY",The Bronx,
-Texas Chicken & Burgers,"21 West Burnside Avenue, The Bronx,   NY",The Bronx,
-Texas Chicken & Burgers,"2168 Westchester Avenue, The Bronx,   NY",The Bronx,
-Texas Chicken & Burgers,"32 East Kingsbridge Road, The Bronx,   NY",The Bronx,
-Texas Chicken & Burgers,"3275 Westchester Avenue, The Bronx,   NY",The Bronx,
-Texas Chicken & Burgers,"509 Willis Avenue, The Bronx,   NY",The Bronx,
-Texas Chicken & Burgers,"78 Westchester Avenue, The Bronx,   NY",The Bronx,
-Halaloo Food,"605 East 187th Street, The Bronx,   Bronx,   NY",The Bronx,
-Chandni Chowk,"2570 Bronxwood Avenue, The Bronx,   NY",The Bronx,
-Kennedy Fried Chicken & Pizza,"952 Longwood Avenue, The Bronx,   NY",The Bronx,
-Caffe Lanka,"2166 Westchester Avenue, The Bronx,   NY",The Bronx,
-Kennedy Fried Chicken & Pizza,"2041 Grand Concourse, The Bronx,   NY",The Bronx,"2041 Grand Concourse, Bronx NY 10453-4317"
-Teuta Qebaptore,"601 East 186th Street, The Bronx,   NY",The Bronx,
-Sofra,"2011A Williamsbridge Road, The Bronx,   NY",The Bronx,
-Papaye,"2300 Grand Concourse, The Bronx,   NY",The Bronx,"2300 Grand Concourse, Bronx NY 10458-6912"
-Bate Nabaya,"860 Melrose Avenue, The Bronx,   NY",The Bronx,
-Fouta,"1762 Westchester Avenue, The Bronx,   Bronx,   NY",The Bronx,
-Grin African,"454 East 168th Street, The Bronx,   NY",The Bronx,
-Çka Ka Qëllu,"2321 Hughes Avenue, The Bronx,   NY",The Bronx,
-Bengal Halal Chinese & Tandoori House,"1209 White Plains Road, The Bronx,   NY",The Bronx,
-Aman,"3594 Jerome Avenue, The Bronx,   NY",The Bronx,
-Falafel King,"1230 Jerome Avenue, The Bronx,   NY",The Bronx,
-Premium Sweets,"2104 Starling Avenue, The Bronx,   NY",The Bronx,
-King Palace Chicken & Gyros,"5605 Broadway, The Bronx,   NY",The Bronx,
-Hungry Bird,"980 Morris Avenue, The Bronx,   NY",The Bronx,
-Kennedy Fried Chicken,"332 East Gun Hill Road, The Bronx,   NY",The Bronx,
-Moja,"307 East 204th Street, The Bronx,   NY",The Bronx,
-Shaad,"2146 Starling Avenue, The Bronx,   NY",The Bronx,
-Jenny's Roti Shop,"1262 Castle Hill Avenue, The Bronx,   NY",The Bronx,
-Naan Shack,"1445 Olmstead Avenue, The Bronx,   NY",The Bronx,
-Tito Boss Halal Truck,"100 East Gun Hill Road, The Bronx,   NY",The Bronx,
-Chicken vs. Lamb Big Taste,"1825 Eastchester Road, The Bronx,   NY",The Bronx,
-Packsun Halal Chicken,"2160 Westchester Avenue, The Bronx,   NY",The Bronx,
-Mr. Pizza,"1448 East Avenue, The Bronx,   NY",The Bronx,
-The Grill House,"1991 Bronxdale Avenue, The Bronx,   NY",The Bronx,
-Carifesta,"4251 White Plains Road, The Bronx,   NY",The Bronx,
-Alba International Food,"1880 Hylan Blvd., Staten Island,   NY",Staten Island,"1880 Hylan Blvd, Staten Island NY 10305-2113"
-Shop & Eat,"1686 Forest Avenue, Staten Island,   NY",Staten Island,"1686 Forest Ave, Staten Island NY 10302-2233"
-Seaside Turkish,"124 Ocean Avenue, Staten Island,   NY",Staten Island,"124 Ocean Ave, Staten Island NY 10305-4725"
-Famous Falafel,"14 Giffords Lane, Staten Island,   NY",Staten Island,"14 Giffords Ln, Staten Island NY 10308-2412"
-Papa's Halal Chicken,"1787 Forest Avenue, Staten Island,   NY",Staten Island,"1787 Forest Ave, Staten Island NY 10303-2107"
-Sahara Xpress,"1203 Hylan Blvd., Staten Island,   NY",Staten Island,"1203 Hylan Blvd, Staten Island NY 10305-1936"
-Sumac,"1198 Forest Avenue #B, Staten Island,   NY",Staten Island,"1198 Forest Ave # B, Staten Island NY 10310-2417"
-Indian Clove,"2071 Clove Road, Staten Island,   NY",Staten Island,"2071 Clove Rd, Staten Island NY 10304-1612"
-Papa Chuck Halal Chicken,"229 Broad Street, Staten Island,   NY",Staten Island,"229 Broad St, Staten Island NY 10304-2057"
-My Pizza,"755 Targee Street, Staten Island,   NY",Staten Island,"755 Targee St, Staten Island NY 10304-3320"
-Halal Crown Chicken,"2047 Richmond Terrace, Staten Island,   NY",Staten Island,"2047 Richmond Ter, Staten Island NY 10302-1201"
-Mandi House,"58 Richmond Terrace, Staten Island,   NY",Staten Island,"58 Richmond Ter, Staten Island NY 10301-1904"
-Crown Fried Chicken & Burgers,"2047 Richmond Terrace, Staten Island,   NY",Staten Island,"2047 Richmond Ter, Staten Island NY 10302-1201"
-Crown Peri Peri Chicken & Grill,"1970 Victory Blvd., Staten Island,   NY",Staten Island,"1970 Victory Blvd, Staten Island NY 10314-3522"
-Bistro Grill,"3972 Hylan Blvd., Staten Island,   NY",Staten Island,"3972 Hylan Blvd, Staten Island NY 10308-3428"
-King Gyro,"1970 Victory Blvd., Staten Island,   NY",Staten Island,"1970 Victory Blvd, Staten Island NY 10314-3522"
-New Asha,"322 Victory Blvd., Staten Island,   NY",Staten Island,"322 Victory Blvd, Staten Island NY 10301-2950"
-Al-Humza,"629 Richmond Road, Staten Island,   NY",Staten Island,"629 Richmond Rd, Staten Island NY 10304-2409"
-Kebab & Gyro King,"1267 Forest Avenue, Staten Island,   NY",Staten Island,"1267 Forest Ave, Staten Island NY 10302-2311"
-Ali Baba Grill,"774 Port Richmond Avenue, Staten Island,   NY",Staten Island,"774 Port Richmond Ave, Staten Island NY 10302-1737"
-Pizzken,"1775 Richmond Road, Staten Island,   NY",Staten Island,"1775 Richmond Rd, Staten Island NY 10306-2579"
+NEW!","473 McDonald Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Punjab Restaurant,"691 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Istanbul Fast Food,"2202 86th Street, Brooklyn, NY",Brooklyn,Zabiha
+Papa's Halal Fried Chicken & Pizza,"1036 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Bismillah Kabab & Curry,"1203 Liberty Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Blue Nile West Indian,"621 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Affy's Premium Grill,"1909 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Karam Restaurant,"8519 4th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Man'ouche,"7701 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Grill N Dine,"786 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Hazar Turkish Kebab,"7224 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Tanoreen,"7704 3rd Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Pizza Chef,"1512 Fulton Street, Brooklyn, NY",Brooklyn,Zabiha
+Bosna Express,"791 Fairview Avenue, Ridgewood, NY",Brooklyn,Zabiha
+Kabob Shack,"182 Havemeyer Street, Brooklyn, NY",Brooklyn,Zabiha
+Skyway Restaurant & Kabab House,"2032 Bath Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Kebab Garden,"2943 Stillwell Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Bukhari,"1095 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Bahar Masala,"984 Coney Island Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Memo Shishkebob,"1821 Kings Highway, Brooklyn, NY",Brooklyn,Zabiha
+New Texas Fried Chicken,"803 Cypress Avenue, Ridgewood, NY",Brooklyn,Zabiha
+Nablus Sweets & Pastries,"6812 5th Avenue, Brooklyn, NY",Brooklyn,Zabiha
+The Bahche,"191 7th Street, Brooklyn, NY",Brooklyn,Zabiha
+Lasiaf Taco & Lounge,"2368 Flatbush Avenue, Brooklyn, NY",Brooklyn,Zabiha
+Al-Sham Sweets & Pastries,"24-39 Steinway Street, Astoria, NY",Queens,Zabiha
+Duzan Mediterranean Grill,"24-11 Crescent Street South, Queens, NY",Queens,Zabiha
+El Souk,"25-85 Steinway Street, Astoria, NY",Queens,Zabiha
+Teal,"22-79 Steinway Street, Astoria, NY",Queens,Zabiha
+One Stop Pizza & Restaurant,"28-15 36th Avenue, Astoria, NY",Queens,Zabiha
+Alfarha Deli,"25-32 Steinway Street, New York, NY",Queens,Zabiha
+C-Town Supermarket,"169-13 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+On The Nile Café,"33-09 36th Avenue, New York, NY",Queens,Zabiha
+Taci's,"102-07 Metropolitan Avenue, Forest Hills, NY",Queens,Zabiha
+El-Omda,"33-10 28th Avenue, Astoria, NY",Queens,Zabiha
+Xhale Hookah Lounge,"70-11 Austin Street, Forest Hills, NY",Queens,Zabiha
+Shawarmania,"22-49 31st Street, Astoria, NY",Queens,Zabiha
+Shah's Halal Food,"Homelawn Street & Hillside Avenue, Jamaica, NY",Queens,Zabiha
+54th Street Halal Express Deli,"3-10 Beach 54th Street, Far Rockaway, NY",Queens,Zabiha
+Uma's,"92-07 Rockaway Beach Blvd., Rockaway Beach, NY",Queens,Zabiha
+Turkish Grill,"42-03 Queens Blvd., Sunnyside, NY",Queens,Zabiha
+Kennedy Deli,"157-05 Rockaway Blvd., Jamaica, NY",Queens,Zabiha
+Khyber Kabab,"112-11 Jamaica Avenue, Richmond Hill, NY",Queens,Zabiha
+Singas Famous Pizza,"2500 Central Park Avenue, Yonkers, NY",Queens,Zabiha
+Texas Chicken & Burgers,"255-21 Hillside Avenue, Floral Park, NY",Queens,Zabiha
+Pamir Kabab House & Grill,"70-74 Kissena Blvd., Flushing, NY",Queens,Zabiha
+Dhanshiri,"169-28 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Madina Halal,"64-02 35th Avenue, Woodside, NY",Queens,Zabiha
+Truva Café & Grill,"22-41 31st Street, Astoria, NY",Queens,Zabiha
+Samis Kabab House,"35-57 Crescent Street, Astoria, NY",Queens,Zabiha
+Kebab Empire,"136-20 Roosevelt Avenue, Flushing, NY",Queens,Zabiha
+Platinum Hookah Lounge & Café,"140-14 Rockaway Blvd., Jamaica, NY",Queens,Zabiha
+Bakhter Halal Kabab,"68-16 Fresh Meadow Lane, Flushing, NY",Queens,Zabiha
+Addy's BBQ,"30-94 Steinway Street, Astoria, NY",Queens,Zabiha
+Halalbee's,"182-26 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Aria Kabab,"72-55 Kissena Blvd, Flushing, NY",Queens,Zabiha
+KFC,"3042 Steinway Street, Astoria, NY",Queens,Zabiha
+Munch,"70-19 Austin Street, Forest Hills, NY",Queens,Zabiha
+Darbar's Chicken & Ribs,"126-9 Liberty Avenue, South Richmond Hill, NY",Queens,Zabiha
+Kennedy Fried Chicken,"170-02 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Fatima's Halal Kitchen,"25-25 Broadway, Queens, NY",Queens,Zabiha
+Carifesta,"12615 Liberty Avenue, Richmond Hill, NY",Queens,Zabiha
+Tokyo Hibachi,"184-16 Horace Harding Expressway, Fresh Meadows, NY",Queens,Zabiha
+Nur Thai,"63-32 Woodhaven Blvd., Rego Park, NY",Queens,Zabiha
+Halal Kitchen,"187-14 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Crown Fried Chicken,"182-26 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Balkh Shish Kabab House,"23-10 31st Street, Astoria, NY",Queens,Zabiha
+Upi Jaya,"76-04 Woodside Avenue, Elmhurst, NY",Queens,Zabiha
+Sarajevo Fast Foods,"3718 34th Avenue, Long Island City, NY",Queens,Zabiha
+Firdos Grill & Café,"25-21 Steinway Street, Astoria, NY",Queens,Zabiha
+Halal Sandwich Shop,"25-61 Steinway Street, New York, NY",Queens,Zabiha
+Marhabah Halal,"128-16 Liberty Avenue, Richmond Hill, NY",Queens,Zabiha
+Halal Kitchen (II),"71-12 Grand Avenue, Maspeth, NY",Queens,Zabiha
+Bakhtar Afghan Halal Kababs,"68-16 Fresh Meadow Lane, Fresh Meadows, NY",Queens,Zabiha
+Halal Dynasty,"172-33 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Istanbul Restaurant,"95-36 Queens Blvd., Rego Park, NY",Queens,Zabiha
+Starlight Grill,"80-02 Astoria Blvd., Astoria, NY",Queens,Zabiha
+Choopan Kabab,"4327 Main Street, Flushing, NY",Queens,Zabiha
+Kabab Diner,"133-23 Rockaway Blvd., South Ozone Park, NY",Queens,Zabiha
+Little Morocco,"24-39 Steinway Street, Queens, NY",Queens,Zabiha
+Mangal Turkish Restaurant,"46-20 Queens Blvd., Sunnyside, NY",Queens,Zabiha
+Tangra Asian Fusion (II),"39-23 Queens Blvd., Sunnyside, NY",Queens,Zabiha
+Kabul Kabab House,"42-51 Main Street, Flushing, NY",Queens,Zabiha
+Al-Mehran,"87-46 Parsons Blvd., Jamaica, NY",Queens,Zabiha
+S&A West Indian Restaurant,"103-06 Liberty Avenue, Jamaica, NY",Queens,Zabiha
+Kabab Café,"25-12 Steinway Street, Astoria, NY",Queens,Zabiha
+Shah's Halal Food,"121st Street & Liberty Avenue, Richmond Hill, NY",Queens,Zabiha
+Afghan Kebab House #5,"25-89 Steinway Street, Astoria, NY",Queens,Zabiha
+Indo Foods Halal Cart,"120th Street and Liberty Avenue, Richmond Hill, Queens, NY",Queens,Zabiha
+Halal Kitchen,"42-14 Greenpoint Avenue, Sunnyside, NY",Queens,Zabiha
+Ariana Kebab Palace,"169-10 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Palace Fried Chicken,"21-02 36th Avenue, New York, NY",Queens,Zabiha
+Crown Grill Fried Chicken & Pizza,"71-12 Kissena Blvd., Flushing, NY",Queens,Zabiha
+Abdul Halal Food Cart,"Liberty Avenue & Lefferts Blvd, South Richmond Hill, NY",Queens,Zabiha
+Mombar,"25-22 Steinway Street, Queens, NY",Queens,Zabiha
+Abou Bakery,"210-23 Jamaica Avenue, Queens, NY",Queens,Zabiha
+Curry Point Halal Grill,"41-02 Greenpoint Avenue, Sunnyside, NY",Queens,Zabiha
+Palace Chicken,"104-02 Jamaica Avenue, Queens, NY",Queens,Zabiha
+Halal Gyro & Chicken,"64th Avenue & 108th Street, Forest Hills, NY",Queens,Zabiha
+Kennedy Fried Chicken,"13604 Northern Blvd, Flushing, NY",Queens,Zabiha
+Rose Bengal,"77-01 101st Avenue, Ozone Park, NY",Queens,Zabiha
+Nanking,"134-07 Rockaway Blvd., South Ozone Park, NY",Queens,Zabiha
+Aden Restaurant,"24-42 Steinway Street, Astoria, NY",Queens,Zabiha
+Hot N Sour,"396 64th Street, Woodside, NY",Queens,Zabiha
+Our Village Roti Shop,"211-61 Jamaica Avenue, Queens Village, NY",Queens,Zabiha
+Silk Hookah Lounge & Grill,"192-08 Northern Blvd., Flushing, NY",Queens,Zabiha
+Anando,"29-14 36th Avenue, Astoria, NY",Queens,Zabiha
+Jerusalem Pita House,"25-15 30th Avenue, Long Island City, NY",Queens,Zabiha
+Just Combo,"21-01 21st Avenue, Astoria, NY",Queens,Zabiha
+Namaste,"31-15 30th Avenue, Astoria, NY",Queens,Zabiha
+Saffron Indian Cuisine,"44-04 Broadway, Queens, NY",Queens,Zabiha
+Chang Pai,"166-12 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Taste of Bengal,"30-27 31st Street, Astoria, NY",Queens,Zabiha
+Djerdan Burek,"33-15 Greenpoint Avenue, Long Island City, NY",Queens,Zabiha
+Dhaka Garden,"72-23 37th Avenue, Jackson Heights, NY",Queens,Zabiha
+Asian Halal Food Restaurant,"39-44 21st Street, Long Island City, NY",Queens,Zabiha
+Halal Tikka,"87-17 Lefferts Blvd., Richmond Hill, NY",Queens,Zabiha
+Tutu's Halal Kitchen,"91-31 Queens Blvd., New York, NY",Queens,Zabiha
+SABA Restaurant & Grill,"25-75 Steinway Street, Astoria, NY",Queens,Zabiha
+Aladdin Sweets & Restaurant,"29-06 36th Avenue, Astoria, NY",Queens,Zabiha
+Richi Rich Palace,"110-19 Atlantic Avenue, Richmond Hill, NY",Queens,Zabiha
+Patoug,"220-06 Horace Harding Expressway South, Queens, NY",Queens,Zabiha
+Shah's Halal Food Cart,"Queens Blvd & Union Turnpike, New York, NY",Queens,Zabiha
+Swaad,"29-14 36th Avenue, Astoria, NY",Queens,Zabiha
+King Kabab,"130-09 Hillside Avenue, Elmhurst, NY",Queens,Zabiha
+Green Apple Delight,"29-12 Crescent Street, Astoria, NY",Queens,Zabiha
+Naz Bakery & Roti Shop,"204-17 Jamaica Avenue, Hollis, NY",Queens,Zabiha
+Crown Fried Chicken,"204-20 Hillside Avenue, Hollis, NY",Queens,Zabiha
+Halal Cart,"Hollis Court Blvd & Hillside Avenue, Queens Village, NY",Queens,Zabiha
+Halal Cart,"Hillside Avenue & Francis Lewis Blvd, Queens Village, NY",Queens,Zabiha
+Arya Kabob House,"33-35 Francis Lewis Blvd., Flushing, NY",Queens,Zabiha
+Tasty Fried Chicken Pizza & Grill,"134-19 Liberty Avenue, South Richmond Hill, NY",Queens,Zabiha
+Farid Grill,"25-15 Steinway Street, Astoria, NY",Queens,Zabiha
+Ignited Restaurant & Lounge,"30-27 Steinway Street, Astoria, NY",Queens,Zabiha
+Desi Food Market,"109-19 Liberty Avenue, South Richmond Hill, NY",Queens,Zabiha
+Tayaba Gyro,"150-5 14th Road, Whitestone, NY",Queens,Zabiha
+Jackfruit Garden,"83-27 Parsons Blvd, Jamaica, NY",Queens,Zabiha
+New Bakhtar,"110-23 Jamaica Avenue, Richmond Hill, NY",Queens,Zabiha
+Uncle's Fried Chicken,"163-04 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Joe's Pasta & Pizza,"95-08 Jamaica Avenue, Woodhaven, NY",Queens,Zabiha
+Kurry Qulture,"36-05 30th Avenue, Astoria, NY",Queens,Zabiha
+Rockaway Roti,"122-21 Rockaway Blvd., South Ozone Park, NY",Queens,Zabiha
+Lhasa Fast Food,"37-50 74th Street, Jackson Heights, NY",Queens,Zabiha
+Zahid's Halal Food,"Braddock Avenue, Queens Village, NY",Queens,Zabiha
+Tawa Food,"37-38 72nd Street, Jackson Heights, NY",Queens,Zabiha
+Yi Lan Halal,"42-79 Main Street, Flushing, NY",Queens,Zabiha
+Yaar,"22-55 31st Street, Astoria, NY",Queens,Zabiha
+Asian Taste 86,"86-10 Whitney Avenue, Elmhurst, NY",Queens,Zabiha
+Punda,"39-35 47th Avenue, Sunnyside, NY",Queens,Zabiha
+Mirch,"172-27 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Namaste Tashi Delek,"37-66 74th Street, Jackson Heights, NY",Queens,Zabiha
+Krispy Krunchy Chicken,"179-33 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+King of Falafel & Shawarma,"3015 Broadway, Astoria, NY",Queens,Zabiha
+Brother's Pizzeria,"30-50 14th Street, Astoria, NY",Queens,Zabiha
+Tikka Grill,"2402 82nd Street, East Elmhurst, NY",Queens,Zabiha
+Punjabi Kabab & Gyro,"108-3 101st Avenue, South Richmond Hill, NY",Queens,Zabiha
+Gaw Gai,"23-06 Jackson Avenue, Long Island City, NY",Queens,Zabiha
+Malingo,"43-16 Queens Blvd., Queens, NY",Queens,Zabiha
+Dumpling,"147-18 45th Avenue, Flushing, NY",Queens,Zabiha
+Heat Caribbean Kitchen & Lounge,"100-05 Atlantic Avenue, Richmond Hill, NY",Queens,Zabiha
+Erqal,"136-20 Roosevelt Avenue, Flushing, NY",Queens,Zabiha
+Apnar Sweets & Bakery,"167-19 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Mis Kebab,"142 Main Street, East Rockaway, NY",Queens,Zabiha
+Kabab & Gyro Grill,"131-07 Liberty Avenue, South Richmond Hill, NY",Queens,Zabiha
+Hamza & Medina Halal Food,"254-05 Hillside Avenue, Floral Park, NY",Queens,Zabiha
+Trinciti Roti Shop,"111-05 Lefferts Blvd., South Ozone Park, NY",Queens,Zabiha
+Mejbaan,"74-24 37th Avenue, Jackson Heights, NY",Queens,Zabiha
+Prince Kabab,"37-54 74th Street, Jackson Heights, NY",Queens,Zabiha
+Abdullah Sweets & Restaurant,"73-06 37th Avenue, Jackson Heights, NY",Queens,Zabiha
+Meghna Grocery & Halal Meat,"74-18 37th Avenue, Jackson Heights, NY",Queens,Zabiha
+Mannan Halal Meat,"37-08 73rd Street, Jackson Heights, NY",Queens,Zabiha
+Merit Kabab,"37-67 74th Street, Jackson Heights, NY",Queens,Zabiha
+Zaytoun,"40-13 82nd Street, Elmhurst, NY",Queens,Zabiha
+PappaRich,"39-16 Prince Street, Unit 205 & 206, Flushing, NY",Queens,Zabiha
+Junoon Café & Grill,"179-22 Union Turnpike, Fresh Meadows, NY",Queens,Zabiha
+Shahi Deggi Grill,"43-39 Main Street, Flushing, NY",Queens,Zabiha
+Souk El Shater,"43-03 Queens Blvd., Sunnyside, NY",Queens,Zabiha
+Ukus,"42-08 30th Avenue, Astoria, NY",Queens,Zabiha
+Al Nour Foods,"41-08 30th Avenue, Astoria, NY",Queens,Zabiha
+Atomic Wings,"153-23A Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Kennedy Fried Chicken,"167-19 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+New Texas Chicken & Pizza,"64-01 Broadway, Woodside, NY",Queens,Zabiha
+Il Miglio Pizza,"11-03 36th Avenue, Long Island, NY",Queens,Zabiha
+LIC Grill,"39-44 21st Street, Long Island City, NY",Queens,Zabiha
+Hot Peppers,"78-33 Springfield Blvd., Oakland Gardens, NY",Queens,Zabiha
+CimCim,"33-08 Ditmars Blvd, Astoria, NY",Queens,Zabiha
+AwesomeSauce,"40-06 Astoria Blvd. South, Astoria, NY",Queens,Zabiha
+Cevabdzinica Sarajevo,"37-18 34th Avenue, Long Island City, NY",Queens,Zabiha
+Halal Munchies,"69-21 164th Street, Fresh Meadows, NY",Queens,Zabiha
+Halal Boyz,"183-20 Horace Harding Expressway, Flushing, NY",Queens,Zabiha
+Bakhtar Halal Kabab,"67-29 Main Street, Flushing, NY",Queens,Zabiha
+Agra Palace Restaurant & Party Hall,"116-33 Queens Blvd., Forest Hills, NY",Queens,Zabiha
+Adana Türkish Grill,"178-25 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Burgerim,"162-16 Union Turnpike, Flushing, NY",Queens,Zabiha
+Chicago's Pizza With-A-Twist,"117-02 Atlantic Avenue, South Richmond Hill, NY",Queens,Zabiha
+Farine Baking Company,"74-24 37th Avenue, Jackson Heights, NY",Queens,Zabiha
+Khan Halal Food,"118-18 Jamaica Avenue, Jamaica, NY",Queens,Zabiha
+El-Rawsheh,"25-48 Steinway Street, Astoria, NY",Queens,Zabiha
+Tangra Masala,"8709 Grand Avenue, Elmhurst, NY",Queens,Zabiha
+Kababish,"70-64 Broadway, Jackson Heights, NY",Queens,Zabiha
+Sagar Restaurant,"168-25 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Sunshine Restaurant,"6915 Northern Blvd., Woodside, NY",Queens,Zabiha
+Al-Naimat Sweets & Restaurant,"37-03 74th Street, Jackson Heights, NY",Queens,Zabiha
+34th Avenue Halal Cart,"34th Avenue & Steinway Street, Astoria, NY",Queens,Zabiha
+BBQ Village Palace,"181-12 Hillside Avenue, Hollis, NY",Queens,Zabiha
+Amina Thai,"169-22 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Talk of the Town,"37-21 72nd Street, Jackson Heights, NY",Queens,Zabiha
+Queens College Halal Cart,"Kissena Blvd. & Horace Harding Expressway, Flushing, NY",Queens,Zabiha
+Sagar Chinese,"87-47 Homelawn Street, Jamaica, NY",Queens,Zabiha
+Bakhtar Afghan Halal Kababs,"67-29 Main Street, Queens, NY",Queens,Zabiha
+Sammy's Halal,"73rd Street & Broadway, Jackson Heights, NY",Queens,Zabiha
+Chick Inn,"233-16 Hillside Avenue, Queens Village, NY",Queens,Zabiha
+Tandoori Hut,"119-04 94th Avenue, Richmond Hill, NY",Queens,Zabiha
+Dhaka Sweets & Restaurant,"168-32 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Madina Halal Food Cart,"39-99 Main Street, Flushing, NY",Queens,Zabiha
+Original American Chicken,"7807 37th Avenue, Jackson Heights, NY",Queens,Zabiha
+Kabab King Diner,"72-23 37th Avenue, Jackson Heights, NY",Queens,Zabiha
+Ali Baba,"183-08 Horace Harding Expressway, Fresh Meadows, NY",Queens,Zabiha
+Tawa Tandoor,"35-56 74th Street, Jackson Heights, NY",Queens,Zabiha
+Halal Cart,"North Conduit & 130th Street, South Ozone Park, NY",Queens,Zabiha
+Ghoroa,"168-41 Hillside Avenue, Jamaica, NY",Queens,Zabiha
+Halal Food/BBQ Chicken,"132-28 41st Road, Flushing, NY",Queens,Zabiha
+Cedars Halal Meat,"41-08 30th Avenue, Astoria, NY",Queens,Zabiha
+Super China Pagoda,"47-20 30th Avenue, Astoria, NY",Queens,Zabiha
+Jackson Heights Food Court,"73-07 37th Road, Jackson Heights, NY",Queens,Zabiha
+Taste of Lahore,"73-10 Northern Blvd., Jackson Heights, NY",Queens,Zabiha
+Mia Halal Food,"1057 Cross Bay Blvd., Ozone Park, NY",Queens,Zabiha
+JFK Airport Travel Plaza,"150th Avenue & 147th Street, Jamaica, NY",Queens,Zabiha
+Afghan Kebab House #4,"74-16 37th Avenue, Jackson Heights, NY",Queens,Zabiha
+New Sunshine Grill & Restaurant,"255-09 Hillside Avenue, Floral Park, NY",Queens,Zabiha
+Bownie,"143-05 45th Avenue, Flushing, NY",Queens,Zabiha
+Roti Boti,"27-09 21st Street, Astoria, NY",Queens,Zabiha
+Taipan Fusion & Hookah Lounge,"184-22 Horace Harding Expressway South, New York, NY",Queens,Zabiha
+Maurya,"63-108 Woodhaven Blvd, Rego Park, NY",Queens,Zabiha
+Eat & Go,"JFK Airport, Terminal 1, Queens, NY",Queens,Zabiha
+The Halal Guys,"27-10 Thomson Avenue, Long Island City, NY",Queens,Zabiha
+Layali Beirut,"25-60 Steinway Street, Astoria, NY",Queens,Zabiha
+Angelina's Panini Bar,"LaGuardia Road, Terminal B, Flushing, NY",Queens,Zabiha
+Dera,"72-09 Broadway, Jackson Heights, NY",Queens,Zabiha
+Al-Aqsa,"2109 Starling Avenue, Bronx, NY",The Bronx,Zabiha
+Ziyadeh Halal Meat Market & Grocery,"1903 White Plains Road, Bronx, NY",The Bronx,Zabiha
+Norwood Food Co-op,"302 East 206th Street, Bronx, NY",The Bronx,Zabiha
+US Fried Chicken,"860 Gerard Avenue, Bronx, NY",The Bronx,Zabiha
+Musa Halal Chinese,"2023 Westchester Avenue, Bronx, NY",The Bronx,Zabiha
+AKS Halal Deli & Grill,"319 East 204th Street, Bronx, NY",The Bronx,Zabiha
+Halal Hot Fried Chicken,"1401 White Plains Road, Bronx, NY",The Bronx,Zabiha
+Arth AlJanatain,"700 Rhinelander Avenue, Bronx, NY",The Bronx,Zabiha
+Oasis,"1907 White Plains Road, Bronx, NY",The Bronx,Zabiha
+Curry & Kabob,"3111 Bainbridge Avenue, Bronx, NY",The Bronx,Zabiha
+Halal Coffee Shop,"225 Mcclellan Street, Bronx, NY",The Bronx,Zabiha
+Fordham Fried Seafood & Chicken,"2468 Grand Concourse, Bronx, NY",The Bronx,Zabiha
+Kebab Curry Halal Food,"2165 Starling Avenue, Bronx, NY",The Bronx,Zabiha
+Mehman Sweets,"1445 Olmstead Avenue, Bronx, NY",The Bronx,Zabiha
+Tajdar,"2475 Boston Road, Bronx, NY",The Bronx,Zabiha
+Tastebud Foods,"791 Westchester Avenue, Bronx, NY",The Bronx,Zabiha
+Texas Chicken & Burgers,"21 West Burnside Avenue, Bronx, NY",The Bronx,Zabiha
+Texas Chicken & Burgers,"2168 Westchester Avenue, Bronx, NY",The Bronx,Zabiha
+Texas Chicken & Burgers,"32 East Kingsbridge Road, Bronx, NY",The Bronx,Zabiha
+Texas Chicken & Burgers,"3275 Westchester Avenue, Bronx, NY",The Bronx,Zabiha
+Texas Chicken & Burgers,"509 Willis Avenue, Bronx, NY",The Bronx,Zabiha
+Texas Chicken & Burgers,"78 Westchester Avenue, Bronx, NY",The Bronx,Zabiha
+Halaloo Food,"605 East 187th Street, Unit A, Bronx, NY",The Bronx,Zabiha
+Chandni Chowk,"2570 Bronxwood Avenue, Bronx, NY",The Bronx,Zabiha
+Kennedy Fried Chicken & Pizza,"952 Longwood Avenue, Bronx, NY",The Bronx,Zabiha
+Caffe Lanka,"2166 Westchester Avenue, Bronx, NY",The Bronx,Zabiha
+Kennedy Fried Chicken & Pizza,"2041 Grand Concourse, Bronx, NY",The Bronx,Zabiha
+Teuta Qebaptore,"601 East 186th Street, Bronx, NY",The Bronx,Zabiha
+Sofra,"2011A Williamsbridge Road, The Bronx, NY",The Bronx,Zabiha
+Papaye,"2300 Grand Concourse, Bronx, NY",The Bronx,Zabiha
+Bate Nabaya,"860 Melrose Avenue, Bronx, NY",The Bronx,Zabiha
+Fouta,"1762 Westchester Avenue, Unit A, Bronx, NY",The Bronx,Zabiha
+Grin African,"454 East 168th Street, Bronx, NY",The Bronx,Zabiha
+Çka Ka Qëllu,"2321 Hughes Avenue, Bronx, NY",The Bronx,Zabiha
+Bengal Halal Chinese & Tandoori House,"1209 White Plains Road, Bronx, NY",The Bronx,Zabiha
+Aman,"3594 Jerome Avenue, Bronx, NY",The Bronx,Zabiha
+Falafel King,"1230 Jerome Avenue, Bronx, NY",The Bronx,Zabiha
+Premium Sweets,"2104 Starling Avenue, Bronx, NY",The Bronx,Zabiha
+King Palace Chicken & Gyros,"5605 Broadway, Bronx, NY",The Bronx,Zabiha
+Hungry Bird,"980 Morris Avenue, Bronx, NY",The Bronx,Zabiha
+Kennedy Fried Chicken,"332 East Gun Hill Road, Bronx, NY",The Bronx,Zabiha
+Moja,"307 East 204th Street, Bronx, NY",The Bronx,Zabiha
+Shaad,"2146 Starling Avenue, Bronx, NY",The Bronx,Zabiha
+Jenny's Roti Shop,"1262 Castle Hill Avenue, Bronx, NY",The Bronx,Zabiha
+Naan Shack,"1445 Olmstead Avenue, Bronx, NY",The Bronx,Zabiha
+Tito Boss Halal Truck,"100 East Gun Hill Road, Bronx, NY",The Bronx,Zabiha
+Chicken vs. Lamb Big Taste,"1825 Eastchester Road, Bronx, NY",The Bronx,Zabiha
+Packsun Halal Chicken,"2160 Westchester Avenue, Bronx, NY",The Bronx,Zabiha
+Mr. Pizza,"1448 East Avenue, Bronx, NY",The Bronx,Zabiha
+The Grill House,"1991 Bronxdale Avenue, Bronx, NY",The Bronx,Zabiha
+Carifesta,"4251 White Plains Road, Bronx, NY",The Bronx,Zabiha
+Alba International Food,"1880 Hylan Blvd., Staten Island, NY",Staten Island,Zabiha
+Shop & Eat,"1686 Forest Avenue, Staten Island, NY",Staten Island,Zabiha
+Seaside Turkish,"124 Ocean Avenue, Staten Island, NY",Staten Island,Zabiha
+Famous Falafel,"14 Giffords Lane, Staten Island, NY",Staten Island,Zabiha
+Papa's Halal Chicken,"1787 Forest Avenue, Staten Island, NY",Staten Island,Zabiha
+Sahara Xpress,"1203 Hylan Blvd., Staten Island, NY",Staten Island,Zabiha
+Sumac,"1198 Forest Avenue #B, Staten Island, NY",Staten Island,Zabiha
+Indian Clove,"2071 Clove Road, Staten Island, NY",Staten Island,Zabiha
+Papa Chuck Halal Chicken,"229 Broad Street, Staten Island, NY",Staten Island,Zabiha
+My Pizza,"755 Targee Street, Staten Island, NY",Staten Island,Zabiha
+Halal Crown Chicken,"2047 Richmond Terrace, Staten Island, NY",Staten Island,Zabiha
+Mandi House,"58 Richmond Terrace, Staten Island, NY",Staten Island,Zabiha
+Crown Fried Chicken & Burgers,"2047 Richmond Terrace, Staten Island, NY",Staten Island,Zabiha
+Crown Peri Peri Chicken & Grill,"1970 Victory Blvd., Staten Island, NY",Staten Island,Zabiha
+Bistro Grill,"3972 Hylan Blvd., Staten Island, NY",Staten Island,Zabiha
+King Gyro,"1970 Victory Blvd., Staten Island, NY",Staten Island,Zabiha
+New Asha,"322 Victory Blvd., Staten Island, NY",Staten Island,Zabiha
+Al-Humza,"629 Richmond Road, Staten Island, NY",Staten Island,Zabiha
+Kebab & Gyro King,"1267 Forest Avenue, Staten Island, NY",Staten Island,Zabiha
+Ali Baba Grill,"774 Port Richmond Avenue, Staten Island, NY",Staten Island,Zabiha
+Pizzken,"1775 Richmond Road, Staten Island, NY",Staten Island,Zabiha
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
+The Halal Guys,W 53rd Street & 7th Ave New York 10019,New York City,Zomato
+Kailash Parbat,"99 Lexington Avenue, New York 10016",New York City,Zomato
+Yemen Café and Restaurant,"176 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Pars Grill House & Bar,"249 W 26th Street, New York 10001",New York City,Zomato
+Heart of India,"79 2nd Avenue, New York 10003",New York City,Zomato
+Tamba Indian Grill & Bar,"103 Lexington Avenue, New York 10016",New York City,Zomato
+The Soul Spot,"302 Atlantic Avenue, Brooklyn 11201",New York City,Zomato
+Mint Masala,95 Macdougal Street 10012,New York City,Zomato
+Haandi,113 Lexington Avenue 10016,New York City,Zomato
+Bombay Masala Restaurant,"Times Square, 148 W 49th Street, New York 10019",New York City,Zomato
+The Halal Guys,"722 Amsterdam Avenue, New York, NY 10025",New York City,Zomato
+Sheezan Restaurant,"183 Church Street, New York, NY 10007",New York City,Zomato
+Tripoli,"156 Atlantic Avenue, Brooklyn, Cobble Hill, New York City 11201",New York City,Zomato
+Patiala,371 West 34th Street 10001,New York City,Zomato
+Kabab King,"7301 37th Rd, Jackson Heights 11372",New York City,Zomato
+Salt & Pepper,"139 W 33rd Street, New York 10001",New York City,Zomato
+Tangra Masala,"87-09 Grand Avenue, Queens 11373",New York City,Zomato
+Fatima's Halal Kitchen,"2525 Broadway, Astoria 11106",New York City,Zomato
+Curry Hut,"534 9th Avenue, New York, NY",New York City,Zomato
+Al Bustan,"319 E 53rd Street, New York 10022",New York City,Zomato
