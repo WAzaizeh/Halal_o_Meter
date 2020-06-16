@@ -15,7 +15,7 @@ def _zabiha_to_csv(url_dict):
 
     res_names_xpath = '//div[@class="titleBS"]'
     res_address_xpath = '//div[@class="titleBS"]/../div[@class="tinyLink"]'
-    df = pd.DataFrame(columns=['restaurant_name', 'restaurant_address', 'borough'])
+    df = pd.DataFrame(columns=['name', 'address', 'borough'])
 
     for key in url_dict:
         print('scraping {} results from Zabiha.com'.format(key))
@@ -23,13 +23,13 @@ def _zabiha_to_csv(url_dict):
         names = webdriver.find_elements_by_xpath(res_names_xpath)
         addresses = webdriver.find_elements_by_xpath(res_address_xpath)
         for name, address in zip(names, addresses):
-            row = {'restaurant_name' : name.text,
-                    'restaurant_address' : address.text,
+            row = {'name' : name.text,
+                    'address' : address.text,
                     'borough' : key,
                     'source' : 'Zabiha'}
             df = df.append(row, ignore_index=True)
     review_scraper._close_webdriver(webdriver)
-    df.to_csv('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection/target_list.csv', mode='a', header=False, index=False)
+    df.to_csv('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection/target_list.csv', mode='a', index=False)
     print('\n{} rows added from Zabiha\n'.format(df.shape[0]))
 
 def _zomato_to_csv(city_id):
@@ -47,7 +47,7 @@ def _zomato_to_csv(city_id):
     offset_max = json_obj['results_found']
     print('Found {} results in Zomato.com'.format(offset_max))
 
-    df = pd.DataFrame(columns=['restaurant_name', 'restaurant_address', 'borough'])
+    df = pd.DataFrame(columns=['name', 'address', 'borough'])
     while offset < offset_max:
         # request next page
         r = requests.request("GET", url, headers=headers)
@@ -56,15 +56,15 @@ def _zomato_to_csv(city_id):
         # get info and append to dataframe
         for restaurant in json_obj['restaurants']:
             restaurant = restaurant['restaurant']
-            row = {'restaurant_name' : restaurant['name'],
-                    'restaurant_address' : restaurant['location']['address'],
+            row = {'name' : restaurant['name'],
+                    'address' : restaurant['location']['address'],
                     'borough' : restaurant['location']['city'],
                     'source' : 'Zomato'}
             df = df.append(row, ignore_index=True)
         # advance offset
         print('Progress: {0}/{1}'.format(offset+20, offset_max), end='\r', flush=True)
         offset += 20
-    df.to_csv('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection/target_list.csv', mode='a', header=False, index=False)
+    df.to_csv('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection/target_list.csv', mode='a', index=False)
     print('\n{} rows added from Zomato\n'.format(df.shape[0]))
 
 
