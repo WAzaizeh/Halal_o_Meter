@@ -3,20 +3,26 @@
 Can we make a compact dashboard across several columns and with a dark theme?"""
 # import io
 from typing import List, Optional
-
+import os, sys, re
 import markdown
 import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
-# import plotly.graph_objects as go
 import streamlit as st
-# from plotly import express as px
-# from plotly.subplots import make_subplots
 
-# matplotlib.use("TkAgg")
-matplotlib.use("Agg")
-COLOR = "black"
-BACKGROUND_COLOR = "#fff"
+# for testing
+import random
+
+# add path to database
+module_path = os.path.abspath(os.path.join('.')+'/src/data/data_collection')
+if module_path not in sys.path:
+    sys.path.append(module_path)
+
+from database import Database
+
+# matplotlib.use("Agg")
+COLOR = 'black'
+BACKGROUND_COLOR = '#fffafa'
 
 
 # extension to sidebar
@@ -67,31 +73,25 @@ class Cell:
     def dataframe(self, dataframe: pd.DataFrame):
         self.inner_html = dataframe.to_html()
 
-#     def plotly_chart(self, fig):
-#         self.inner_html = f"""
-# <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-# <body>
-#     <p>This should have been a plotly plot.
-#     But since *script* tags are removed when inserting MarkDown/ HTML i cannot get it to workto work.
-#     But I could potentially save to svg and insert that.</p>
-#     <div id='divPlotly'></div>
-#     <script>
-#         var plotly_data = {fig.to_json()}
-#         Plotly.react('divPlotly', plotly_data.data, plotly_data.layout);
-#     </script>
-# </body>
-# """
+    def image(self, url):
+        self.inner_html = '<img src ="' + url +'"/>'
 
-    # def pyplot(self, fig=None, **kwargs):
-    #     string_io = io.StringIO()
-    #     plt.savefig(string_io, format="svg", fig=(2, 2))
-    #     svg = string_io.getvalue()[215:]
-    #     plt.close(fig)
-    #     self.inner_html = '<div height="200px">' + svg + "</div>"
+    def image_card(self, name, address, score, image_url):
+        self.inner_html = '<div class="flex">'\
+        +'<img src ="' + image_url +'"/>'\
+        + '<div>'\
+        +'<p>'+ name +'</p>'\
+        +'<p> Halal score: '+ score + ' (will be converted to stars) </p>'\
+        +'<p>description description description description description description description description</p>'\
+        + '</div>'\
+        + '<div>'\
+        +'<p>' + address + '</p>'\
+        + '</div>'\
+        +'</div>'
+
 
     def _to_html(self):
         return f"""<div class="box {self.class_}">{self.inner_html}</div>"""
-
 
 class Grid:
     """A (CSS) Grid"""
@@ -136,6 +136,9 @@ class Grid:
     }}
     table {{
         color: {self.color}
+    }}
+    .flex {{
+        display: flex;
     }}
 </style>
 """
@@ -211,7 +214,7 @@ def _set_block_container_style(
     padding_top: int = 5,
     padding_right: int = 1,
     padding_left: int = 1,
-    padding_bottom: int = 10,
+    padding_bottom: int = 5,
 ):
     if max_width_100_percent:
         max_width_str = f"max-width: 100%;"
@@ -221,7 +224,7 @@ def _set_block_container_style(
         f"""
 <style>
     .reportview-container .main .block-container{{
-        {max_width_str}
+        width: 65%;
         padding-top: {padding_top}rem;
         padding-right: {padding_right}rem;
         padding-left: {padding_left}rem;
@@ -230,6 +233,17 @@ def _set_block_container_style(
     .reportview-container .main {{
         color: {COLOR};
         background-color: {BACKGROUND_COLOR};
+        align-items: flex-start;
+    }}
+
+    .reportview-container .main .block-container .element-container:nth-child(10) {{
+    width: 28% !important;
+    position: fixed;
+    top: 110px;
+
+    right: 0;
+    border-radius: 5px;
+    overflow: hidden;
     }}
 </style>
 """,
@@ -239,66 +253,40 @@ def _set_block_container_style(
 
 @st.cache
 def get_dataframe() -> pd.DataFrame():
-    """Dummy DataFrame"""
-    data = [
-        {"quantity": 1, "price": 2},
-        {"quantity": 3, "price": 5},
-        {"quantity": 4, "price": 8},
-    ]
-    return pd.DataFrame(data)
+    """A slice of yelp businesses dataframe for testing purposes"""
+    db = Database()
+    yelp_sql = '''SELECT *
+                    FROM businesses
+                    WHERE url LIKE %s '''
+    data = db.select_rows(yelp_sql, ('%yelp%', ))
+    # for testing
+    df = pd.DataFrame(data)[:20]
+    df.columns = ['name', 'platform_id', 'url', 'total_review_count', 'address', 'id']
+    df.address = df.address.map(lambda address: re.sub(r'[^A-Za-z0-9, ]+', '', address).split(','))
+    df.address = df.address.map(lambda address: ', '.join([str.strip() for str in address]))
+    df['score'] = random.randint(1,5)
+    df['image_url'] = 'https://s3-media0.fl.yelpcdn.com/bphoto/h92NeXrAhC_SCM-Fa77J5A/258s.jpg'
+    return df
 
-
-# def get_plotly_fig():
-#     """Dummy Plotly Plot"""
-#     return px.line(data_frame=get_dataframe(), x="quantity", y="price")
-
+@st.cache
+def get_neighborhoods() -> pd.DataFrame():
+    '''List of NYC neighborhoods to search in'''
+    db = Database()
+    neighborhoods_sql = '''SELECT *
+                            FROM coordinates'''
+    df = db.select_df(neighborhoods_sql)
+    df['neighborhood'] = df['neighborhood'].str.replace('+', ' ').str.replace(',', ', ')
+    return df
 
 def get_matplotlib_plt():
     get_dataframe().plot(kind="line", x="quantity", y="price", figsize=(5, 3))
 
 
-# def get_plotly_subplots():
-#     fig = make_subplots(
-#         rows=2,
-#         cols=2,
-#         subplot_titles=("Plot 1", "Plot 2", "Plot 3", "Table 4"),
-#         specs=[
-#             [{"type": "scatter"}, {"type": "scatter"}],
-#             [{"type": "scatter"}, {"type": "table"}],
-#         ],
-#     )
-#
-#     fig.add_trace(go.Scatter(x=[1, 2, 3], y=[4, 5, 6]), row=1, col=1)
-#
-#     fig.add_trace(go.Scatter(x=[20, 30, 40], y=[50, 60, 70]), row=1, col=2)
-#
-#     fig.add_trace(go.Scatter(x=[300, 400, 500], y=[600, 700, 800]), row=2, col=1)
-#
-#     fig.add_table(
-#         header=dict(values=["A Scores", "B Scores"]),
-#         cells=dict(values=[[100, 90, 80, 90], [95, 85, 75, 95]]),
-#         row=2,
-#         col=2,
-#     )
-#
-#     if COLOR == "black":
-#         template="plotly"
-#     else:
-#         template ="plotly_dark"
-#     fig.update_layout(
-#         height=500,
-#         width=700,
-#         title_text="Plotly Multiple Subplots with Titles",
-#         template=template,
-#     )
-#     return fig
-
 def main():
     """Main function. Run this to run the app"""
-    st.sidebar.title("Halal-o-meter")
+    st.sidebar.image('/Users/wesamazaizeh/Downloads/logo_temp.png', use_column_width=True)
     st.sidebar.header("Search options")
-    value = st.sidebar.selectbox("NYC neighborhood:", ['Astoria, Queens', 'Morris Park, Bronx', 'East Village, Manhttan'])
-    st.write(value)
+    neighborhood = st.selectbox("NYC neighborhood:", get_neighborhoods()['neighborhood'])
     st.markdown(
         """
 # Halal-o-meter (LOGO will go somewhere)
@@ -323,27 +311,14 @@ We even have a dark theme?
 
     # My preliminary idea of an API for generating a grid
     with Grid("1 1 1", color=COLOR, background_color=BACKGROUND_COLOR) as grid:
-        grid.cell(
-            class_="a",
-            grid_column_start=2,
-            grid_column_end=3,
-            grid_row_start=1,
-            grid_row_end=2,
-        ).markdown("# This is A Markdown Cell")
-        grid.cell("b", 2, 3, 2, 3).text("The cell to the left is a dataframe")
+        for i, row in get_dataframe().iterrows():
+            grid.cell(chr(i + 97), 1, 2, i+1, i+1).image_card(name='. '.join([str(i+1),row['name']]), address=row.address, score=str(row.score), image_url=row.image_url)
+        # grid.cell('map', 2, 4, 1, 3).dataframe(get_neighborhoods[:10])
+        # grid.cell("b", 2, 3, 2, 3).text("The cell to the left is a dataframe")
         # grid.cell("c", 3, 4, 2, 3).plotly_chart(get_plotly_fig())
-        grid.cell('b', 3, 4, 2, 3).text("Removed plotly")
-        grid.cell("d", 1, 2, 1, 3).dataframe(get_dataframe())
-        # grid.cell('d', 3, 4, 2, 3).image('https://s3-media0.fl.yelpcdn.com/bphoto/h92NeXrAhC_SCM-Fa77J5A/258s.jpg 1.03x,https://s3-media0.fl.yelpcdn.com/bphoto/h92NeXrAhC_SCM-Fa77J5A/348s.jpg 1.39x,https://s3-media0.fl.yelpcdn.com/bphoto/h92NeXrAhC_SCM-Fa77J5A/300s.jpg')
-        grid.cell("e", 3, 4, 1, 2).markdown(
-            "Try changing the **block container style** in the sidebar!"
-        )
-        grid.cell("f", 1, 3, 3, 4).text(
-            "The cell to the right is a matplotlib svg image"
-        )
-        # grid.cell("g", 3, 4, 3, 4).pyplot(get_matplotlib_plt())
-        grid.cell('g', 3, 4, 3, 4).text('replaced pyplot to see if io library is necessary')
+        # grid.cell('e', 1, 2, 4, 4).dataframe(get_dataframe())
 
-    # st.plotly_chart(get_plotly_subplots())
-
+    df = get_neighborhoods().iloc[:, 2:]
+    df.columns = ['lat', 'lon']
+    st.map(df)
 main()
