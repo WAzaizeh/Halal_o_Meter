@@ -9,21 +9,24 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
+import pydeck as pdk
+
 
 # for testing
 import random
 
 # add path to database
-module_path = os.path.abspath(os.path.join('.')+'/src/data/data_collection')
+module_path = os.path.abspath(os.path.join('.')+'/src/')
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from database import Database
+from data.data_collection.database import Database
+import pages.home as home
 
 # matplotlib.use("Agg")
 COLOR = 'black'
 BACKGROUND_COLOR = '#fffafa'
-
+COUNT = 0
 
 # extension to sidebar
 # def add_resources_section():
@@ -102,17 +105,22 @@ class Grid:
         gap="10px",
         background_color=COLOR,
         color=BACKGROUND_COLOR,
+        df=None,
     ):
+        print('init')
         self.template_columns = template_columns
         self.gap = gap
         self.background_color = background_color
         self.color = color
         self.cells: List[Cell] = []
+        self.df = df
 
     def __enter__(self):
+        print('enter')
         return self
 
     def __exit__(self, type, value, traceback):
+        print('exit')
         st.markdown(self._get_grid_style(), unsafe_allow_html=True)
         st.markdown(self._get_cells_style(), unsafe_allow_html=True)
         st.markdown(self._get_cells_html(), unsafe_allow_html=True)
@@ -139,6 +147,13 @@ class Grid:
     }}
     .flex {{
         display: flex;
+    }}
+    .st-at {{
+        background-color:#fb919d;
+    }}
+    .reportview-container .image-container img {{
+        width:100px !important;
+        margin: auto;
     }}
 </style>
 """
@@ -177,14 +192,11 @@ class Grid:
 
 
 def select_block_container_style():
-    """Add selection section for setting setting the max-width and padding
-    of the main block container"""
-    st.sidebar.header("Block Container Style")
-    max_width_100_percent = st.sidebar.checkbox("Max-width: 100%?", False)
-    if not max_width_100_percent:
-        max_width = st.sidebar.slider("Select max-width in px", 100, 2000, 1200, 100)
-    else:
-        max_width = 1200
+    # max_width_100_percent = st.sidebar.checkbox("Max-width: 100%?", False)
+    # if not max_width_100_percent:
+    #     max_width = st.sidebar.slider("Select max-width in px", 100, 2000, 1200, 100)
+    # else:
+    # max_width = 1200
     dark_theme = st.sidebar.checkbox("Dark Theme?", False)
     padding_top = st.sidebar.number_input("Select padding top in rem", 0, 200, 5, 1)
     padding_right = st.sidebar.number_input("Select padding right in rem", 0, 200, 1, 1)
@@ -199,8 +211,8 @@ def select_block_container_style():
         COLOR = "#fff"
 
     _set_block_container_style(
-        max_width,
-        max_width_100_percent,
+        # max_width,
+        # max_width_100_percent,
         padding_top,
         padding_right,
         padding_left,
@@ -209,17 +221,17 @@ def select_block_container_style():
 
 
 def _set_block_container_style(
-    max_width: int = 1200,
-    max_width_100_percent: bool = False,
+    # max_width: int = 1200,
+    # max_width_100_percent: bool = False,
     padding_top: int = 5,
     padding_right: int = 1,
     padding_left: int = 1,
     padding_bottom: int = 5,
 ):
-    if max_width_100_percent:
-        max_width_str = f"max-width: 100%;"
-    else:
-        max_width_str = f"max-width: {max_width}px;"
+    # if max_width_100_percent:
+    #     max_width_str = f"max-width: 100%;"
+    # else:
+    #     max_width_str = f"max-width: {max_width}px;"
     st.markdown(
         f"""
 <style>
@@ -236,23 +248,61 @@ def _set_block_container_style(
         align-items: flex-start;
     }}
 
-    .reportview-container .main .block-container .element-container:nth-child(10) {{
-    width: 28% !important;
-    position: fixed;
-    top: 110px;
+    .reportview-container .main .block-container .element-container:nth-child(11) {{
+        width: 28% !important;
+        position: fixed;
+        top: 110px;
+        right: 0;
+        border-radius: 5px;
+        overflow: hidden;
+    }}
 
-    right: 0;
-    border-radius: 5px;
-    overflow: hidden;
+    .sidebar-content {{
+        background-color: #e5e7ea;
+        background-image: none;
     }}
 </style>
 """,
         unsafe_allow_html=True,
     )
+x = 0
 
+def make_main_body(df):
+    # generate a grid of 2 image_cards
+    grid = Grid("1 1 1", color=COLOR, background_color=BACKGROUND_COLOR, df=df)
+
+    with grid:
+        for i, row in zip(range(df.shape[0]), df.itertuples()):
+            grid.cell(chr(i + 97), 1, 2, i+1, i+1).image_card(name='. '.join([str(i+1),row.name]), address=row.address, score=str(row.score), image_url=row.image_url)
+
+    # should be places in it's own function later
+    # generate the map
+    df = get_neighborhoods().iloc[:, 2:]
+    df.columns = ['lat', 'lon']
+    # Adding code so we can have map default to the center of the data
+    midpoint = ((df.loc[0, 'lat']), (df.loc[0, 'lon']))
+    st.pydeck_chart(pdk.Deck(
+            map_style='mapbox://styles/mapbox/light-v9',
+            initial_view_state=pdk.ViewState(
+                latitude = midpoint[0],
+                longitude =  midpoint[1],
+                zoom = 10,
+                pitch = 10
+            ),
+            layers=[ pdk.Layer(
+                'ScatterplotLayer',
+                data=df,
+                get_position=['lon', 'lat'],
+                auto_highlight=True,
+                get_radius=250,
+                get_fill_color='[145, 196, 251]',
+                pickable=True
+            )]
+            )
+        )
 
 @st.cache
-def get_dataframe() -> pd.DataFrame():
+def get_dataframe(sort_by='') -> pd.DataFrame():
     """A slice of yelp businesses dataframe for testing purposes"""
     db = Database()
     yelp_sql = '''SELECT *
@@ -266,6 +316,8 @@ def get_dataframe() -> pd.DataFrame():
     df.address = df.address.map(lambda address: ', '.join([str.strip() for str in address]))
     df['score'] = random.randint(1,5)
     df['image_url'] = 'https://s3-media0.fl.yelpcdn.com/bphoto/h92NeXrAhC_SCM-Fa77J5A/258s.jpg'
+    if sort_by != 'Halal Score':
+        df.sort_values('total_review_count', inplace=True)
     return df
 
 @st.cache
@@ -278,15 +330,9 @@ def get_neighborhoods() -> pd.DataFrame():
     df['neighborhood'] = df['neighborhood'].str.replace('+', ' ').str.replace(',', ', ')
     return df
 
-def get_matplotlib_plt():
-    get_dataframe().plot(kind="line", x="quantity", y="price", figsize=(5, 3))
-
-
 def main():
-    """Main function. Run this to run the app"""
-    st.sidebar.image('/Users/wesamazaizeh/Downloads/logo_temp.png', use_column_width=True)
-    st.sidebar.header("Search options")
-    neighborhood = st.selectbox("NYC neighborhood:", get_neighborhoods()['neighborhood'])
+    """Main function of the App"""
+    st.sidebar.image('/Users/wesamazaizeh/Downloads/logo.png', use_column_width=True)
     st.markdown(
         """
 # Halal-o-meter (LOGO will go somewhere)
@@ -298,27 +344,17 @@ We even have a dark theme?
 """
     )
 
+    neighborhood = st.selectbox("NYC neighborhood:", get_neighborhoods()['neighborhood'])
+
+    """Add selection section for setting setting the max-width and padding
+    of the main block container"""
+    st.sidebar.header("Filter Options")
+    sort_by = st.sidebar.radio('Filter by:', ('Halal Score', 'Most Reviwed', 'Distance'))
+
+    with st.spinner(f"Loading {sort_by} ..."):
+        df = get_dataframe(sort_by)
+        make_main_body(df)
+
     select_block_container_style()
-    ## filters
-    # repalce with radius setting that will use coordinate data cached in dataframe
-    # add checkbox options in sidebar (open now, has delivery)
-    # replace this one with reliability store cutoff selection
-    ## sort
-    # add sort bar to change order in grid
-    ## functionality
-    # add possibility to improve reliability score? feedback?
-    # add_resources_section()
 
-    # My preliminary idea of an API for generating a grid
-    with Grid("1 1 1", color=COLOR, background_color=BACKGROUND_COLOR) as grid:
-        for i, row in get_dataframe().iterrows():
-            grid.cell(chr(i + 97), 1, 2, i+1, i+1).image_card(name='. '.join([str(i+1),row['name']]), address=row.address, score=str(row.score), image_url=row.image_url)
-        # grid.cell('map', 2, 4, 1, 3).dataframe(get_neighborhoods[:10])
-        # grid.cell("b", 2, 3, 2, 3).text("The cell to the left is a dataframe")
-        # grid.cell("c", 3, 4, 2, 3).plotly_chart(get_plotly_fig())
-        # grid.cell('e', 1, 2, 4, 4).dataframe(get_dataframe())
-
-    df = get_neighborhoods().iloc[:, 2:]
-    df.columns = ['lat', 'lon']
-    st.map(df)
 main()
