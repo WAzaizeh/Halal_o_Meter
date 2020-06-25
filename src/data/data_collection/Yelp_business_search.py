@@ -6,6 +6,7 @@ import requests, json, time
 from database import Database
 from dotenv import load_dotenv
 import os
+import pandas as pd
 
 load_dotenv()
 API_key = os.getenv('YELP_API_KEY')
@@ -47,3 +48,17 @@ def get_yelp_places_by_location(search_location, search_type='restaurant', searc
         time.sleep(5)
 
     print('Yelp search in {0} yielded {1} business added to database'.format(search_location.replace('+',' '), offset_max))
+
+def get_yelp_business_details(yelp_id):
+    URL = ('https://api.yelp.com/v3/businesses/'+yelp_id)
+    headers = {
+        'Authorization' : 'Bearer %s' % API_key
+    }
+    response = requests.request("GET", URL, headers=headers)
+    json_obj = json.loads(response.text)
+    row = {
+        'image_url' : json_obj['image_url'],
+        'lat' : json_obj['coordinates']['latitude'],
+        'lng' : json_obj['coordinates']['longitude']
+        }
+    return row

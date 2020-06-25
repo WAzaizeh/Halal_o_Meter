@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-API_key = os.getenv('GOOGLE_API_KEY_3')
+API_key = os.getenv('GOOGLE_API_KEY')
 
 def get_corrdinates_from_name(location_name):
     URL = ('https://maps.googleapis.com/maps/api/geocode/json?address='
@@ -22,6 +22,21 @@ def get_corrdinates_from_name(location_name):
         lat = result['geometry']['location']['lat']
         lng = result['geometry']['location']['lng']
     return [lat, lng]
+
+
+def get_name_from_coordinates(lat, lng):
+    URL = ('https://maps.googleapis.com/maps/api/geocode/json?latlng='
+    + str(lat) + ',' + str(lng) + '&result_type=neighborhood&key=' + API_key)
+    print(URL)
+    r = requests.get(URL)
+    response = r.text
+    json_obj = json.loads(response)
+    if json_obj['status'] == 'OK':
+        results = json_obj['results']
+        neighborhood_name = results[0]['formatted_address']
+        return neighborhood_name
+    else:
+        return None
 
 def get_google_place_url_and_review_count(place_id):
     URL = ('https://maps.googleapis.com/maps/api/place/details/json?placeid='

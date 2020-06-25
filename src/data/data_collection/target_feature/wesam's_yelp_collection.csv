@@ -1,0 +1,193 @@
+name,address,tags
+Merguez & Frites,"astoria, NY","['Halal', 'African']"
+BBQ Nite,"Hicksville, NY","['Barbeque', 'Fish & Chips']"
+Russell Dhaba,"Hicksville, NY",['Indian']
+Kababjees,"Hicksville, NY","['Halal', 'Barbeque']"
+Red Pipe Cafe,"Forest Hills, NY","['Coffee & Tea', 'Breakfast & Brunch']"
+Pi Bakerie,"New York, NY","['Bakeries', 'Greek']"
+Punjabi Kabab and Gyro,"South Richmond Hill, NY","['Indian', 'Pakistani']"
+AwesomeSauce,"Astoria, NY","['Burgers', 'Chicken Wings']"
+Woops! BakeShop,"New York, NY",['Macarons']
+Blend: Coffee + CoWork,"Brooklyn, NY",['Coffee & Tea']
+Curry on Pizza,"Bellerose, NY","['Pizza', 'Chicken Wings']"
+Kinship Coffee,"Astoria, NY",['Coffee & Tea']
+Maria’s Mediterranean,"Bayside, NY","['Seafood', 'Greek']"
+Rajbhog Foods,"Jackson Heights, NY","['Desserts', 'Bakeries']"
+Aladin Lamb BBQ,"Flushing, NY","['Moroccan', 'Barbeque']"
+Cafe Kashkar,"Brooklyn, NY","['Halal', 'Uzbek']"
+Shawarma Al-Sham,"Brooklyn, NY",['Middle Eastern']
+Kofte Piyaz,"Brooklyn, NY",['Turkish']
+Black Label Donuts,"Astoria, NY","['Donuts', 'Pop-Up Restaurants']"
+Samudra Vegetarian Restaurant & Chaat House,"Jackson Heights, NY","['Indian', 'Vegetarian']"
+Clinton Street Baking Company,"New York, NY","['Bakeries', 'Breakfast & Brunch']"
+Divya’s Kitchen,"New York, NY","['Vegan', 'Vegetarian']"
+Caffè Ammi Roasting,"Pelham, NY","['Coffee Roasteries', 'Coffee & Tea']"
+Adda Indian Canteen,"Long Island City, NY","['Indian', 'Halal']"
+Gaw Gai,"Long Island City, NY",['Thai']
+Bean Square,"Bayside, NY","['Coffee & Tea', 'Bakeries']"
+White Noise Coffee Co,"Flushing, NY","['Coffee & Tea', 'Breakfast & Brunch']"
+Café 1 of a Kind,"Little Neck, NY","['Desserts', 'Coffee & Tea']"
+Beard Papa’s,"Flushing, NY","['Desserts', 'Bakeries']"
+Ateaz,"Kew Gardens, NY","['Coffee & Tea', 'Desserts']"
+OBA Mediterranean Gyro & Grill,"Forest Hills, NY",['Mediterranean']
+La Boulangerie,"Forest Hills, NY","['Bakeries', 'Creperies']"
+Avli The Little Greek Kafe,"Bayside, NY","['Cocktail Bars', 'Breakfast & Brunch']"
+Mahjong Cafe,"Bayside, NY","['Desserts', 'Cafes']"
+Pamir Kabab House & Grill,"Kew Gardens, NY","['Afghan', 'Middle Eastern']"
+Halalbee’s,"Jamaica, NY","['Burgers', 'Halal']"
+Marmar,"Staten Island, NY","['Mediterranean', 'Syrian']"
+Ground Central,"New York, NY","['Coffee & Tea', 'Salad']"
+Momo Crave,"Woodside, NY",['Himalayan/Nepalese']
+Agora Turkish Restaurant,"New York, NY","['Turkish', 'Mediterranean']"
+Farida Central Asian Cuisine & Grill,"New York, NY","['Uzbek', 'Russian']"
+Djerdan Burek Astoria,"Astoria, NY","['Fast Food', 'Turkish']"
+Nur Thai,"Rego Park, NY",['Thai']
+Taci’s,"Forest Hills, NY","['Turkish', 'Halal']"
+Porto Rico Importing Co,"Brooklyn, NY","['Coffee & Tea', 'Coffee Roasteries']"
+Woolyn,"Brooklyn, NY","['Embroidery & Crochet', 'Knitting Supplies']"
+BK JANI,"Brooklyn, NY","['Pakistani', 'Burgers']"
+Potala Restaurant,"Jackson Heights, NY",['Himalayan/Nepalese']
+Coffee Factory,"Flushing, NY","['Desserts', 'Coffee & Tea']"
+Möge Tee - Flushing,"Flushing, NY","['Bubble Tea', 'Tea Rooms']"
+Lhasa Fast Food,"Jackson Heights, NY",['Himalayan/Nepalese']
+Truva Cafe and Grill,"Astoria, NY","['Mediterranean', 'Halal']"
+Johnny’s Reef Restaurant,"Bronx, NY",['Seafood']
+Xian Famous Foods,"Flushing, NY","['Chinese', 'Noodles']"
+Top Thai Greenwich,"New York, NY","['Thai', 'Cocktail Bars']"
+Zyara NY,"New York, NY","['Mediterranean', 'Middle Eastern']"
+Spot Dessert Bar,"Flushing, NY","['Desserts', 'Coffee & Tea']"
+Mirch Grill And Clay Oven,"Jamaica, NY","['Indian', 'Halal']"
+Moti Mahal Delux,"New York, NY",['Indian']
+Pita Palace,"Brooklyn, NY","['Middle Eastern', 'Falafel']"
+Sumela Mediterranean Cafe & Grill,"New York, NY","['Mediterranean', 'Turkish']"
+Zatar,"Brooklyn, NY","['Breakfast & Brunch', 'Sandwiches']"
+LoveMama,"New York, NY","['Thai', 'Malaysian']"
+BlackSea Fish & Grill,"Rego Park, NY","['Mediterranean', 'Turkish']"
+Joah,"Flushing, NY","['Asian Fusion', 'Italian']"
+Modoo - Chicken & Noodle Bar,"Bayside, NY","['Chicken Wings', 'Korean']"
+Zizi Limona,"Brooklyn, NY","['Mediterranean', 'Middle Eastern']"
+Asian Taste 86,"Elmhurst, NY","['Halal', 'Indonesian']"
+Look By Plant Love House,"Brooklyn, NY","['Thai', 'Desserts']"
+Bangjangsoo Bakery,"Flushing, NY","['Bakeries', 'Korean']"
+YANA - Uyghur Kebab Express,"New York, NY",['Kebab']
+Sugar N Coal,"Rego Park, NY","['Hookah Bars', 'Desserts']"
+273 Kitchen,"Harrison, NY","['Mediterranean', 'Greek']"
+Yemen Cafe & Restaurant,"Brooklyn, NY","['Middle Eastern', 'Cafes']"
+Yemen Cuisine,"Brooklyn, NY","['Middle Eastern', 'Halal']"
+Fig and Olive Tree,"Brooklyn, NY",['Mediterranean']
+Barboncino Pizza & Bar,"Brooklyn, NY","['Pizza', 'Bars']"
+The Miles Coffee Bar,"Bronx, NY","['Coffee & Tea', 'Bakeries']"
+R Café & Tea Boutique,"New Rochelle, NY","['Coffee & Tea', 'Cafes']"
+Pop’s Espresso Bar,"New Rochelle, NY","['Cafes', 'Breakfast & Brunch']"
+Browny Coffee Roasters,"Flushing, NY",['Coffee Roasteries']
+Ariana Afghan Kebab Restaurant,"New York, NY","['Afghan', 'Halal']"
+Curry & Kebab,"Bronx, NY","['Halal', 'Indian']"
+Khalil Biryani House,"Bronx, NY","['Halal', 'Indian']"
+Premium Sweets & Restaurant,"Bronx, NY",['Bangladeshi']
+Webster Lock & Hardware,"Bronx, NY","['Keys & Locksmiths', 'Hardware Stores']"
+Bocaditos Bistro,"New York, NY","['Breakfast & Brunch', 'Tapas/Small Plates']"
+Nanking,"South Ozone Park, NY","['Indian', 'Thai']"
+The Alchemist,"Wilton Manors, FL","['Coffee & Tea', 'Breakfast & Brunch']"
+Casablanca Restaurant and Bakery,"Kissimmee, FL","['Moroccan', 'Bakeries']"
+Ameena’s Florist,"Brooklyn, NY",['Florists']
+Nelly’s Flower Shop,"Brooklyn, NY","['Florists', 'Nurseries & Gardening']"
+Bahar Masala,"Brooklyn, NY","['Afghan', 'Halal']"
+Rimtin Mediterranean Restaurant,"Forest Hills, NY","['Mediterranean', 'Turkish']"
+SkyIce Sweet & Savory,"Brooklyn, NY","['Ice Cream & Frozen Yogurt', 'Thai']"
+Cocoa Grinder,"Brooklyn, NY","['Coffee & Tea', 'Breakfast & Brunch']"
+Doughnut Plant,"Brooklyn, NY","['Donuts', 'Coffee & Tea']"
+Woops!,"Brooklyn, NY","['Bakeries', 'Macarons']"
+Abracadabra Brooklyn,"Williamsburg, NY","['Turkish', 'American (New)']"
+Martha’s Country Bakery,"Brooklyn, NY","['Bakeries', 'Coffee & Tea']"
+Bombay Xpress,"Brooklyn, NY",['Indian']
+Florist Hills & Garden Center,"Rego Park, NY",['Florists']
+Soy Bean Chen Flower Shop,"Flushing, NY","['Florists', 'Desserts']"
+Garden World,"Flushing, NY","['Nurseries & Gardening', 'Florists']"
+Sunrise Kitchen and Hardware Supplies,"Flushing, NY",['Home & Garden']
+Prince Coffee House,"Bronx, NY",['Coffee & Tea']
+Dar 525,"Brooklyn, NY","['Mediterranean', 'Middle Eastern']"
+Wholesome Cuts,"Brooklyn, NY",['Meat Shops']
+Cafe Tarantin,"New York, NY","['Mediterranean', 'Cafes']"
+Lollino Gelateria & Espresso Bar,"New York, NY","['Coffee & Tea', 'Gelato']"
+Kabul Kabab House,"Flushing, NY","['Afghan', 'Halal']"
+Taheni Mediterranean Grill,"Brooklyn, NY","['Falafel', 'Middle Eastern']"
+ilili,"New York, NY","['Mediterranean', 'Lebanese']"
+Balade - Your Way,"New York, NY","['Lebanese', 'Mediterranean']"
+Yemen Cafe & Restaurant,"Brooklyn, NY","['Middle Eastern', 'Cafes']"
+Mamoun’s Falafel,"New York, NY","['Middle Eastern', 'Falafel']"
+Khushboo Indian Restaurant,"New York, NY","['Indian', 'Wine Bars']"
+Kottu House,"New York, NY",['Sri Lankan']
+Burgers By Honest Chops,"New York, NY","['Halal', 'Burgers']"
+Garden Gourmet Market,"Riverdale, NY","['Grocery', 'Specialty Food']"
+Tin Cup Cafe,"Greenwood, NY",['Coffee & Tea']
+Roots Cafe,"Brooklyn, NY","['Coffee & Tea', 'Breakfast & Brunch']"
+Cafe Mogador,"Brooklyn, NY","['Moroccan', 'Breakfast & Brunch']"
+Pates Et Traditions,"Brooklyn, NY","['French', 'Desserts']"
+Burger & Lobster,"New York, NY","['Seafood', 'Burgers']"
+Almayass Restaurant NYC,"New York, NY","['Mediterranean', 'Armenian']"
+Sohha Savory Yogurt,"New York, NY",['Middle Eastern']
+L’albero Dei Gelati,"Brooklyn, NY","['Gelato', 'Bars']"
+Lunitas,"Brooklyn, NY","['Cafes', 'American (New)']"
+Red Lantern Bicycles,"Brooklyn, NY","['Bikes', 'Coffee & Tea']"
+Rocca Cafe Lounge,"Brooklyn, NY","['Turkish', 'Mediterranean']"
+Cohen I B & Sons,"New Rochelle, NY",['Fashion']
+Round K,"New York, NY","['Coffee & Tea', 'Breakfast & Brunch']"
+Chili’s Indian Cuisine,"New York, NY",['Indian']
+Whynot Coffee,"New York, NY",['Coffee & Tea']
+Black Cat LES,"New York, NY","['Coffee & Tea', 'Breakfast & Brunch']"
+Kookaburra Coffee,"Rockville Centre, NY",['Coffee & Tea']
+Taylor St Baristas,"New York, NY","['Cafes', 'Coffee & Tea']"
+Nana’s Kitchen,"Bronx, NY",['Mediterranean']
+Ravagh Persian Grill,"New York, NY","['Persian/Iranian', 'Middle Eastern']"
+Mazeish Grill,"New York, NY","['Middle Eastern', 'Kebab']"
+Irving Farm New York,"New York, NY","['Coffee & Tea', 'Cafes']"
+PROOF Coffee Roasters,"New York, NY","['Coffee & Tea', 'Desserts']"
+Perk Kafe,"New York, NY","['Coffee & Tea', 'Bakeries']"
+Bibble & Sip,"New York, NY","['Coffee & Tea', 'Bakeries']"
+Stumptown Coffee Roasters,"New York, NY","['Coffee & Tea', 'Coffee Roasteries']"
+Levain Bakery,"New York, NY",['Bakeries']
+Tanoreen,"Brooklyn, NY","['Middle Eastern', 'Mediterranean']"
+Greecologies,"New York, NY","['Juice Bars & Smoothies', 'Ice Cream & Frozen Yogurt']"
+Maman Soho,"New York, NY","['Cafes', 'Bakeries']"
+Little Rascal,"New York, NY","['Middle Eastern', 'Turkish']"
+Akdeniz Mediterranean Restaurant,"New York, NY","['Turkish', 'Mediterranean']"
+Abraço,"New York, NY","['Coffee Roasteries', 'Bakeries']"
+Bread Love,"Bedford-Stuyvesant, NY","['Salad', 'Breakfast & Brunch']"
+FREEHOLD,"Brooklyn, NY","['Coffee & Tea', 'Bars']"
+The Wooden Spoon,"New Rochelle, NY","['Burgers', 'American (Traditional)']"
+Stick With Me,"New York, NY","['Chocolatiers & Shops', 'Desserts']"
+Hedonist Artisan Chocolates,"Rochester, NY",['Chocolatiers & Shops']
+Petite Shell,"New York, NY","['Kosher', 'Breakfast & Brunch']"
+Brado,"Brooklyn, NY",['Pizza']
+La Goulette,"Brooklyn, NY","['Mediterranean', 'Middle Eastern']"
+Zenkichi New York,"Brooklyn, NY",['Japanese']
+Café Moto,"Brooklyn, NY","['Cafes', 'Bars']"
+Pepe Rosso Social,"New York, NY",['Italian']
+Cacao Market by MarieBelle,"Brooklyn, NY",['Chocolatiers & Shops']
+Penny House Cafe,"Brooklyn, NY","['Coffee & Tea', 'Breakfast & Brunch']"
+Kalustyan’s,"New York, NY",['Herbs & Spices']
+Balady Foods,"Brooklyn, NY","['Grocery', 'Meat Shops']"
+Dual Specialty Store,"New York, NY",['Grocery']
+Miss Saigon Bistro,"Coral Gables, FL","['Vietnamese', 'Noodles']"
+WTF Coffee Lab,"Brooklyn, NY","['Coffee & Tea', 'Breakfast & Brunch']"
+Press Coffee,"Rochester, NY",['Coffee & Tea']
+Java’s Cafe,"Rochester, NY","['Coffee & Tea', 'Cafes']"
+Tandoori Hut,"Richmond Hill, NY","['Indian', 'Halal']"
+Rose Bengal Food,"Ozone Park, NY","['American (New)', 'Indian']"
+Brooklyn Kolache,"Brooklyn, NY","['Coffee & Tea', 'Bakeries']"
+Beny’s Delice,"Brooklyn, NY","['Coffee & Tea', 'Bakeries']"
+Baba Cool,"Brooklyn, NY",['Cafes']
+Greenlight Bookstore,"Brooklyn, NY",['Bookstores']
+Gantry Plaza State Park,"Long Island City, NY",['Parks']
+Sugar Sweet Sunshine Bakery,"New York, NY",['Bakeries']
+Darbar Grill,"New York, NY","['Indian', 'Buffets']"
+Manousheh,"New York, NY","['Lebanese', 'Halal']"
+Zaika Indian Cuisine,"North Miami, FL",['Indian']
+Blitzen Benz Auto Repair,"South Miami, FL",['Auto Repair']
+Rendez-Vous Bakery,"Aventura, FL","['French', 'Breakfast & Brunch']"
+Le Pain Quotidien,"New York, NY","['Bakeries', 'Breakfast & Brunch']"
+Shibui,"Sunset, FL","['Japanese', 'Sushi Bars']"
+Darna Lounge,"Boca Raton, FL",['Pizza']
+Manhattan Bakery,"Sunny Isles Bch, FL","['Bakeries', 'Coffee & Tea']"
+La Provence,"North Miami Beach, FL","['Bakeries', 'French']"
+Andala Coffee House,"Cambridge, MA","['Middle Eastern', 'Breakfast & Brunch']"

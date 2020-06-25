@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name><![CDATA[MuslimFoodies' Halal Map of NYC]]></name>
+    <description/>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0F9D58-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0F9D58-nodesc-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-nodesc-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Fully Halal</name>
+      <Placemark>
+        <name>ADDY’S BARBEQUE</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9170111,40.7617052,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Farida Central Asian Cuisine & Grill]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9944464,40.7556662,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>YANA - Uyghur Kebab Express</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.983442,40.76551,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Fitoor Cafe & Grill Lounge]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.7882865,40.7265806,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Firdos Grill</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9119015,40.767307,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lasiaf</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9257919,40.6122955,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Carifesta</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8179396,40.6887898,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Carifesta</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8568142,40.8947879,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Terry And Yaki Cart</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9402437,40.7510021,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>LULU CHINESE</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8594341,40.6802861,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nur Thai</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8689519,40.72345,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Farine Baking Company</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8910453,40.7489115,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Momo's Mediterranean Grill]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8637847,40.6793731,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nepali Bhanchha Ghar</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.891111,40.7471963,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Thai Nara</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.89848,40.750112,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Zeytin Mediterranean</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -74.0070196,40.7085584,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hujra restaurant</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.7186799,40.7257665,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Falafel Guys</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9871265,40.7196317,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Afandi Grill</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9850001,40.7284558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Big Arc Chicken</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9829734,40.7311919,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aroma Indian Cuisine</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8686657,40.7233575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Indi Thai</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9904151,40.7198501,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Desi Galli</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9797204,40.7273649,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Desi Galli</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9826276,40.7421254,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>AwesomeSauce</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9106466,40.7686913,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Mahmoud's Corner Halal Food Cart]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9210012,40.7568858,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Halal Munchies</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.912149,40.766934,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Momo Crave</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8963091,40.7468533,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lhasa Fast Food</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8919285,40.7475666,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Namaste Tashi Delek</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.891711,40.747142,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Oba</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8456826,40.7206215,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tallgrass Burger</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9829575,40.7304761,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Sam's Steak & Grill]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.6986582,40.6639563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Memo Shish Kebab - Manhattan</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9932328,40.7428845,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Halalbee's]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.7795649,40.7134136,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hot Peppers</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.7469081,40.73646,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aba</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.983925,40.767473,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kabab King</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.892277,40.747266,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kotti Berliner Döner Kebab</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9832514,40.6907958,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Ali's Trinidad Roti Shop]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.950721,40.6805494,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Darbar's Chicken & Ribs]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.818136,40.688706,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ruzana</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -74.0260156,40.6221721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Alpha Restaurant & Lounge]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.910679,40.7687013,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sugar N Coal</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8686623,40.7233534,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tangra Masala</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9825208,40.7421568,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rasa</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9976527,40.7329711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cocoa Grinder</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9524458,40.680764,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Brooklyn Halal Grill</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.866771,40.6785742,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Atomic Wings Queens </name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8020077,40.7081658,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bakewell</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8174825,40.6885952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lasani</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.98793,40.7459,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sagar Chinese</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8911988,40.7491701,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sagar Chinese</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.792805,40.711132,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BK JANI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9243349,40.702093,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BK Jani</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9830833,40.6909202,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[M&M Bakery & Halal Restaurant]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8236303,40.6866774,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Majnoon Cafe</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8165538,40.6889642,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Twisted Mexican Grill</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9265453,40.7723846,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Milk And Honey Cafe</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9661268,40.6343373,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Peri Peri Grill House</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9291163,40.6847466,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Halal boyz</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.7902244,40.7393953,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Fatima's Halal Kitchen]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9274763,40.7632005,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BURGERS by Honest Chops</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -74.000991,40.7296006,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Merit Kabab</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8913084,40.7471204,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Haat Bazaar Restaurent</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8925367,40.7484731,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Zatar Cafe & Bistro]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9245856,40.698,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Soul Spot</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.988812,40.68835,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Munch</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8463037,40.7208749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pad Thai Cuisine</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9564294,40.8034705,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Queen Sheeba</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9447058,40.820822,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Falafel Tarboosh</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9478595,40.8245968,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al Masry</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9539582,40.6805545,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Affy's Premium Grill]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9623149,40.6108733,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pepo’s Pizza</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9522861,40.8191441,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Les Ambassades</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9538151,40.8060966,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>My House Burgers and Shakes</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9525921,40.5865846,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Yemen Cafe</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9936946,40.6898526,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mirch</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.7893495,40.7121978,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Halal Spot</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9663152,40.6932336,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bahar Masala</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9673574,40.6334137,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Duzan</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9108713,40.7686494,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Rocca Cafe & Lounge]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9408434,40.5834418,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>One Thai Chef</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9905226,40.7594312,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kabul Kabob House</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8274397,40.7539537,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Asian Taste 86 Halal Food</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8786293,40.741773,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Miraj Healthy Grill</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.6460781,40.7555796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PAPA KEBAB</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -74.0035606,40.7428034,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chick In</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.736233,40.733316,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Sami's Kabab House]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.932968,40.758408,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>No pork halal kitchen</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9793473,40.683321,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Halal Kitchen</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8916495,40.7278143,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Halal Kitchen</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9408319,40.7931335,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Top Thai</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -74.028404,40.623274,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Simit Sarayi</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9821388,40.7512295,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Omar's]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.98122,40.750971,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Omar Mediterranean Cuisine</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9811896,40.7510451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[SkyIce Thai Food & Ice Cream]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9773899,40.6807147,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Taheni</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9833839,40.6773986,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Modoo Chicken and Noodle Bar</name>
+        <description>FULLY halal but alcohol served. </description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -73.765198,40.7611444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kabul Kabob House</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8274397,40.7539537,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Uncle's Nick's Mediterranean Gyro Grill]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8694701,40.7242298,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Omar's Burgers and Platters (Halal)]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8074223,40.7149558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nurlan</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8259798,40.7516975,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Krave Shack</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.7125098,40.73633,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Xinjiang House</name>
+        <description><![CDATA[8202 45th Ave, Flushing, NY 11373<br><br>HALAL Uyghur food in the Hong Kong Food Court]]></description>
+        <styleUrl>#icon-1899-0F9D58</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8825407,40.7416488,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Halal Xpress Chinese Kitchen</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9776688,40.6436947,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Blue Nile</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9601795,40.6582206,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Black Nile</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9499541,40.6782364,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>So Kong Dong</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -74.0090591,40.8231,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fresco Fusion</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9967565,40.9243184,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kebab House (Halal)</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.509769,40.7552361,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tribos Peri Peri</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -74.0437446,40.719481,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Zyara Restaurant</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9124716,40.7664952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Gully</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.912333,40.766705,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Halal China Kitchen Plus</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8032099,40.7080187,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tarim Uyghur Cuisine</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8296815,40.7590988,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bali Kitchen</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.987616,40.7253581,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lahori Chilli</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9670843,40.6324856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Holy Cow</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9906935,40.7143638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chicky’s</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.7166846,40.7265821,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Emir Palace</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9755764,40.6316671,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Sammy's Steak and Smokehouse]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.676177,40.707688,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dhania</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9505323,40.6744463,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Twisted wings</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9941778,40.6018693,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Partially Halal</name>
+      <Placemark>
+        <name>Jassar Deli</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.863669,40.676253,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Benares </name>
+        <description>(alcohol bar present)</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -74.0092085,40.7141495,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Elevation Burger</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8565124,40.9657712,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Top Thai Greenwich</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9994477,40.7297845,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GupShup</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9876379,40.7369109,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Buffalo Boss</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9874877,40.6921206,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Awang Kitchen</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.879109,40.7373898,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Smokey Burger</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9905018,40.7594421,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Taco Mahal</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -74.003305,40.7323211,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Bar taco & grill]]></name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9771719,40.7268233,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Opera Cafe Lounge</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.9446224,40.5839607,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Tokyo Hibachi Steakhouse & Sushi]]></name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.789449,40.73963,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Legend Chicken</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -73.8310286,40.7587356,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

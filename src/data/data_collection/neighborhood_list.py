@@ -4,7 +4,7 @@
 
 import pandas as pd
 import os
-from Google_business_search import get_corrdinates_from_name
+from Google_business_search import get_corrdinates_from_name, get_name_from_coordinates
 from database import Database
 
 def custom_csv_to_db():
@@ -24,3 +24,8 @@ def custom_csv_to_db():
         # print(neighborhood)
         lat, lng = get_corrdinates_from_name(neighborhood)
         db.insert_row(update_sql, *(neighborhood, lat, lng))
+
+def confirm_neighborhoods():
+    db = Database()
+    neighborhoods = db.select_df('''SELECT * FROM coordinates''')
+    neighborhoods['reversed_name'] = neighborhoods.apply(lambda row: get_name_from_coordinates(row.lat, row.lng), axis=1)

@@ -16,12 +16,13 @@ import pydeck as pdk
 import random
 
 # add path to database
-module_path = os.path.abspath(os.path.join('.')+'/src/')
-if module_path not in sys.path:
-    sys.path.append(module_path)
+modules_path = [os.path.abspath(os.path.join('.')+'/src/')] #, os.path.abspath(os.path.join('.')+'/web/pages')
+for module in modules_path:
+    if module not in sys.path:
+        sys.path.append(module)
 
 from data.data_collection.database import Database
-import pages.home as home
+# import pages.home as home
 
 # matplotlib.use("Agg")
 COLOR = 'black'
@@ -107,7 +108,6 @@ class Grid:
         color=BACKGROUND_COLOR,
         df=None,
     ):
-        print('init')
         self.template_columns = template_columns
         self.gap = gap
         self.background_color = background_color
@@ -116,11 +116,9 @@ class Grid:
         self.df = df
 
     def __enter__(self):
-        print('enter')
         return self
 
     def __exit__(self, type, value, traceback):
-        print('exit')
         st.markdown(self._get_grid_style(), unsafe_allow_html=True)
         st.markdown(self._get_cells_style(), unsafe_allow_html=True)
         st.markdown(self._get_cells_html(), unsafe_allow_html=True)
