@@ -9,20 +9,26 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-API_key = os.getenv('GOOGLE_API_KEY')
+API_key = os.getenv('GOOGLE_API_KEY_3')
 
 def get_corrdinates_from_name(location_name):
     URL = ('https://maps.googleapis.com/maps/api/geocode/json?address='
-    + location_name + 'components=country:US&key=' + API_key)
-    r = requests.get(URL)
+    + location_name + '&components=country:US|&key=' + API_key)
+    headers = {
+  'Authorization': 'Bearer ' + API_key
+    }
+    r = requests.get(URL, headers=headers)
     response = r.text
     json_obj = json.loads(response)
     results = json_obj["results"]
-    for result in results:
-        lat = result['geometry']['location']['lat']
-        lng = result['geometry']['location']['lng']
-    return [lat, lng]
-
+    if json_obj['status'] == 'OK':
+        for result in results:
+            lat = result['geometry']['location']['lat']
+            lng = result['geometry']['location']['lng']
+        return lat, lng
+    else:
+        print(json_obj)
+        return 0, 0
 
 def get_name_from_coordinates(lat, lng):
     URL = ('https://maps.googleapis.com/maps/api/geocode/json?latlng='

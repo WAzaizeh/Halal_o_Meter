@@ -6,7 +6,13 @@ cities = {'Manhattan' : 'https://www.zabihah.com/sub/United-States/New-York/New-
         'Brooklyn' : 'https://www.zabihah.com/sub/United-States/New-York/New-York-City/Brooklyn/3avrh3Cth4',
         'Queens' : 'https://www.zabihah.com/sub/United-States/New-York/New-York-City/Queens/9Gku594eh7',
         'The Bronx' : 'https://www.zabihah.com/sub/United-States/New-York/New-York-City/The-Bronx/eIqsntUUuI',
-        'Staten Island' : 'https://www.zabihah.com/sub/United-States/New-York/New-York-City/Staten-Island/84zPaAaBZd'}
+        'Staten Island' : 'https://www.zabihah.com/sub/United-States/New-York/New-York-City/Staten-Island/84zPaAaBZd',
+        'North Jersey' : 'https://www.zabihah.com/sub/United-States/New-Jersey/North-Jersey/E2mHNVQ3ta',
+        'San Francisco' : 'https://www.zabihah.com/sub/United-States/California/SF-Bay-Area/San-Francisco/OB9InUnes0',
+        'Berkley & Oakland' 'https://www.zabihah.com/sub/United-States/California/SF-Bay-Area/Berkeley-amp-Oakland/vmCKU6sHEm',
+        'Long Island' : 'https://www.zabihah.com/sub/United-States/New-York/Long-Island/H89S4GDa2Y',
+        'Los Angeles Inland Empire' : 'https://www.zabihah.com/sub/United-States/California/Los-Angeles/Inland-Empire/gSl0Smz6EY',
+        'Los Angeles Orange County' : 'https://www.zabihah.com/sub/United-States/California/Los-Angeles/Orange-County/AuvKfMSq2N'}
 
 df = pd.DataFrame(columns=['name', 'coordinates', 'borough', 'url'])
 

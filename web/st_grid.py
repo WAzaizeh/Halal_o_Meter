@@ -16,12 +16,13 @@ import pydeck as pdk
 import numpy as np
 
 # add path to database
-modules_path = [os.path.abspath(os.path.join('.')+'/src/')] #, os.path.abspath(os.path.join('.')+'/web/pages')
+modules_path = [os.path.abspath(os.path.join('.')+'/src/data/data_collection/')] #, os.path.abspath(os.path.join('.')+'/web/pages')
 for module in modules_path:
+    print(module)
     if module not in sys.path:
         sys.path.append(module)
 
-from data.data_collection.database import Database
+from database import Database
 # import pages.home as home
 
 # matplotlib.use("Agg")

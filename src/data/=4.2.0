@@ -1,0 +1,44 @@
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /Users/wesamazaizeh/miniconda3/envs/st_env
+
+  added / updated specs:
+    - nbformat
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    attrs-19.3.0               |             py_0          40 KB
+    importlib-metadata-1.7.0   |           py38_0          52 KB
+    importlib_metadata-1.7.0   |                0          11 KB
+    zipp-3.1.0                 |             py_0          13 KB
+    ------------------------------------------------------------
+                                           Total:         116 KB
+
+The following NEW packages will be INSTALLED:
+
+  attrs              pkgs/main/noarch::attrs-19.3.0-py_0
+  importlib-metadata pkgs/main/osx-64::importlib-metadata-1.7.0-py38_0
+  importlib_metadata pkgs/main/noarch::importlib_metadata-1.7.0-0
+  jsonschema         pkgs/main/osx-64::jsonschema-3.2.0-py38_0
+  nbformat           pkgs/main/noarch::nbformat-5.0.7-py_0
+  pyrsistent         pkgs/main/osx-64::pyrsistent-0.16.0-py38h1de35cc_0
+  zipp               pkgs/main/noarch::zipp-3.1.0-py_0
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages
+importlib-metadata-1 | 52 KB     |            |   0% importlib-metadata-1 | 52 KB     | ###        |  31% importlib-metadata-1 | 52 KB     | ########## | 100% 
+attrs-19.3.0         | 40 KB     |            |   0% attrs-19.3.0         | 40 KB     | ########## | 100% 
+zipp-3.1.0           | 13 KB     |            |   0% zipp-3.1.0           | 13 KB     | ########## | 100% 
+importlib_metadata-1 | 11 KB     |            |   0% importlib_metadata-1 | 11 KB     | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Rolling back transaction: ...working... done
