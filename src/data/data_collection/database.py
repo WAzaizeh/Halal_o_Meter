@@ -51,12 +51,16 @@ class Database:
 
     def insert_row(self, query, *args):
         """Run a SQL query to update rows in table"""
-        self.connect()
-        with self.conn.cursor() as cur:
-            cur.execute(query, args)
-            self.conn.commit()
-            cur.close()
-
+        try:
+            self.connect()
+            with self.conn.cursor() as cur:
+                # cur.mogrify(query, args)
+                cur.execute(query, args)
+                self.conn.commit()
+                cur.close()
+        except Exception as err:
+            print ("Oops! An exception has occured:", error)
+            print ("Exception TYPE:", type(error))
 
     def insert_rows(self, query, *args):
         """Run a SQL query to update rows in table"""
