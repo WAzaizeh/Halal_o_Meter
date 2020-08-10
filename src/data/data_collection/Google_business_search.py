@@ -61,7 +61,7 @@ def get_google_place_url_and_review_count(place_id):
 
 def get_google_places_by_location(coordinates, business_type='restaurant', search_term='halal', radius = '16093', next_page=''):
     URL = ('https://maps.googleapis.com/maps/api/place/textsearch/json?location='
-    	+ coordinates + '&radius=' + radius + 'query=' + search_term + '&type='
+    	+ str(coordinates) + '&radius=' + radius + 'query=' + search_term + '&type='
     	+ business_type + '&pagetoken=' + next_page + '&key='+ API_key)
     response = requests.get(URL)
     json_obj = json.loads(response.text)
