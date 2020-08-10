@@ -1,7 +1,0 @@
-conda==4.7.12
-numpy==1.17.2
-pandas==0.25.1
-psycopg2==2.8.3
-python-dotenv==0.13.0
-requests==2.23.0
-selenium==3.141.0
