@@ -4,13 +4,12 @@ Can we make a compact dashboard across several columns and with a dark theme?"""
 # import io
 from typing import List, Optional
 import os, sys, re
-import markdown
+import Markdown
 import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 import pydeck as pdk
-
 
 
 # for testing
