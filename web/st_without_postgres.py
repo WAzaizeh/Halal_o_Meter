@@ -1,7 +1,6 @@
-"""This application experiments with the (grid) layout and some styling
+"""Streamlit app with grid layout to display restaurant information with 'halal-reliability' score
+The score is based on reviews scraped from Yelp & Google Maps"""
 
-Can we make a compact dashboard across several columns and with a dark theme?"""
-# import io
 from typing import List, Optional
 import os, sys, re
 import markdown
@@ -11,25 +10,33 @@ import pandas as pd
 import streamlit as st
 import pydeck as pdk
 
-
-
 # for testing
 import numpy as np
 
-# add path to database
-modules_path = [os.path.abspath(os.path.join('.')+'/src/data/data_collection/')] #, os.path.abspath(os.path.join('.')+'/web/pages')
-for module in modules_path:
-    print(module)
-    if module not in sys.path:
-        sys.path.append(module)
+# make sure working directory is above necessary files
+def get_desired_wd():
+    file_pattern = '.yml' #file patterns to be searched
+    cur_dir = os.getcwd() # Dir from where search starts can be replaced with any path
+    found = False
 
-from database import Database
-# import pages.home as home
+    while not found:
+        file_list = os.listdir(cur_dir)
+        parent_dir = os.path.dirname(cur_dir)
+        for file in file_list:
+            if file.endswith(file_pattern):
+                found=True
+                return cur_dir
+        else:
+            if cur_dir == parent_dir: #if dir is root dir
+                print("File not found")
+                return cur_dir
+            else:
+                cur_dir = parent_dir
+os.chdir(get_desired_wd())
 
-# matplotlib.use("Agg")
+
 COLOR = 'black'
 BACKGROUND_COLOR = '#fffafa'
-COUNT = 0
 
 # extension to sidebar
 # def add_resources_section():
@@ -109,7 +116,7 @@ class Grid:
         self,
         template_columns="1 1 1",
         gap="10px",
-        background_color=COLOR,
+        background_color=COLOR, # why is this reversed? dark theme?
         color=BACKGROUND_COLOR,
         df=None,
     ):
@@ -344,36 +351,21 @@ def make_main_body(res_df):
 
 @st.cache
 def get_dataframe(sort_by='') -> pd.DataFrame():
-    """A slice of yelp businesses dataframe for testing purposes"""
-    db = Database()
-    yelp_sql = '''SELECT *
-                    FROM businesses
-                    WHERE url LIKE %s '''
-    data = db.select_rows(yelp_sql, ('%yelp%', ))
-    # for testing
-    df = pd.DataFrame(data)[:20]
-    df.columns = ['name', 'platform_id', 'url', 'total_review_count', 'address', 'id']
-    df.address = df.address.map(lambda address: re.sub(r'[^A-Za-z0-9, ]+', '', address).split(','))
-    df.address = df.address.map(lambda address: ', '.join([str.strip() for str in address]))
-    df['score'] = np.random.randint(1, 6, df.shape[0])
-    df['image_url'] = 'https://s3-media0.fl.yelpcdn.com/bphoto/h92NeXrAhC_SCM-Fa77J5A/258s.jpg'
+    biz_data_path = os.getcwd() + '/data/external/businesses_database_clone.csv'
+    df = pd.read_csv(biz_data_path, header=0)
     if sort_by != 'Halal Score':
         df.sort_values('total_review_count', inplace=True)
-    return df
+    return df[:25] # restricted for mock
 
 @st.cache
 def get_neighborhoods() -> pd.DataFrame():
-    '''List of NYC neighborhoods to search in'''
-    db = Database()
-    neighborhoods_sql = '''SELECT *
-                            FROM coordinates'''
-    df = db.select_df(neighborhoods_sql)
-    df['neighborhood'] = df['neighborhood'].str.replace('+', ' ').str.replace(',', ', ')
+    coord_data_path = os.getcwd() + '/data/external/coordinates_database_clone.csv'
+    df = pd.read_csv(coord_data_path, header=0)
     return df
 
 def main():
     """Main function of the App"""
-    st.sidebar.image('/Users/wesamazaizeh/Downloads/logo.png', use_column_width=True)
+    st.sidebar.image(os.getcwd() + '/logo/logo.png', use_column_width=True)
     st.sidebar.header("Filter Options")
     sort_by = st.sidebar.radio('Filter by:', ('Halal Score', 'Most Reviwed', 'Distance'))
 

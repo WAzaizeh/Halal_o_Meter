@@ -13,27 +13,18 @@ EXPOSE 8501
 WORKDIR /streamlit-docker
 
 # copy over requirements
-COPY requirements.txt ./tmp/requirements.txt
+COPY /docker/requirements.txt ./tmp/requirements.txt
 
 # install pip then packages
 RUN pip3 install -r ./tmp/requirements.txt
 
 # copying all files over
 COPY ./web ./web
+COPY ./data ./data
 
-# cmd to launch app when container is run
-CMD streamlit run ./web/st_grid.py
-
-# streamlit-specific commands for config
+# streamlit-specific commands
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
-RUN mkdir -p /root/.streamlit
-RUN bash -c 'echo -e "\
-[general]\n\
-email = \"\"\n\
-" > /root/.streamlit/credentials.toml'
 
-RUN bash -c 'echo -e "\
-[server]\n\
-enableCORS = false\n\
-" > /root/.streamlit/config.toml'
+# cmd to launch app when container is run
+CMD streamlit run ./web/st_without_postgres.py  --server.enableWebsocketCompression=false
