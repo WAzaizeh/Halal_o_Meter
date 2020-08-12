@@ -21,6 +21,7 @@ RUN pip3 install -r ./tmp/requirements.txt
 # copying all files over
 COPY ./web ./web
 COPY ./data ./data
+COPY ./logo ./logo
 
 # streamlit-specific commands
 ENV LC_ALL=C.UTF-8

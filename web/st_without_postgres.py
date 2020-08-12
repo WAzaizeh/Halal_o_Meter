@@ -2,7 +2,7 @@
 The score is based on reviews scraped from Yelp & Google Maps"""
 
 from typing import List, Optional
-import os, sys, re
+import os, sys, re, platform
 import markdown
 import matplotlib
 import matplotlib.pyplot as plt
@@ -12,28 +12,6 @@ import pydeck as pdk
 
 # for testing
 import numpy as np
-
-# make sure working directory is above necessary files
-def get_desired_wd():
-    file_pattern = '.yml' #file patterns to be searched
-    cur_dir = os.getcwd() # Dir from where search starts can be replaced with any path
-    found = False
-
-    while not found:
-        file_list = os.listdir(cur_dir)
-        parent_dir = os.path.dirname(cur_dir)
-        for file in file_list:
-            if file.endswith(file_pattern):
-                found=True
-                return cur_dir
-        else:
-            if cur_dir == parent_dir: #if dir is root dir
-                print("File not found")
-                return cur_dir
-            else:
-                cur_dir = parent_dir
-os.chdir(get_desired_wd())
-
 
 COLOR = 'black'
 BACKGROUND_COLOR = '#fffafa'
