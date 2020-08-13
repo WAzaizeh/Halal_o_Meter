@@ -284,8 +284,7 @@ def make_main_body(res_df):
 
         Are you wondering what halal options are around NYC neighborhoods?
 
-        We provide a halal-reliability scroe based on reviews of the restaurants.
-        We even have a dark theme?
+        We provide a halal-reliability score based on reviews of the restaurants.
         """.format(neighborhood), unsafe_allow_html=True
     )
     # generate a grid of 2 image_cards
@@ -345,7 +344,7 @@ def main():
     """Main function of the App"""
     st.sidebar.image(os.getcwd() + '/logo/logo.png', use_column_width=True)
     st.sidebar.header("Filter Options")
-    sort_by = st.sidebar.radio('Filter by:', ('Halal Score', 'Most Reviwed', 'Distance'))
+    sort_by = st.sidebar.radio('Filter by:', ('Halal Score', 'Most Reviewed', 'Distance'))
 
     with st.spinner(f"Loading {sort_by} ..."):
         res_df = get_dataframe(sort_by)
