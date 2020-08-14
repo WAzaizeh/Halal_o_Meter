@@ -15,12 +15,15 @@ from dotenv import load_dotenv
 import time, random
 
 def scrape_google_reviews(google_url, google_id):
-    webdriver = _get_webdriver()
-    webdriver.get(google_url)
-    _search_google_halal_review(webdriver) # a function that will carry the search and infinite scroll
-    reviews_list = _scrape_google_reviews_text(webdriver) # a function that will retreive the list of reviews after clicking all the 'more'
-    _close_webdriver(webdriver)
-    print('Scraped {0} reviews from google business id #{1}'.format(len(reviews_list), google_id))
+    reviews_list = []
+    try:
+        webdriver = _get_webdriver()
+        webdriver.get(google_url)
+        _search_google_halal_review(webdriver) # a function that will carry the search and infinite scroll
+        reviews_list = _scrape_google_reviews_text(webdriver) # a function that will retreive the list of reviews after clicking all the 'more'
+        print('Scraped {0} reviews from google business id #{1}'.format(len(reviews_list), google_id))
+    finally:
+        _close_webdriver(webdriver)
     return reviews_list
 
     # # for testing compare count of added rows
@@ -55,7 +58,9 @@ def _get_webdriver():
     chromedriver_path = os.getenv('CHROMEDRIVER_PATH')
     options = ChromeOptions()
     # will need more configuration when deployed
+    # options.add_experimental_option("detach", True) # for experimentation
     options.add_argument('--headless')
+    options.add_argument("--incognito")
     options.add_argument("start-maximized")
     options.add_argument("disable-infobars")
     options.add_argument("--disable-extensions") # to overcome _scroll_into_view failure in headless mode
@@ -105,38 +110,60 @@ def _search_google_halal_review(webdriver):
     # click button to open search input field
     open_search_button_xpath = '//button[@aria-label="Search reviews"]'
     # scroll to bring review search into focus
-    WebDriverWait(webdriver, 10).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
+    print('attempting to find search input')
+    try:
+        WebDriverWait(webdriver, 5).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
+    except TimeoutException: # try again. Sometimes the script cannot find the button the first time around
+        WebDriverWait(webdriver, 10).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
     open_search_input = webdriver.find_element_by_xpath(open_search_button_xpath)
     _scroll_into_view(open_search_input)
     time.sleep(random.randint(3, 15))
     _open_review_search_input(webdriver)
 
-    # insert input then RETURN
+    # insert 'halal' then RETURN
     search_input_xpath = '//input[@aria-label="Search reviews"]'
-    WebDriverWait(webdriver, 10).until(EC.visibility_of_element_located((By.XPATH, search_input_xpath)))
+    print('attempting to cick search button')
+    try:
+        WebDriverWait(webdriver, 3).until(EC.visibility_of_element_located((By.XPATH, search_input_xpath)))
+    except TimeoutException:
+        WebDriverWait(webdriver, 3).until(EC.visibility_of_element_located((By.XPATH, search_input_xpath)))
     search_input = webdriver.find_element_by_xpath(search_input_xpath)
     search_input.send_keys('Halal')
     search_input.send_keys(Keys.RETURN)
 
     # scroll to show all reviews
+    print('Scrolling to show all reviews')
     scrollable_pane_css = '#pane > div > div.widget-pane-content.scrollable-y > div > div > div.section-layout.section-scrollbox.scrollable-y.scrollable-show'
     WebDriverWait(webdriver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR, scrollable_pane_css)))
     scrollable = webdriver.find_element_by_css_selector(scrollable_pane_css)
     _infinite_scroll(scrollable)
 
     # load all reviews' text by clicking all 'More' buttons
+    try:
+        more_button_xpath = '//button[@class="section-expand-review blue-link"]'
+        buttons = webdriver.find_elements_by_xpath(more_button_xpath)
+        for button in buttons:
+            button.click()
+    except:
+        pass
 
 
 def _scrape_google_reviews_text(webdriver):
     reviews_text_xpath = '//span[@class="section-review-text"]'
     reviews_dates_xpath = '//span[@class = "section-review-publish-date"]'
-    reviews_text = webdriver.find_elements_by_xpath(reviews_text_xpath)
+    reviews_rating_xpath = '//span[@class="section-review-stars"]'
+    reviews_username_xpath = '//div[@class="section-review-title"]/span'
+    reviews_texts = webdriver.find_elements_by_xpath(reviews_text_xpath)
     reviews_dates = webdriver.find_elements_by_xpath(reviews_dates_xpath)
+    reviews_ratings = webdriver.find_elements_by_xpath(reviews_rating_xpath)
+    reviews_usernames = webdriver.find_elements_by_xpath(reviews_username_xpath)
     reviews_list = []
-    for review, review_date in zip(reviews_text, reviews_dates):
+    for review, review_date, review_rating, review_usr in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames):
         text = review.text
         date = review_date.text
-        reviews_list.append([text, date])
+        rating = review_rating.get_attribute('aria-label')
+        username = review_usr.text
+        reviews_list.append([username, rating, text, date, rating])
     return reviews_list
 
 
