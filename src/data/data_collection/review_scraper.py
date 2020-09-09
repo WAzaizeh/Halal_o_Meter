@@ -35,8 +35,8 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
     webdriver = _get_webdriver()
     # get business url with halal-relevant reviews only
     webdriver.get(yelp_url + '&q=halal')
-    print(yelp_id)
     review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
+    print(review_num)
 
     reviews_list = []
     if review_num > 0 :
@@ -48,7 +48,7 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
             time.sleep(random.randint(2,5))
         # scrape last page
         reviews_list.extend(_scrape_yelp_reviews_text(webdriver))
-    _close_webdriver(webdriver)
+    # _close_webdriver(webdriver)
     print('Scraped {0} reviews from yelp business id #{1}'.format(len(reviews_list), yelp_id))
     time.sleep(random.randint(2,5))
     return reviews_list
@@ -58,8 +58,8 @@ def _get_webdriver():
     chromedriver_path = os.getenv('CHROMEDRIVER_PATH')
     options = ChromeOptions()
     # will need more configuration when deployed
-    # options.add_experimental_option("detach", True) # for experimentation
-    options.add_argument('--headless')
+    # options.add_experimental_option("detach", True) # uncomment for experimentation
+    options.add_argument('--headless') # comment for experimentation
     options.add_argument("--incognito")
     options.add_argument("start-maximized")
     options.add_argument("disable-infobars")
@@ -177,11 +177,27 @@ def _get_yelp_reviews_num(webdriver):
 
 def _scrape_yelp_reviews_text(webdriver):
     reviews_text_xpath = '//span[@lang="en"]'
-    dates_xpath_from_text = './../../../div/div/div[2]/span'
+    dates_xpath = '//span[@class="lemon--span__373c0__3997G text__373c0__2Kxyz text-color--mid__373c0__jCeOG text-align--left__373c0__2XGa-"]'
+    ratings_xpath_relative_from_date = './/parent::div//parent::div//div[@aria-label]'
+    # will need to expand all previous reviews before being able to extract usefulness tags for them
+    expand_previous_xpath = '//*[@role="button" and @aria-controls="expander-link-content-7c654597-0659-4e87-b5fd-c9bfe1f4c1fe"]'
+    useful_tags_xpath = '//span[contains(text(), "Useful")]'
+
+    expand_buttons = webdriver.find_elements_by_xpath(expand_previous_xpath)
+    if len(expand_buttons):
+        for button in expand_buttons:
+            button.click()
+
     reviews = webdriver.find_elements_by_xpath(reviews_text_xpath)
+    dates = webdriver.find_elements_by_xpath(dates_xpath)
+    useful_tags = webdriver.find_elements_by_xpath(useful_tags_xpath)
     reviews_list = []
-    for review in reviews:
-        text = review.text
-        date = review.find_element_by_xpath(dates_xpath_from_text).text
-        reviews_list.append([text, date])
+    for review, date, useful_tag in zip(reviews, dates, useful_tags):
+        rating = date.find_element_by_xpath(ratings_xpath_relative_from_date)
+        try:
+            useful_count = useful_tag.find_element_by_xpath('./span').text
+        except:
+            useful_count = 0
+        reviews_list.append([review.text, date.text, rating.get_attribute('aria-label'), useful_count])
+        print(reviews_list[-1])
     return reviews_list
