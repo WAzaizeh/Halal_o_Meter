@@ -36,7 +36,6 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
     # get business url with halal-relevant reviews only
     webdriver.get(yelp_url + '&q=halal')
     review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
-    print(review_num)
 
     reviews_list = []
     if review_num > 0 :
@@ -199,5 +198,4 @@ def _scrape_yelp_reviews_text(webdriver):
         except:
             useful_count = 0
         reviews_list.append([review.text, date.text, rating.get_attribute('aria-label'), useful_count])
-        print(reviews_list[-1])
     return reviews_list
