@@ -109,7 +109,6 @@ def _search_google_halal_review(webdriver):
     # click button to open search input field
     open_search_button_xpath = '//button[@aria-label="Search reviews"]'
     # scroll to bring review search into focus
-    print('attempting to find search input')
     try:
         WebDriverWait(webdriver, 5).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
     except TimeoutException: # try again. Sometimes the script cannot find the button the first time around
@@ -121,7 +120,6 @@ def _search_google_halal_review(webdriver):
 
     # insert 'halal' then RETURN
     search_input_xpath = '//input[@aria-label="Search reviews"]'
-    print('attempting to cick search button')
     try:
         WebDriverWait(webdriver, 3).until(EC.visibility_of_element_located((By.XPATH, search_input_xpath)))
     except TimeoutException:
@@ -131,7 +129,6 @@ def _search_google_halal_review(webdriver):
     search_input.send_keys(Keys.RETURN)
 
     # scroll to show all reviews
-    print('Scrolling to show all reviews')
     scrollable_pane_css = '#pane > div > div.widget-pane-content.scrollable-y > div > div > div.section-layout.section-scrollbox.scrollable-y.scrollable-show'
     WebDriverWait(webdriver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR, scrollable_pane_css)))
     scrollable = webdriver.find_element_by_css_selector(scrollable_pane_css)
@@ -152,17 +149,20 @@ def _scrape_google_reviews_text(webdriver):
     reviews_dates_xpath = '//span[@class = "section-review-publish-date"]'
     reviews_rating_xpath = '//span[@class="section-review-stars"]'
     reviews_username_xpath = '//div[@class="section-review-title"]/span'
+    reviews_helpful_xpath = '//img[@src="//www.gstatic.com/images/icons/material/system_gm/1x/thumb_up_black_18dp.png"]//following-sibling::span/span[2]'
     reviews_texts = webdriver.find_elements_by_xpath(reviews_text_xpath)
     reviews_dates = webdriver.find_elements_by_xpath(reviews_dates_xpath)
     reviews_ratings = webdriver.find_elements_by_xpath(reviews_rating_xpath)
     reviews_usernames = webdriver.find_elements_by_xpath(reviews_username_xpath)
+    reviews_helpful_count = webdriver.find_elements_by_xpath(reviews_helpful_xpath)
     reviews_list = []
-    for review, review_date, review_rating, review_usr in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames):
+    for review, review_date, review_rating, review_usr, review_help in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames, reviews_helpful_count):
         text = review.text
         date = review_date.text
         rating = review_rating.get_attribute('aria-label')
         username = review_usr.text
-        reviews_list.append([username, rating, text, date, rating])
+        help_count = review_help.text + ' likes'
+        reviews_list.append([username, rating, text, date, help_count])
     return reviews_list
 
 
@@ -175,6 +175,7 @@ def _get_yelp_reviews_num(webdriver):
 
 
 def _scrape_yelp_reviews_text(webdriver):
+    reviews_usernames_xpath = '//a[@class="lemon--a__373c0__IEZFH link__373c0__1G70M link-color--inherit__373c0__3dzpk link-size--inherit__373c0__1VFlE"]'
     reviews_text_xpath = '//span[@lang="en"]'
     dates_xpath = '//span[@class="lemon--span__373c0__3997G text__373c0__2Kxyz text-color--mid__373c0__jCeOG text-align--left__373c0__2XGa-"]'
     ratings_xpath_relative_from_date = './/parent::div//parent::div//div[@aria-label]'
@@ -187,15 +188,16 @@ def _scrape_yelp_reviews_text(webdriver):
         for button in expand_buttons:
             button.click()
 
-    reviews = webdriver.find_elements_by_xpath(reviews_text_xpath)
+    reviews_usernames = webdriver.find_elements_by_xpath(reviews_usernames_xpath)
+    reviews_texts = webdriver.find_elements_by_xpath(reviews_text_xpath)
     dates = webdriver.find_elements_by_xpath(dates_xpath)
     useful_tags = webdriver.find_elements_by_xpath(useful_tags_xpath)
     reviews_list = []
-    for review, date, useful_tag in zip(reviews, dates, useful_tags):
+    for username, review, date, useful_tag in zip(reviews_usernames, reviews_texts, dates, useful_tags):
         rating = date.find_element_by_xpath(ratings_xpath_relative_from_date)
         try:
-            useful_count = useful_tag.find_element_by_xpath('./span').text
+            useful_count = useful_tag.find_element_by_xpath('./span').text + ' likes'
         except:
-            useful_count = 0
-        reviews_list.append([review.text, date.text, rating.get_attribute('aria-label'), useful_count])
+            useful_count = '0 likes'
+        reviews_list.append([username.text, rating.get_attribute('aria-label'), review.text, date.text, useful_count])
     return reviews_list
