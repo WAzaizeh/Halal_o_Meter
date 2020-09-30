@@ -78,19 +78,21 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
         google_id = result['place_id']
         google_url , review_count = get_google_place_url_and_review_count(google_id)
         address = result['formatted_address']
-        image_url = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + result['photos']['photo_reference'] + '&key='+ API_key
+        try:
+            image_url = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + result['photos'][0]['photo_reference'] + '&key='+ API_key
+        except: # no image
+            print('No image found for {}'.format(name))
+            image_url = 'https://thumbs.dreamstime.com/b/food-line-icon-restaurant-sign-fork-knife-plate-symbol-geometric-shapes-random-cross-elements-linear-food-icon-design-vector-136546147.jpg'
         lat = result['geometry']['location']['lat']
         lng = result['geometry']['location']['lng']
-        businesses_list.append([name, google_id, google_url, review_count, address, imgae_url, lat, lng])
+        businesses_list.append([name, google_id, google_url, review_count, address, image_url, lat, lng])
         # db.insert_row( update_sql, *(name, google_id, google_url, review_count, address))
     try:
         next_page_token = json_obj["next_page_token"]
+        time.sleep(1)
+        data = get_google_places_by_location(coordinates=coordinates, next_page=next_page_token)
+        businesses_list.extend(data)
     except:
         #no next page
-
-        return businesses_list
-    time.sleep(1)
-    data = get_google_places_by_location(coordinates=coordinates, next_page=next_page_token)
-    businesses_list.extend(data)
-    print('Found {} businesses near coordinates {}'.format(len(businesses_list), coordinates))
+        pass
     return businesses_list
