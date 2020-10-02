@@ -12,10 +12,10 @@ load_dotenv()
 API_key = os.getenv('YELP_API_KEY')
 
 
-def get_yelp_places_by_location(search_location, search_type='restaurant', search_term='halal'):
+def get_yelp_places_by_location(coordinates, search_type='restaurant', search_term='halal'):
     url = "https://api.yelp.com/v3/businesses/search"
     params = {
-        'location': search_location,
+        'location': coordinates[1],
         'type': search_type,
         'term': search_term,
         'offset': ''
@@ -24,13 +24,8 @@ def get_yelp_places_by_location(search_location, search_type='restaurant', searc
       'Authorization': 'Bearer %s' % API_key
     }
 
+    businesses_list = []
     offset_max = 951
-    # initialize database functions
-    db = Database()
-    update_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address)
-                    VALUES (%s, %s, %s, %s, %s)
-                    ON CONFLICT (url) DO NOTHING"""
-
     while len(params['offset']) == 0 or int(params['offset']) < offset_max:
         response = requests.request("GET", url, headers=headers, params=params)
         json_obj = json.loads(response.text)
@@ -41,24 +36,14 @@ def get_yelp_places_by_location(search_location, search_type='restaurant', searc
             yelp_id = result['id']
             yelp_url = result['url']
             review_count = result['review_count']
-            address = result['location']['display_address']
-            db.insert_row(update_sql, *(name, yelp_id, yelp_url, review_count, address))
+            address = ', '.join(result['location']['display_address'])
+            image_url = result['image_url']
+            lat = result['coordinates']['latitude']
+            lng = result['coordinates']['longitude']
+            businesses_list.append([name, yelp_id, yelp_url, review_count, address, image_url, lat, lng])
         # load more results using the offset param
-        params['offset'] = str(int(params['offset']) + 50) if params['offset'] != '' else '51'
-        time.sleep(5)
+        params['offset'] = str(int(params['offset']) + 20) if params['offset'] != '' else '20'
+        time.sleep(1)
 
-    print('Yelp search in {0} yielded {1} business added to database'.format(search_location.replace('+',' '), offset_max))
-
-def get_yelp_business_details(yelp_id):
-    URL = ('https://api.yelp.com/v3/businesses/'+yelp_id)
-    headers = {
-        'Authorization' : 'Bearer %s' % API_key
-    }
-    response = requests.request("GET", URL, headers=headers)
-    json_obj = json.loads(response.text)
-    row = {
-        'image_url' : json_obj['image_url'],
-        'lat' : json_obj['coordinates']['latitude'],
-        'lng' : json_obj['coordinates']['longitude']
-        }
-    return row
+    print('Yelp search in {0} yielded {1} business'.format(coordinates[0], offset_max))
+    return businesses_list

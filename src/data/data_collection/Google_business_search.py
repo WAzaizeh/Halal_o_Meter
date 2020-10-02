@@ -27,13 +27,11 @@ def get_corrdinates_from_name(location_name):
             lng = result['geometry']['location']['lng']
         return lat, lng
     else:
-        print(json_obj)
         return 0, 0
 
 def get_name_from_coordinates(lat, lng):
     URL = ('https://maps.googleapis.com/maps/api/geocode/json?latlng='
     + str(lat) + ',' + str(lng) + '&result_type=neighborhood&key=' + API_key)
-    print(URL)
     r = requests.get(URL)
     response = r.text
     json_obj = json.loads(response)
@@ -59,9 +57,9 @@ def get_google_place_url_and_review_count(place_id):
     return google_url, review_count
 
 
-def get_google_places_by_location(coordinates, business_type='restaurant', search_term='halal', radius = '16093', next_page=''):
+def get_google_places_by_location(coordinates, business_type='restaurant', search_term='halal', radius = '16093', page_num=0, next_page=''):
     URL = ('https://maps.googleapis.com/maps/api/place/textsearch/json?location='
-    	+ str(coordinates) + '&radius=' + radius + 'query=' + search_term + '&type='
+    	+ str(coordinates[1]) + '&radius=' + radius + 'query=' + search_term + '&type='
     	+ business_type + '&pagetoken=' + next_page + '&key='+ API_key)
     response = requests.get(URL)
     json_obj = json.loads(response.text)
@@ -81,7 +79,6 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
         try:
             image_url = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + result['photos'][0]['photo_reference'] + '&key='+ API_key
         except: # no image
-            print('No image found for {}'.format(name))
             image_url = 'https://thumbs.dreamstime.com/b/food-line-icon-restaurant-sign-fork-knife-plate-symbol-geometric-shapes-random-cross-elements-linear-food-icon-design-vector-136546147.jpg'
         lat = result['geometry']['location']['lat']
         lng = result['geometry']['location']['lng']
@@ -90,9 +87,11 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
     try:
         next_page_token = json_obj["next_page_token"]
         time.sleep(1)
-        data = get_google_places_by_location(coordinates=coordinates, next_page=next_page_token)
+        data = get_google_places_by_location(coordinates=coordinates, page_num=page_num+1, next_page=next_page_token)
         businesses_list.extend(data)
     except:
         #no next page
         pass
+    if page_num == 0:
+        print('Found {} businesses around {}'.format(len(businesses_list), coordinates[0]))
     return businesses_list

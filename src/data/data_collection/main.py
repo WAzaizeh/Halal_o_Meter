@@ -10,18 +10,20 @@ from Google_business_search import get_google_places_by_location
 from Yelp_business_search import get_yelp_places_by_location
 from review_scraper import scrape_yelp_reviews, scrape_google_reviews, _close_webdriver
 import sys
+from datetime import datetime
 
 
 def get_businesses():
     try:
         # searching for businesses and updating database
         coordinates = _get_coordinates_list()
+        timestamped_print('Searching around', '|'.join([coord[0] for coord in coordinates]))
         agents = 3
         chunksize = 10
         businesses_list = []
         with multiprocessing.Pool(processes=agents) as pool:
             businesses_list.extend(pool.map(get_google_places_by_location, coordinates, chunksize))
-            businesses_list.extend(pool.map(get_yelp_places_by_location, coordinates, chunksize))
+            # businesses_list.extend(pool.map(get_yelp_places_by_location, coordinates, chunksize))
             pool.close()
             pool.join()
         _update_businesses_and_final_print(businesses_list)
@@ -33,19 +35,19 @@ def get_businesses():
 def _get_coordinates_list():
     db = Database()
     # fetch the list of NYC neighborhoods' coordinates for the search
-    get_lat_lng = '''SELECT lat, lng
+    get_lat_lng = '''SELECT neighborhood, lat, lng
                         FROM coordinates'''
     results = db.select_rows(get_lat_lng)
     coordinates_list = [coord for coord in results]
-    coordinates = [','.join(map(str, coordinates)) for coordinates in coordinates_list]
-    return coordinates
+    coordinates_list = [[coord[0].replace('+', ' '), ','.join([str(coord[1]),str(coord[2])])] for coord in results]
+    return coordinates_list
 
 
 def _update_businesses_and_final_print(businesses_list):
     db = Database()
     # update database with API search results
-    business_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address)
-                    VALUES (%s, %s, %s, %s, %s)
+    business_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address, image_url, lat, lng)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                     ON CONFLICT (url) DO NOTHING"""
     db_list = [item for sublist in businesses_list for item in sublist]
     db.insert_rows(business_sql, *db_list)
@@ -56,8 +58,8 @@ def _update_businesses_and_final_print(businesses_list):
                     WHERE url LIKE %s '''
     google_count = db.select_rows(count_sql, ('%google%', ))[0][0]
     yelp_count = db.select_rows(count_sql, ('%yelp%'))[0][0]
-    print('{} total businesses added'.format(len(db_list)))
-    print('Have {0} google businesses and {1} yelp businesses'.format(google_count, yelp_count))
+    timestamped_print('{} total businesses found'.format(len(db_list)))
+    timestamped_print('Have {0} google businesses and {1} yelp businesses'.format(google_count, yelp_count))
     # print('Successfully found {} yelp businesses'.format(yelp_count))
 
 
@@ -105,10 +107,20 @@ def _update_reviews_and_final_print(reviews_list):
                     ON CONFLICT (review_text) DO NOTHING"""
     db_list = [item for sublist in reviews_list for item in sublist]
     db.insert_rows(reviews_sql, *db_list)
-
+    # missing the summary print statement
     return reviews_list
 
+def timestamped_print(*args, **kwargs):
+  print(datetime.now(), *args, **kwargs)
 
 if __name__ == '__main__':
-    get_businesses()
-    scrape_reviews()
+    try:
+        log_file = open('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection/logs/Google_search.log','a+')
+        sys.stdout = log_file
+
+        get_businesses()
+        # scrape_reviews()
+
+        log_file.close()
+    finally:
+        sys.stdout = sys.__stdout__

@@ -22,6 +22,10 @@ sample_coord = random.sample(coordinates_list, 1)
 coordinates = sample_coord[0]
 # Yelp_business_search.get_yelp_places_by_location('OzonePark', 'restaurant', 'Halal')
 
-# test google restaurant search around a location
-biz_list = Google_business_search.get_google_places_by_location(coordinates=coordinates)
+# # test google restaurant search around a location
+# biz_list = Google_business_search.get_google_places_by_location(coordinates=coordinates)
+# print('Found {} businesses in {}'.format(len(biz_list), coordinates[0]))
+
+# test yelp restaurant search around a location
+biz_list = Yelp_business_search.get_yelp_places_by_location(coordinates=coordinates)
 print('Found {} businesses in {}'.format(len(biz_list), coordinates[0]))
