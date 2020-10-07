@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-API_key = os.getenv('GOOGLE_API_KEY_3')
+API_key = os.getenv('GOOGLE_API_KEY')
 
 def get_corrdinates_from_name(location_name):
     URL = ('https://maps.googleapis.com/maps/api/geocode/json?address='
@@ -42,19 +42,20 @@ def get_name_from_coordinates(lat, lng):
     else:
         return None
 
-def get_google_place_url_and_review_count(place_id):
+def _get_google_business_details(place_id, fields='url,price_level,rating,user_ratings_total'):
     URL = ('https://maps.googleapis.com/maps/api/place/details/json?placeid='
-    +place_id+'&key='+API_key)
+    + place_id + '&fields=' + fields + '&key='+API_key)
     r = requests.get(URL)
     response = r.text
     json_obj = json.loads(response)
     place_details = json_obj["result"]
-    google_url = place_details['url']
-    try:
-        review_count = place_details['user_ratings_total']
-    except:
-        review_count = 0
-    return google_url, review_count
+    res_dict = dict()
+    for var in fields.split(','):
+        try:
+            res_dict[var] = place_details[var]
+        except:
+            res_dict[var] = 0
+    return res_dict
 
 
 def get_google_places_by_location(coordinates, business_type='restaurant', search_term='halal', radius = '16093', page_num=0, next_page=''):
@@ -66,6 +67,7 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
     results = json_obj["results"]
 
     # # SQL query to add business to table
+    # # moved externally to avoid opening too many connections when doing batch searched
     # db = Database()
     # update_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address)
     #                 VALUES (%s, %s, %s, %s, %s)
@@ -74,7 +76,8 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
     for result in results:
         name = result['name']
         google_id = result['place_id']
-        google_url , review_count = get_google_place_url_and_review_count(google_id)
+        # have to use Google fields options and variable have to be in same order as fields string
+        google_url , review_count = _get_google_business_details(place_id=google_id, fields='url,user_ratings_total').values()
         address = result['formatted_address']
         try:
             image_url = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + result['photos'][0]['photo_reference'] + '&key='+ API_key
