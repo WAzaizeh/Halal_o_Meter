@@ -7,6 +7,7 @@ import requests, json, time
 from database import Database
 from dotenv import load_dotenv
 import os
+from json_managment import json_to_file
 
 load_dotenv()
 API_key = os.getenv('GOOGLE_API_KEY')
@@ -58,7 +59,7 @@ def _get_google_business_details(place_id, fields='url,price_level,rating,user_r
     return res_dict
 
 
-def get_google_places_by_location(coordinates, business_type='restaurant', search_term='halal', radius = '16093', page_num=0, next_page=''):
+def get_google_places_by_location(coordinates, business_type='restaurant', search_term='halal', radius = '16093', next_page='', save_json=False):
     URL = ('https://maps.googleapis.com/maps/api/place/textsearch/json?location='
     	+ str(coordinates[1]) + '&radius=' + radius + 'query=' + search_term + '&type='
     	+ business_type + '&pagetoken=' + next_page + '&key='+ API_key)
@@ -87,14 +88,17 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
         lng = result['geometry']['location']['lng']
         businesses_list.append([name, google_id, google_url, review_count, address, image_url, lat, lng])
         # db.insert_row( update_sql, *(name, google_id, google_url, review_count, address))
+        # save file according to save_json flag
+        if save_json:
+            json_to_file(businesses_id=google_id, result)
     try:
         next_page_token = json_obj["next_page_token"]
         time.sleep(1)
-        data = get_google_places_by_location(coordinates=coordinates, page_num=page_num+1, next_page=next_page_token)
+        data = get_google_places_by_location(coordinates=coordinates, next_page=next_page_token)
         businesses_list.extend(data)
     except:
         #no next page
-        pass
-    if page_num == 0:
+        next_page_token = ''
+    if (not len(next_page)) & (len(next_page_token)):
         print('Found {} businesses around {}'.format(len(businesses_list), coordinates[0]))
     return businesses_list
