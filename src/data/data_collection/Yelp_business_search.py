@@ -12,7 +12,7 @@ load_dotenv()
 API_key = os.getenv('YELP_API_KEY')
 
 
-def get_yelp_places_by_location(coordinates, search_type='restaurant', search_term='halal'):
+def get_yelp_places_by_location(coordinates, search_type='restaurant', search_term='halal', save_json=False):
     url = "https://api.yelp.com/v3/businesses/search"
     params = {
         'location': coordinates[1],
@@ -41,6 +41,9 @@ def get_yelp_places_by_location(coordinates, search_type='restaurant', search_te
             lat = result['coordinates']['latitude']
             lng = result['coordinates']['longitude']
             businesses_list.append([name, yelp_id, yelp_url, review_count, address, image_url, lat, lng])
+            # save file according to save_json flag
+            if save_json:
+                json_to_file(businesses_id=yelp_id, result)
         # load more results using the offset param
         params['offset'] = str(int(params['offset']) + 20) if params['offset'] != '' else '20'
         time.sleep(1)
