@@ -21,14 +21,17 @@ def get_businesses():
         agents = 3
         chunksize = 10
         businesses_list = []
-        with multiprocessing.Pool(processes=agents) as pool:
-            businesses_list.extend(pool.map(get_google_places_by_location, coordinates, chunksize))
-            # businesses_list.extend(pool.map(get_yelp_places_by_location, coordinates, chunksize))
-            pool.close()
-            pool.join()
-        _update_businesses_and_final_print(businesses_list)
+        # with multiprocessing.Pool(processes=agents) as pool:
+        #     businesses_list.extend(pool.map(get_google_places_by_location, coordinates, chunksize))
+        #     # businesses_list.extend(pool.map(get_yelp_places_by_location, coordinates, chunksize))
+        #     pool.close()
+        #     pool.join()
+        ## -Chunk and call search functions multiple times:
+        ## -Have lat,lng limitation where if more than 10% of results are outside locality then stop search
+        ## and eliminate results from lat/lng +/- threshold
+        _update_businesses(businesses_list)
     except KeyboardInterrupt:
-        _update_businesses_and_final_print(businesses_list)
+        _update_businesses(businesses_list)
         raise
         sys.exit(0)
 
@@ -43,7 +46,7 @@ def _get_coordinates_list():
     return coordinates_list
 
 
-def _update_businesses_and_final_print(businesses_list):
+def _update_businesses(businesses_list):
     db = Database()
     # update database with API search results
     business_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address, image_url, lat, lng)
@@ -64,20 +67,20 @@ def _update_businesses_and_final_print(businesses_list):
 
 
 def scrape_reviews():
+    yelp_urls, google_urls = _get_unscraped_urls()
+    # scrape reviews info
+    agents = 3
+    chunksize = 10
+    reviews_list = []
     try:
-        yelp_urls, google_urls = _get_unscraped_urls()
-        # scrape reviews info
-        agents = 3
-        chunksize = 10
-        reviews_list = []
         with multiprocessing.Pool(processes=agents) as pool:
-            # reviews_list.extend(pool.starmap(scrape_yelp_reviews, yelp_urls[:2], chunksize=chunksize))
-            reviews_list.extend(pool.starmap(scrape_google_reviews, google_urls[:2], chunksize))
+            reviews_list.extend(pool.starmap(scrape_yelp_reviews, yelp_urls[:2], chunksize=chunksize))
+            # reviews_list.extend(pool.starmap(scrape_google_reviews, google_urls[:2], chunksize))
             pool.close()
             pool.join()
-        _update_reviews_and_final_print(reviews_list)
+        _update_reviews(reviews_list)
     except (KeyboardInterrupt, SystemExit):
-        _update_reviews_and_final_print(reviews_list)
+        _update_reviews(reviews_list)
         raise
         sys.exit(0)
 
@@ -99,7 +102,7 @@ def _get_unscraped_urls():
     return yelp_urls_keep, google_urls_keep
 
 
-def _update_reviews_and_final_print(reviews_list):
+def _update_reviews(reviews_list):
     db = Database()
     # update database with business scraping results
     reviews_sql = """INSERT INTO reviews (restaurant_id, review_text, review_date)
@@ -108,18 +111,18 @@ def _update_reviews_and_final_print(reviews_list):
     db_list = [item for sublist in reviews_list for item in sublist]
     db.insert_rows(reviews_sql, *db_list)
     # missing the summary print statement
-    return reviews_list
+    timestamped_print('{} reviews found'.format(len(db_list)))
 
 def timestamped_print(*args, **kwargs):
   print(datetime.now(), *args, **kwargs)
 
 if __name__ == '__main__':
     try:
-        log_file = open('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection/logs/Google_search.log','a+')
+        log_file = open('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection/logs/Yelp_scrapping.log','a+')
         sys.stdout = log_file
 
-        get_businesses()
-        # scrape_reviews()
+        # get_businesses()
+        scrape_reviews()
 
         log_file.close()
     finally:

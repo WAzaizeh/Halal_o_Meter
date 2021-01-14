@@ -43,7 +43,7 @@ def get_yelp_places_by_location(coordinates, search_type='restaurant', search_te
             businesses_list.append([name, yelp_id, yelp_url, review_count, address, image_url, lat, lng])
             # save file according to save_json flag
             if save_json:
-                json_to_file(businesses_id=yelp_id, result)
+                json_to_file(businesses_id=yelp_id, json_obj=result)
         # load more results using the offset param
         params['offset'] = str(int(params['offset']) + 20) if params['offset'] != '' else '20'
         time.sleep(1)

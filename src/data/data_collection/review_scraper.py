@@ -57,8 +57,8 @@ def _get_webdriver():
     chromedriver_path = os.getenv('CHROMEDRIVER_PATH')
     options = ChromeOptions()
     # will need more configuration when deployed
-    # options.add_experimental_option("detach", True) # uncomment for experimentation
-    options.add_argument('--headless') # comment for experimentation
+    options.add_experimental_option("detach", True) # uncomment for experimentation
+    # options.add_argument('--headless') # comment for experimentation
     options.add_argument("--incognito")
     options.add_argument("start-maximized")
     options.add_argument("disable-infobars")

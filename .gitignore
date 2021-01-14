@@ -60,6 +60,9 @@ target/
 # DotEnv configuration
 .env
 
+# API search results
+*.json
+
 # Database
 *.db
 *.rdb

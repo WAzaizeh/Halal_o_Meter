@@ -90,7 +90,7 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
         # db.insert_row( update_sql, *(name, google_id, google_url, review_count, address))
         # save file according to save_json flag
         if save_json:
-            json_to_file(businesses_id=google_id, result)
+            json_to_file(businesses_id=google_id, json_ojb=result)
     try:
         next_page_token = json_obj["next_page_token"]
         time.sleep(1)

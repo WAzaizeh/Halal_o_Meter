@@ -10,7 +10,7 @@ def json_to_file(businesses_id, json_ojb):
     folder named after the ID
     '''
     with open(FOLDER_PATH + file_id + '.json' ,'w+') as outfile:
-    json.dump(json_ojb, outfile)
+        json.dump(json_ojb, outfile)
 
 def file_to_json(business_id='', file_path=''):
     '''
