@@ -72,9 +72,11 @@ def scrape_reviews():
     agents = 3
     chunksize = 10
     reviews_list = []
+    print('\n\n#####################################################################')
+    print('{} yelp restaurants and {} Google restaurants left to scrape'.format(len(yelp_urls), len(google_urls)))
     try:
         with multiprocessing.Pool(processes=agents) as pool:
-            reviews_list.extend(pool.starmap(scrape_yelp_reviews, yelp_urls[:2], chunksize=chunksize))
+            reviews_list.extend(pool.starmap(scrape_yelp_reviews, yelp_urls, chunksize=chunksize))
             # reviews_list.extend(pool.starmap(scrape_google_reviews, google_urls[:2], chunksize))
             pool.close()
             pool.join()
