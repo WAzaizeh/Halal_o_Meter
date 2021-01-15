@@ -47,9 +47,9 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
             webdriver.get(yelp_url  + '&q=halal' + '&start='+str(i*20))
             time.sleep(random.randint(2,5))
         # scrape last page
-        reviews_list.extend(_scrape_yelp_reviews_text(webdriver))
+        reviews_list.extend([yelp_id, _scrape_yelp_reviews_text(webdriver)])
     else:
-        reviews_list = [['', '', '', '', '']]
+        reviews_list = [[yelp_id, '', '', '', '', '']]
     # _close_webdriver(webdriver)
     print('Scraped {0} reviews from yelp business id #{1}'.format(len(reviews_list), yelp_id))
     return reviews_list
@@ -196,8 +196,8 @@ def _scrape_yelp_reviews_text(webdriver):
         rating = review_rating.get_attribute('aria-label')
         username = review_usr.text
         try:
-            help_count = review_help.find_element_by_xpath('.//span').text + ' likes'
+            reviews_helpful_count = review_help.find_element_by_xpath('.//span').text + ' likes'
         except:
-            help_count = '0 likes'
-        reviews_list.append([username, rating, text, date, help_count])
+            helpful_count = '0 likes'
+        reviews_list.append([username, rating, text, date, helpful_count])
     return reviews_list

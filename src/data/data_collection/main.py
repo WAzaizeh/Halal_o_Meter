@@ -105,9 +105,18 @@ def _get_unscraped_urls():
 
 
 def _update_reviews(reviews_list):
+    '''
+        get a nested list of individual review data. Each entry includes:
+        - restaurant id
+        - username
+        - rating
+        - review text
+        - review date
+        - helpful count
+    '''
     db = Database()
     # update database with business scraping results
-    reviews_sql = """INSERT INTO reviews (restaurant_id, review_text, review_date)
+    reviews_sql = """INSERT INTO reviews (restaurant_id, username, rating, review_text, date, helpful_count)
                     VALUES (%s, %s, %s)
                     ON CONFLICT (review_text) DO NOTHING"""
     db_list = [item for sublist in reviews_list for item in sublist]
