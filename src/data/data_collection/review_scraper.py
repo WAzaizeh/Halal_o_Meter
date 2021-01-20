@@ -36,22 +36,23 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
     # get business url with halal-relevant reviews only
     webdriver.get(yelp_url + '&q=halal')
     review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
-    print('The page has {} reviews'.format(review_num))
 
     reviews_list = []
     if review_num > 0 :
         for i in range(1 ,int(review_num / 20) + (review_num % 20 > 0)):
             # get list of reviews text and dates and append to database
-            reviews_list.extend(_scrape_yelp_reviews_text(webdriver))
+            reviews_list.extend(_scrape_yelp_reviews_text(webdriver, yelp_id))
             # call next page
             webdriver.get(yelp_url  + '&q=halal' + '&start='+str(i*20))
             time.sleep(random.randint(2,5))
         # scrape last page
-        reviews_list.extend([yelp_id, _scrape_yelp_reviews_text(webdriver)])
+        reviews_list.extend(_scrape_yelp_reviews_text(webdriver, yelp_id))
+        print('Scraped {0} reviews from yelp business id {1}'.format(len(reviews_list), yelp_id))
     else:
-        reviews_list = [[yelp_id, '', '', '', '', '']]
-    # _close_webdriver(webdriver)
-    print('Scraped {0} reviews from yelp business id #{1}'.format(len(reviews_list), yelp_id))
+        reviews_list = [[yelp_id, '', '', NULL, '', 0]] # review text is set to NULL to escape SQL insert ON CONFLICT based on review_text
+        print('No reviews to scrape from yelp business id {1}'.format(len(reviews_list), yelp_id))
+
+    _close_webdriver(webdriver)
     return reviews_list
 
 def _get_webdriver():
@@ -165,7 +166,6 @@ def _scrape_google_reviews_text(webdriver):
         username = review_usr.text
         help_count = review_help.text + ' likes'
         reviews_list.append([username, rating, text, date, help_count])
-        print('|'.join([text, date, rating, username, help_count]))
     return reviews_list
 
 
@@ -177,7 +177,7 @@ def _get_yelp_reviews_num(webdriver):
     return int(review_num_str.split()[0])
 
 
-def _scrape_yelp_reviews_text(webdriver):
+def _scrape_yelp_reviews_text(webdriver, yelp_id):
     reviews_text_xpath = '//span[@lang="en"]'
     reviews_dates_xpath = '//span[contains(text(), "/")]'
     reviews_rating_xpath = '//li/div/div//div[contains(@aria-label, "star rating") and starts-with(@class, " i-stars__373c0__1T6rz i-stars--regular")]'
@@ -196,8 +196,8 @@ def _scrape_yelp_reviews_text(webdriver):
         rating = review_rating.get_attribute('aria-label')
         username = review_usr.text
         try:
-            reviews_helpful_count = review_help.find_element_by_xpath('.//span').text + ' likes'
+            helpful_count = int(review_help.find_element_by_xpath('.//span').text.split()[0]) # take only the number and convert to ineteger
         except:
-            helpful_count = '0 likes'
-        reviews_list.append([username, rating, text, date, helpful_count])
+            helpful_count = 0
+        reviews_list.append([yelp_id, username, rating, text, date, helpful_count])
     return reviews_list

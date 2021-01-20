@@ -58,9 +58,9 @@ class Database:
                 cur.execute(query, args)
                 self.conn.commit()
                 cur.close()
-        except Exception as err:
-            print ("Oops! An exception has occured:", error)
-            print ("Exception TYPE:", type(error))
+        except Exception as e:
+            print ("Oops! An exception has occured:", e)
+            print ("Exception TYPE:", type(e))
 
     def insert_rows(self, query, *args):
         """Run a SQL query to update rows in table"""

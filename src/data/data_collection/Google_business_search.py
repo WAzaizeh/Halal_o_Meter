@@ -67,17 +67,11 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
     json_obj = json.loads(response.text)
     results = json_obj["results"]
 
-    # # SQL query to add business to table
-    # # moved externally to avoid opening too many connections when doing batch searched
-    # db = Database()
-    # update_sql = """INSERT INTO businesses (name, platform_id, url, total_review_count, address)
-    #                 VALUES (%s, %s, %s, %s, %s)
-    #                 ON CONFLICT (url) DO NOTHING"""
     businesses_list = []
     for result in results:
         name = result['name']
         google_id = result['place_id']
-        # have to use Google fields options and variable have to be in same order as fields string
+        # have to use Google fields options and variables have to be in same order as fields string
         google_url , review_count = _get_google_business_details(place_id=google_id, fields='url,user_ratings_total').values()
         address = result['formatted_address']
         try:
@@ -87,8 +81,7 @@ def get_google_places_by_location(coordinates, business_type='restaurant', searc
         lat = result['geometry']['location']['lat']
         lng = result['geometry']['location']['lng']
         businesses_list.append([name, google_id, google_url, review_count, address, image_url, lat, lng])
-        # db.insert_row( update_sql, *(name, google_id, google_url, review_count, address))
-        # save file according to save_json flag
+        # save json files for debgging and to avoid calling api too many times
         if save_json:
             json_to_file(businesses_id=google_id, json_ojb=result)
     try:
