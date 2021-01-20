@@ -16,7 +16,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 # now that the folder is in the path, ../data_collection/database.py can be imported
-from database import Database
+from storage_managers.database import Database
 
 ### setup logging file ###
 # log into a text file

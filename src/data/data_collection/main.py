@@ -5,16 +5,16 @@ review texts that include the word 'Halal' in them.
 '''
 
 import sys
-from scraping_manager import scrape_reviews
-from api_search_manager import get_businesses
+from search_and_scrape.scraping_manager import scrape_reviews
+from search_and_scrape.api_search_manager import get_businesses
 
 if __name__ == '__main__':
     try:
         log_file = open('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection/logs/data_collection.log','a+')
         sys.stdout = log_file
 
-        get_businesses()
-        # scrape_reviews()
+        # get_businesses()
+        scrape_reviews(google=False)
 
         log_file.close()
     finally:

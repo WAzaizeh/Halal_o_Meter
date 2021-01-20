@@ -1,6 +1,6 @@
-from database import Database
-from Google_business_search import get_google_places_by_location
-from Yelp_business_search import get_yelp_places_by_location
+from storage_managers.database import Database
+from search_and_scrape.Google_business_search import get_google_places_by_location
+from search_and_scrape.Yelp_business_search import get_yelp_places_by_location
 import sys
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed

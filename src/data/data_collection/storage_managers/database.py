@@ -59,8 +59,13 @@ class Database:
                 self.conn.commit()
                 cur.close()
         except Exception as e:
-            print ("Oops! An exception has occured:", e)
-            print ("Exception TYPE:", type(e))
+            # get details about the exception
+            e_type, e_obj, traceback = sys.exc_info()
+            # get the line number when exception occured
+            line_num = traceback.tb_lineno
+            # print the connect() error
+            print ("\npsycopg2 ERROR:", e, "on line number:", line_num)
+            print ("psycopg2 traceback:", traceback, "-- type:", e_type)
 
     def insert_rows(self, query, *args):
         """Run a SQL query to update rows in table"""

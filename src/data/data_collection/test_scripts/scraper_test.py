@@ -2,7 +2,7 @@ import sys
 # add parent system path
 sys.path.append('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src/data/data_collection')
 
-from review_scraper import scrape_yelp_reviews, scrape_google_reviews
+from search_and_scrape.review_scraper import scrape_yelp_reviews, scrape_google_reviews
 
 # google_test_url = 'https://maps.google.com/?cid=4988939335835406517'
 # google_id = 'randomID8083rpoeu'

@@ -22,7 +22,7 @@ for module in modules_path:
     if module not in sys.path:
         sys.path.append(module)
 
-from database import Database
+from storage_managers.database import Database
 # import pages.home as home
 
 # matplotlib.use("Agg")

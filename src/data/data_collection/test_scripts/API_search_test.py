@@ -5,7 +5,7 @@ import random
 import sys, os
 sys.path.append( os.getcwd() + '/src/data/data_collection/')
 
-from database import Database
+from storage_managers.database import Database
 
 import Yelp_business_search
 import  Google_business_search

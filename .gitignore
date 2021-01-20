@@ -79,7 +79,6 @@ target/
 
 # Jupyter NB Checkpoints & random testing NB
 .ipynb_checkpoints/
-/src/data/data_collection/Untitled.ipynb
 
 # exclude data from source control by default
 /data/

@@ -8,8 +8,8 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 
 import pandas as pd
-from Google_business_search import get_corrdinates_from_name, get_name_from_coordinates
-from database import Database
+from search_and_scrape.Google_business_search import get_corrdinates_from_name, get_name_from_coordinates
+from storage_managers.database import Database
 
 WIKI_URL = 'https://en.wikipedia.org/wiki/Neighborhoods_in_New_York_City'
 

@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-from database import Database
+from storage_managers.database import Database
 import os
 from dotenv import load_dotenv
 import time, random
@@ -49,7 +49,7 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
         reviews_list.extend(_scrape_yelp_reviews_text(webdriver, yelp_id))
         print('Scraped {0} reviews from yelp business id {1}'.format(len(reviews_list), yelp_id))
     else:
-        reviews_list = [[yelp_id, '', '', NULL, '', 0]] # review text is set to NULL to escape SQL insert ON CONFLICT based on review_text
+        reviews_list = [[yelp_id, '', '', None, '', 0]] # review text is set to None/NULL to escape SQL insert ON CONFLICT based on review_text
         print('No reviews to scrape from yelp business id {1}'.format(len(reviews_list), yelp_id))
 
     _close_webdriver(webdriver)
@@ -191,7 +191,8 @@ def _scrape_yelp_reviews_text(webdriver, yelp_id):
     reviews_helpful_count = webdriver.find_elements_by_xpath(reviews_helpful_xpath)
     reviews_list = []
     for review, review_date, review_rating, review_usr, review_help in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames, reviews_helpful_count):
-        text = review.text
+        text = review.text.replace('"', '')
+        text = text[:2712] # maximum numb of characters allowed in SQL text column
         date = review_date.text
         rating = review_rating.get_attribute('aria-label')
         username = review_usr.text

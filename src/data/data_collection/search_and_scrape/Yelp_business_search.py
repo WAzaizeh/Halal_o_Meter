@@ -3,7 +3,7 @@
 # a location, type of business, and search term.
 
 import requests, json, time
-from database import Database
+from storage_managers.database import Database
 from dotenv import load_dotenv
 import os
 import pandas as pd

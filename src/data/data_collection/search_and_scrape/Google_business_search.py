@@ -4,10 +4,10 @@
 
 import requests, json, time
 #import database_func as db
-from database import Database
+from storage_managers.database import Database
 from dotenv import load_dotenv
 import os
-from json_managment import json_to_file
+from storage_managers.json_managment import json_to_file
 
 load_dotenv()
 API_key = os.getenv('GOOGLE_API_KEY')

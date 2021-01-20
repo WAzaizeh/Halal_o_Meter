@@ -1,5 +1,5 @@
-from database import Database
-from review_scraper import scrape_yelp_reviews, scrape_google_reviews
+from storage_managers.database import Database
+from search_and_scrape.review_scraper import scrape_yelp_reviews, scrape_google_reviews
 import sys
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -10,12 +10,12 @@ def scrape_reviews(yelp=True, google=True):
     threads_max = 3
     reviews_list = []
     print('\n#####################################################################')
-    print('{} yelp restaurants and {} Google restaurants left to scrape'.format(len(yelp_urls), len(google_urls)))
+    timestamped_print('{} yelp restaurants and {} Google restaurants left to scrape'.format(len(yelp_urls), len(google_urls)))
 
     try:
         with ThreadPoolExecutor(max_workers=threads_max) as executor:
             if yelp:
-                futures = [executor.submit(scrape_yelp_reviews, *params) for params in yelp_urls]
+                futures = [executor.submit(scrape_yelp_reviews, *params) for params in yelp_urls[:2]]
                 for future in as_completed(futures):
                     reviews_list.append(future.result())
             if google:
@@ -24,10 +24,9 @@ def scrape_reviews(yelp=True, google=True):
                     reviews_list.append(future.result())
         _update_reviews(reviews_list=reviews_list)
 
-    except (KeyboardInterrupt, SystemExit):
+    finally:
         _update_reviews(reviews_list=reviews_list)
-        raise
-        sys.exit(0)
+
 
 
 def _get_unscraped_urls():
@@ -59,7 +58,7 @@ def _update_reviews(reviews_list):
                     VALUES (%s, %s, %s, %s, %s, %s )
                     ON CONFLICT (review_text) DO NOTHING"""
     db_list = [item for sublist in reviews_list for item in sublist]
-    db.insert_row(reviews_sql, *review)
+    db.insert_rows(reviews_sql, *db_list)
 
     #print summary statement
     timestamped_print('Attempted to insert {} reviews'.format(len(db_list)))

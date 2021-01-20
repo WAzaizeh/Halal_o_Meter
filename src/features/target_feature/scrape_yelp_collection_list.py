@@ -17,7 +17,7 @@ modules_path = [os.path.abspath(os.path.join('.')+'/src/data/data_collection')] 
 for module in modules_path:
     if module not in sys.path:
         sys.path.append(module)
-from database import Database
+from storage_managers.database import Database
 from review_scraper import _get_webdriver, _close_webdriver
 
 def scrape_yelp_collection(collection_url):

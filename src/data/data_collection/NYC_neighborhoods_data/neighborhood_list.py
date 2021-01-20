@@ -4,8 +4,8 @@
 
 import pandas as pd
 import os
-from Google_business_search import get_corrdinates_from_name, get_name_from_coordinates
-from database import Database
+from search_and_scrape.Google_business_search import get_corrdinates_from_name, get_name_from_coordinates
+from storage_managers.database import Database
 
 def custom_csv_to_db():
     neighborhood_table = pd.read_csv(os.getcwd()+'/NYC_neighborhood.csv', keep_default_na=False)
