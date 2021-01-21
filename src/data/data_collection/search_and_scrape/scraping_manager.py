@@ -20,11 +20,15 @@ def scrape_reviews(yelp=True, google=True):
                     futures = [executor.submit(scrape_yelp_reviews, *params) for params in yelp_urls[i : i+n]]
                     for future in as_completed(futures):
                         reviews_list.append(future.result())
+                    _update_reviews(reviews_list=reviews_list)
+                    reviews_list = []
             if google:
                 for i in range(0, len(google_urls), chunk_size):
                     futures = [executor.submit(scrape_google_reviews, *params) for params in google_urls[i : i+n]]
                     for future in as_completed(futures):
                         reviews_list.append(future.result())
+                    _update_reviews(reviews_list=reviews_list)
+                    reviews_list = []
     finally:
         _update_reviews(reviews_list=reviews_list)
 
