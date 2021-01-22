@@ -2,13 +2,13 @@ from storage_managers.database import Database
 from search_and_scrape.review_scraper import scrape_yelp_reviews, scrape_google_reviews
 import sys
 from datetime import datetime
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed, wait, ALL_COMPLETED
 
 def scrape_reviews(yelp=True, google=True):
     yelp_urls, google_urls = _get_unscraped_urls()
     # scrape reviews info
     threads_max = 3
-    chunk_size = 50
+    chunk_size = 20
     reviews_list = []
     print('\n#####################################################################')
     timestamped_print('{} yelp restaurants and {} Google restaurants left to scrape'.format(len(yelp_urls), len(google_urls)))
@@ -16,17 +16,19 @@ def scrape_reviews(yelp=True, google=True):
     try:
         with ThreadPoolExecutor(max_workers=threads_max) as executor:
             if yelp:
-                for i in range(0, len(yelp_urls), chunk_size):
-                    futures = [executor.submit(scrape_yelp_reviews, *params) for params in yelp_urls[i : i+n]]
+                for i in range(0, len(yelp_urls[:20]), chunk_size):
+                    futures = [executor.submit(scrape_yelp_reviews, *params) for params in yelp_urls[i : i+chunk_size]]
                     for future in as_completed(futures):
                         reviews_list.append(future.result())
+                    wait(futures, return_when=ALL_COMPLETED)
                     _update_reviews(reviews_list=reviews_list)
                     reviews_list = []
             if google:
                 for i in range(0, len(google_urls), chunk_size):
-                    futures = [executor.submit(scrape_google_reviews, *params) for params in google_urls[i : i+n]]
+                    futures = [executor.submit(scrape_google_reviews, *params) for params in google_urls[i : i+chunk_size]]
                     for future in as_completed(futures):
                         reviews_list.append(future.result())
+                    wait(futures, return_when=ALL_COMPLETED)
                     _update_reviews(reviews_list=reviews_list)
                     reviews_list = []
     finally:
@@ -62,7 +64,10 @@ def _update_reviews(reviews_list):
                     VALUES (%s, %s, %s, %s, %s, %s )
                     ON CONFLICT (review_text) DO NOTHING"""
     db_list = [item for sublist in reviews_list for item in sublist]
-    db.insert_rows(reviews_sql, *db_list)
+    for review in db_list:
+        db.insert_row(reviews_sql, *review)
+
+    # db.insert_rows(reviews_sql, *db_list)
 
     #print summary statement
     timestamped_print('Attempted to insert {} reviews'.format(len(db_list)))

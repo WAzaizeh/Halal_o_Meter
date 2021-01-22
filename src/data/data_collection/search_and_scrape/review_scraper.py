@@ -35,7 +35,10 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
     webdriver = _get_webdriver()
     # get business url with halal-relevant reviews only
     webdriver.get(yelp_url + '&q=halal')
-    review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
+    try:
+        review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
+    except TimeoutException as e:
+        print('Selenium Timeout on business id: {}'.format(yelp_id))
 
     reviews_list = []
     if review_num > 0 :
@@ -191,7 +194,9 @@ def _scrape_yelp_reviews_text(webdriver, yelp_id):
     reviews_helpful_count = webdriver.find_elements_by_xpath(reviews_helpful_xpath)
     reviews_list = []
     for review, review_date, review_rating, review_usr, review_help in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames, reviews_helpful_count):
-        text = review.text.replace('"', '')
+        text = ' '.join(review.text.split())
+        if len(text) > 2712:
+            text = text[:(2712 - text.count("'"))] #workaround to psycopg2 doubling single quotes and affecting max string length
         text = text[:2712] # maximum numb of characters allowed in SQL text column
         date = review_date.text
         rating = review_rating.get_attribute('aria-label')

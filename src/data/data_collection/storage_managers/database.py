@@ -59,6 +59,7 @@ class Database:
                 self.conn.commit()
                 cur.close()
         except Exception as e:
+            self.conn.rollback()
             # get details about the exception
             e_type, e_obj, traceback = sys.exc_info()
             # get the line number when exception occured
