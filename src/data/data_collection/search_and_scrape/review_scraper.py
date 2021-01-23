@@ -33,30 +33,32 @@ def scrape_google_reviews(google_url, google_id):
 
 def scrape_yelp_reviews(yelp_url, yelp_id):
     webdriver = _get_webdriver()
-    # get business url with halal-relevant reviews only
-    webdriver.get(yelp_url + '&q=halal')
     try:
-        review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
-    except TimeoutException as e:
-        print('Selenium Timeout on business id: {}'.format(yelp_id))
+        # get business url with halal-relevant reviews only
+        webdriver.get(yelp_url + '&q=halal')
+        try:
+            review_num = _get_yelp_reviews_num(webdriver) # the total number of halal-relevant reviews to be scraped
+        except TimeoutException as e:
+            print('Selenium Timeout on business id: {}'.format(yelp_id))
+            raise TimeoutException()
 
-    reviews_list = []
-    if review_num > 0 :
-        for i in range(1 ,int(review_num / 20) + (review_num % 20 > 0)):
-            # get list of reviews text and dates and append to database
+        reviews_list = []
+        if review_num > 0 :
+            for i in range(1 ,int(review_num / 20) + (review_num % 20 > 0)):
+                # get list of reviews text and dates and append to database
+                reviews_list.extend(_scrape_yelp_reviews_text(webdriver, yelp_id))
+                # call next page
+                webdriver.get(yelp_url  + '&q=halal' + '&start='+str(i*20))
+                time.sleep(random.randint(2,5))
+            # scrape last page
             reviews_list.extend(_scrape_yelp_reviews_text(webdriver, yelp_id))
-            # call next page
-            webdriver.get(yelp_url  + '&q=halal' + '&start='+str(i*20))
-            time.sleep(random.randint(2,5))
-        # scrape last page
-        reviews_list.extend(_scrape_yelp_reviews_text(webdriver, yelp_id))
-        print('Scraped {0} reviews from yelp business id {1}'.format(len(reviews_list), yelp_id))
-    else:
-        reviews_list = [[yelp_id, '', '', None, '', 0]] # review text is set to None/NULL to escape SQL insert ON CONFLICT based on review_text
-        print('No reviews to scrape from yelp business id {1}'.format(len(reviews_list), yelp_id))
-
-    _close_webdriver(webdriver)
-    return reviews_list
+            print('Scraped {0} reviews from yelp business id {1}'.format(len(reviews_list), yelp_id))
+        else:
+            reviews_list = [[yelp_id, '', '', None, '', 0]] # review text is set to None/NULL to escape SQL insert ON CONFLICT based on review_text
+            print('No reviews to scrape from yelp business id {1}'.format(len(reviews_list), yelp_id))
+        return reviews_list
+    finally:
+        _close_webdriver(webdriver)
 
 def _get_webdriver():
     load_dotenv()
@@ -196,7 +198,7 @@ def _scrape_yelp_reviews_text(webdriver, yelp_id):
     for review, review_date, review_rating, review_usr, review_help in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames, reviews_helpful_count):
         text = ' '.join(review.text.split())
         if len(text) > 2712:
-            text = text[:(2712 - text.count("'"))] #workaround to psycopg2 doubling single quotes and affecting max string length
+            text = text[:(2712 - (text.count("'") + text.count('"')))] #workaround to psycopg2 doubling single quotes and affecting max string length
         text = text[:2712] # maximum numb of characters allowed in SQL text column
         date = review_date.text
         rating = review_rating.get_attribute('aria-label')

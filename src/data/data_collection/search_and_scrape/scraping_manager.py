@@ -16,7 +16,7 @@ def scrape_reviews(yelp=True, google=True):
     try:
         with ThreadPoolExecutor(max_workers=threads_max) as executor:
             if yelp:
-                for i in range(0, len(yelp_urls[:20]), chunk_size):
+                for i in range(0, len(yelp_urls), chunk_size):
                     futures = [executor.submit(scrape_yelp_reviews, *params) for params in yelp_urls[i : i+chunk_size]]
                     for future in as_completed(futures):
                         reviews_list.append(future.result())
@@ -32,7 +32,8 @@ def scrape_reviews(yelp=True, google=True):
                     _update_reviews(reviews_list=reviews_list)
                     reviews_list = []
     finally:
-        _update_reviews(reviews_list=reviews_list)
+        if len(reviews_list):
+            _update_reviews(reviews_list=reviews_list)
 
 
 def _get_unscraped_urls():
