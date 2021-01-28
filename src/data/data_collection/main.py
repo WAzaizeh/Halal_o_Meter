@@ -14,7 +14,7 @@ if __name__ == '__main__':
         sys.stdout = log_file
 
         # get_businesses()
-        scrape_reviews(google=False)
+        scrape_reviews(yelp=False)
 
         log_file.close()
     finally:

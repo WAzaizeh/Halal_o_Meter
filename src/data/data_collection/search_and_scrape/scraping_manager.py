@@ -8,7 +8,7 @@ def scrape_reviews(yelp=True, google=True):
     yelp_urls, google_urls = _get_unscraped_urls()
     # scrape reviews info
     threads_max = 3
-    chunk_size = 20
+    chunk_size = 10
     reviews_list = []
     print('\n#####################################################################')
     timestamped_print('{} yelp restaurants and {} Google restaurants left to scrape'.format(len(yelp_urls), len(google_urls)))

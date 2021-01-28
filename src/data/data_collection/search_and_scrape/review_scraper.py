@@ -8,11 +8,12 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, ElementNotInteractableException
 from storage_managers.database import Database
 import os
 from dotenv import load_dotenv
 import time, random
+
 
 def scrape_google_reviews(google_url, google_id):
     reviews_list = []
@@ -20,15 +21,16 @@ def scrape_google_reviews(google_url, google_id):
         webdriver = _get_webdriver()
         webdriver.get(google_url)
         _search_google_halal_review(webdriver) # a function that will carry the search and infinite scroll
-        reviews_list = _scrape_google_reviews_text(webdriver) # a function that will retreive the list of reviews after clicking all the 'more'
-        print('Scraped {0} reviews from google business id #{1}'.format(len(reviews_list), google_id))
+        if _has_reviews(webdriver):
+            eviews_list = _scrape_google_reviews_text(webdriver, google_id) # a function that will retreive the list of reviews after clicking all the 'more' buttons
+            print('Scraped {0} reviews from google business id #{1}'.format(len(reviews_list), google_id))
+        else:
+            reviews_list = [[google_id, '', '', None, '', 0]] # no reviews found. Text is set to None to avoid database conflicts
+            print('No reviews to scrape from google business id {}'.format(google_id))
+        return reviews_list
     finally:
         _close_webdriver(webdriver)
-    return reviews_list
 
-    # # for testing compare count of added rows
-    # final_row_num = db.select_rows('''SELECT COUNT(*) FROM reviews''')
-    # print(final_row_num, start_row_num)
 
 
 def scrape_yelp_reviews(yelp_url, yelp_id):
@@ -44,7 +46,7 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
 
         reviews_list = []
         if review_num > 0 :
-            for i in range(1 ,int(review_num / 20) + (review_num % 20 > 0)):
+            for i in range(0 ,int(review_num / 20) + (review_num % 20 > 0)):
                 # get list of reviews text and dates and append to database
                 reviews_list.extend(_scrape_yelp_reviews_text(webdriver, yelp_id))
                 # call next page
@@ -59,6 +61,7 @@ def scrape_yelp_reviews(yelp_url, yelp_id):
         return reviews_list
     finally:
         _close_webdriver(webdriver)
+
 
 def _get_webdriver():
     load_dotenv()
@@ -106,11 +109,19 @@ def _open_review_search_input(webdriver):
         ## using Selenium
         # open_search_button_xpath = '//button[@aria-label="Search reviews"]'
         open_search_button_css = ' div.kt69ovbk911__expand-button.section-expandable-text-input-expand-button-container > div > div > button'
-        WebDriverWait(webdriver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, open_search_button_css)))
-    except TimeoutException:
+        webdriver.find_element_by_css_selector(open_search_button_css).click()
+    except ElementNotInteractableException:
         ## using javascript
-        webdriver.execute_script("var button=document.body.getElementsByClassName('iRxY3GoUYUY__button gm2-hairline-border section-action-chip-button')[17]; button.click();")
+        webdriver.execute_script("var button = document.querySelector('[aria-label=\"Search reviews\"]'); button.click();")
 
+
+def _has_reviews(webdriver):
+    no_reviews_xpath = "//div[contains(text(), 'No reviews')]"
+    try:
+        WebDriverWait(webdriver, 5).until(EC.presence_of_element_located((By.XPATH, no_reviews_xpath)))
+        return False
+    except TimeoutException:
+        return True
 
 
 def _search_google_halal_review(webdriver):
@@ -120,18 +131,18 @@ def _search_google_halal_review(webdriver):
     try:
         WebDriverWait(webdriver, 5).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
     except TimeoutException: # try again. Sometimes the script cannot find the button the first time around
-        WebDriverWait(webdriver, 10).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
+        WebDriverWait(webdriver, 5).until(EC.presence_of_element_located((By.XPATH, open_search_button_xpath)))
     open_search_input = webdriver.find_element_by_xpath(open_search_button_xpath)
-    _scroll_into_view(open_search_input)
-    time.sleep(random.randint(3, 15))
+    # _scroll_into_view(open_search_input)
     _open_review_search_input(webdriver)
+    time.sleep(random.randint(3, 15))
 
     # insert 'halal' then RETURN
     search_input_xpath = '//input[@aria-label="Search reviews"]'
     try:
-        WebDriverWait(webdriver, 3).until(EC.visibility_of_element_located((By.XPATH, search_input_xpath)))
+        WebDriverWait(webdriver, 5).until(EC.visibility_of_element_located((By.XPATH, search_input_xpath)))
     except TimeoutException:
-        WebDriverWait(webdriver, 3).until(EC.visibility_of_element_located((By.XPATH, search_input_xpath)))
+        WebDriverWait(webdriver, 5).until(EC.visibility_of_element_located((By.XPATH, search_input_xpath)))
     search_input = webdriver.find_element_by_xpath(search_input_xpath)
     search_input.send_keys('Halal')
     search_input.send_keys(Keys.RETURN)
@@ -148,29 +159,33 @@ def _search_google_halal_review(webdriver):
         buttons = webdriver.find_elements_by_xpath(more_button_xpath)
         for button in buttons:
             button.click()
-    except:
-        pass
+            time.sleep(random.randint(1,3))
+    except Exception as e:
+        raise(e)
 
-
-def _scrape_google_reviews_text(webdriver):
+def _scrape_google_reviews_text(webdriver, google_id):
     reviews_text_xpath = '//span[@class="section-review-text"]'
     reviews_dates_xpath = '//span[@class = "section-review-publish-date"]'
     reviews_rating_xpath = '//span[@class="section-review-stars"]'
     reviews_username_xpath = '//div[@class="section-review-title"]/span'
-    reviews_helpful_xpath = '//img[@src="//www.gstatic.com/images/icons/material/system_gm/1x/thumb_up_black_18dp.png"]//following-sibling::span/span[2]'
+    reviews_helpful_xpath = "//span[@jstcache='536']"
+
     reviews_texts = webdriver.find_elements_by_xpath(reviews_text_xpath)
     reviews_dates = webdriver.find_elements_by_xpath(reviews_dates_xpath)
     reviews_ratings = webdriver.find_elements_by_xpath(reviews_rating_xpath)
     reviews_usernames = webdriver.find_elements_by_xpath(reviews_username_xpath)
     reviews_helpful_count = webdriver.find_elements_by_xpath(reviews_helpful_xpath)
     reviews_list = []
-    for review, review_date, review_rating, review_usr, review_help in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames, reviews_helpful_count):
+    for review, review_date, review_rating, review_usr, review_helpful in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames, reviews_helpful_count):
         text = review.text
         date = review_date.text
         rating = review_rating.get_attribute('aria-label')
         username = review_usr.text
-        help_count = review_help.text + ' likes'
-        reviews_list.append([username, rating, text, date, help_count])
+        if len(review_helpful.text):
+            helpful_count = int(review_helpful.text)
+        else:
+            helpful_count = 0
+        reviews_list.append([google_id, username, rating, text, date, helpful_count])
     return reviews_list
 
 
@@ -196,7 +211,7 @@ def _scrape_yelp_reviews_text(webdriver, yelp_id):
     reviews_helpful_count = webdriver.find_elements_by_xpath(reviews_helpful_xpath)
     reviews_list = []
     for review, review_date, review_rating, review_usr, review_help in zip(reviews_texts, reviews_dates, reviews_ratings, reviews_usernames, reviews_helpful_count):
-        text = ' '.join(review.text.split())
+        text = ' '.join(review.text.split()).replace('-','').replace('...',' ') # charcters that affect the string length and hinder insert into SQL text column with max size 2712
         if len(text) > 2712:
             text = text[:(2712 - (text.count("'") + text.count('"')))] #workaround to psycopg2 doubling single quotes and affecting max string length
         text = text[:2712] # maximum numb of characters allowed in SQL text column
