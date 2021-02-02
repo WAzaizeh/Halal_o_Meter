@@ -6,20 +6,14 @@ from styling.st_classes import Cell, Grid
 from dataframes.get_data import get_dataframe, get_neighborhoods
 from styling.style import _set_block_container_style
 import os
-import matplotlib
-import matplotlib.pyplot as plt
 import pandas as pd
 import pydeck as pdk
-import pathlib
-import bs4
 
 COLOR = 'black'
 BACKGROUND_COLOR = '#fffafa'
 
 
-def make_main_body(rest_df, ngbr_df):
-    # add list of neighborhoods to drop down menu
-    neighborhood = st.selectbox('Select search neighborhood', ngbr_df['name'])
+def make_main_body(rest_df, ngbr_df, neighborhood):
 
     # intro and header
     st.markdown(
@@ -43,7 +37,7 @@ def make_main_body(rest_df, ngbr_df):
     # generate the map
 
     # Adding code so we can have map default to the center of the data
-    midpoint = ((ngbr_df.loc[0, 'lat']), (ngbr_df.loc[0, 'lon']))
+    midpoint = ((rest_df['lat'].mean()), (rest_df['lon'].mean()))
 
     st.pydeck_chart(pdk.Deck(
             map_style='mapbox://styles/mapbox/light-v9',
@@ -62,7 +56,7 @@ def make_main_body(rest_df, ngbr_df):
             },
             layers=[ pdk.Layer(
                 'ScatterplotLayer',
-                data=ngbr_df,
+                data=rest_df,
                 get_position=['lon', 'lat'],
                 auto_highlight=True,
                 get_radius=250,
@@ -79,25 +73,16 @@ def main():
     sort_by = st.sidebar.radio('Sort by:', ('Halal Score', 'Most Reviewed', 'Distance'))
     st.sidebar.markdown('---')
 
+    # add list of neighborhoods to drop down menu
+    ngbr_df = get_neighborhoods()
+    neighborhood = st.selectbox('Select search neighborhood', ngbr_df['name'])
+    neighborhood_coords = ngbr_df.loc[ngbr_df['name'] == neighborhood][['lat', 'lon']]
     with st.spinner(f"Loading {sort_by.lower()} ..."):
-        rest_df = get_dataframe(sort_by)
-        ngbr_df = get_neighborhoods()
-        ngbr_df.columns = ['name', 'id', 'lat', 'lon']
+        rest_df = get_dataframe(sort_by, neighborhood_coords['lat'], neighborhood_coords['lon'])
 
-        make_main_body(rest_df=rest_df, ngbr_df=ngbr_df)
+        make_main_body(rest_df=rest_df, ngbr_df=ngbr_df, neighborhood=neighborhood)
 
     _set_block_container_style()
 
-    GA_JS = """Hello world!"""
-
-    # Insert the script in the head tag of the static template inside your virtual environement
-    # index_path = pathlib.Path(st.__file__).parent / "static" / "index.html"
-    index_path = pathlib.Path('/Users/wesamazaizeh/miniconda3/envs/sm-project/lib/python3.8/site-packages/streamlit/static/index.html')
-    soup = bs4.BeautifulSoup(index_path.read_text(), features="lxml")
-    if not soup.find(id='custom-js'):
-        script_tag = soup.new_tag("script", id='custom-js')
-        script_tag.string = GA_JS
-        soup.head.append(script_tag)
-        index_path.write_text(str(soup))
 
 main()
