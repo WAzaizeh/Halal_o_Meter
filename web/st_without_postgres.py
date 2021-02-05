@@ -3,7 +3,7 @@ The score is based on reviews scraped from Yelp & Google Maps"""
 
 import streamlit as st
 from styling.st_classes import Cell, Grid
-from dataframes.get_data import get_dataframe, get_neighborhoods
+from data.get_data_from_csv import get_restaurant_dataframe, get_neighborhoods_dataframe
 from styling.style import _set_block_container_style
 import os
 import pandas as pd
@@ -74,11 +74,11 @@ def main():
     st.sidebar.markdown('---')
 
     # add list of neighborhoods to drop down menu
-    ngbr_df = get_neighborhoods()
+    ngbr_df = get_neighborhoods_dataframe()
     neighborhood = st.selectbox('Select search neighborhood', ngbr_df['name'])
     neighborhood_coords = ngbr_df.loc[ngbr_df['name'] == neighborhood][['lat', 'lon']]
     with st.spinner(f"Loading {sort_by.lower()} ..."):
-        rest_df = get_dataframe(sort_by, neighborhood_coords['lat'], neighborhood_coords['lon'])
+        rest_df = get_restaurant_dataframe(sort_by, neighborhood_coords['lat'], neighborhood_coords['lon'])
 
         make_main_body(rest_df=rest_df, ngbr_df=ngbr_df, neighborhood=neighborhood)
 

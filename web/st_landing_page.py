@@ -289,7 +289,7 @@ def _set_block_container_style(
 x = 0
 
 def make_main_body(res_df):
-    df = get_neighborhoods()
+    df = get_neighborhoods_dataframe()
     df.columns = ['name', 'id', 'lat', 'lon']
     neighborhood = st.selectbox("", df['name'])
     st.markdown(
@@ -342,7 +342,7 @@ def make_main_body(res_df):
         )
 
 @st.cache
-def get_dataframe(sort_by='') -> pd.DataFrame():
+def get_restaurant_dataframe(sort_by='') -> pd.DataFrame():
     """A slice of yelp businesses dataframe for testing purposes"""
     db = Database()
     yelp_sql = '''SELECT *
@@ -361,7 +361,7 @@ def get_dataframe(sort_by='') -> pd.DataFrame():
     return df
 
 @st.cache
-def get_neighborhoods() -> pd.DataFrame():
+def get_neighborhoods_dataframe() -> pd.DataFrame():
     '''List of NYC neighborhoods to search in'''
     db = Database()
     neighborhoods_sql = '''SELECT *
@@ -377,7 +377,7 @@ def main():
     sort_by = st.sidebar.radio('Filter by:', ('Halal Score', 'Most Reviwed', 'Distance'))
 
     with st.spinner(f"Loading {sort_by} ..."):
-        res_df = get_dataframe(sort_by)
+        res_df = get_restaurant_dataframe(sort_by)
         make_main_body(res_df)
 
     _set_block_container_style()

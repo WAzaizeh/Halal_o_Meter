@@ -59,7 +59,6 @@ class Database:
                 self.conn.commit()
                 cur.close()
         except Exception as e:
-            print('Problematic review: {}'.format(args[3]))
             self.conn.rollback()
             # get details about the exception
             e_type, e_obj, traceback = sys.exc_info()

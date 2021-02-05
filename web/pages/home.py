@@ -14,4 +14,4 @@ def write():
     ## functionality
     # add possibility to improve reliability score? feedback?
     # add_resources_section()
-    # make_main_body(get_dataframe())
+    # make_main_body(get_restaurant_dataframe())
