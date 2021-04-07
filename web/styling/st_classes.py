@@ -4,7 +4,7 @@ streamlit classes to enable custom grid styling
 
 import streamlit as st
 from typing import List, Optional
-import markdown
+# import markdown
 import pandas as pd
 
 # move to config file
@@ -41,8 +41,8 @@ class Cell:
     def text(self, text: str = ''):
         self.inner_html = text
 
-    def markdown(self, text):
-        self.inner_html = markdown.markdown(text)
+    # def markdown(self, text):
+    #     self.inner_html = markdown.markdown(text)
 
     def dataframe(self, dataframe: pd.DataFrame):
         self.inner_html = dataframe.to_html()
