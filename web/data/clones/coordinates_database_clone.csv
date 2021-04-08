@@ -1,0 +1,330 @@
+neighborhood,id,lat,lng
+"Allerton, Bronx",2,40.8631189,-73.8616476
+"Annadale, Staten Island",5,40.5445496,-74.1765324
+"Arden Heights, Staten Island",10,40.556413,-74.1735044
+"Arlington, Staten Island",15,40.7763877,-73.0485198
+"Arrochar, Staten Island",20,40.7763877,-73.0485198
+"Arverne, Queens",4,40.592658,-73.7977928
+"Astoria Heights, Queens",14,40.7687747,-73.8915777
+"Astoria, Queens",9,46.1878841,-123.8312534
+"Auburndale, Queens",19,28.0652975,-81.7886906
+"Bath Beach, Brooklyn",1,40.6038852,-74.0062078
+"Bathgate, Bronx",7,55.9024,-3.643118
+"Battery Park City, Manhattan",3,40.7032775,-74.0170279
+"Bay Ridge, Brooklyn",6,40.6263732,-74.0298767
+"Bay Terrace, Queens",24,40.781354,-73.771498
+"Bay Terrace, Staten Island",25,40.5559913,-74.1328046
+"Baychester, Bronx",12,40.8693862,-73.83308439999999
+"Bayside, Queens",29,40.7585569,-73.7654367
+"Bayswater, Queens",34,51.5135456,-0.1865659
+"Bedford Park, Bronx",17,41.7641723,-87.7812524
+"Bedford Stuyvesant, Brooklyn",11,40.6872176,-73.9417735
+"Beechhurst, Queens",39,40.7903214,-73.8001946
+"Beekman Place, Manhattan",8,40.7533089,-73.9647957
+"Bellaire, Queens",44,29.7057858,-95.4588299
+"Belle Harbor, Queens",49,40.5754846,-73.8507279
+"Bellerose, Queens",54,40.7361769,-73.7137365
+"Belmont, Bronx",22,40.8534507,-73.88936819999999
+"Bensonhurst, Brooklyn",16,40.6139307,-73.9921833
+"Bergen Beach, Brooklyn",21,40.6200838,-73.90743309999999
+"Blissville, Queens",59,40.7347222,-73.93777779999999
+"Bloomfield, Staten Island",30,40.6126039,-74.17819949999999
+"Boerum Hill, Brooklyn",26,40.6848689,-73.9844722
+"Borough Park, Brooklyn",31,40.6350319,-73.9921028
+"Breezy Point, Queens",64,40.5608702,-73.9155359
+"Briarwood, Queens",69,40.7109315,-73.81356099999999
+"Brighton Beach, Brooklyn",36,40.5780706,-73.9596565
+"Broad Channel, Queens",74,40.6158335,-73.8213213
+"Broadway Junction, Brooklyn",41,40.6789137,-73.9039
+"Bronx Park South, Bronx",32,40.8723263,-73.87125379999999
+"Bronx River, Bronx",37,40.9356134,-73.8346401
+"Bronxdale, Bronx",27,40.8603726,-73.8602604
+"Brooklyn Heights, Brooklyn",46,40.6959294,-73.9955523
+"Brookville, Queens",79,39.4231065,-85.0127376
+"Brownsville, Brooklyn",51,25.9017472,-97.4974838
+"Bulls Head, Staten Island",35,40.6072329,-74.162443
+"Bushwick, Brooklyn",56,40.6957755,-73.9170604
+"Butler Manor, Staten Island",40,40.50496529999999,-74.2298318
+"Cambria Heights, Queens",84,40.692158,-73.7330753
+"Canarsie, Brooklyn",61,40.6402325,-73.9060579
+"Carnegie Hill, Manhattan",13,40.7844653,-73.9550857
+"Carroll Gardens, Brooklyn",66,40.6795331,-73.9991637
+"Castle Hill, Bronx",42,40.8176831,-73.8507279
+"Castleton Corners, Staten Island",45,40.6130802,-74.1225608
+"Charleston, Staten Island",50,40.7763877,-73.0485198
+"Chelsea, Manhattan",18,40.7465004,-74.00137370000002
+"Chelsea, Staten Island",55,40.5795317,-74.1502007
+"Chinatown, Manhattan",23,37.7941378,-122.4077914
+"City Island, Bronx",47,40.8468202,-73.7874983
+"City Line, Brooklyn",71,40.6762144,-73.88708059999999
+"Civic Center, Manhattan",28,40.7140519,-74.00283639999999
+"Claremont Village, Bronx",52,34.0966764,-117.7197785
+"Clason Point, Bronx",57,40.8144344,-73.8624893
+"Clearview, Queens",89,35.3970366,-96.1863927
+"Clifton, Staten Island",60,40.6189726,-74.0784785
+"Clinton Hill, Brooklyn",76,40.6896834,-73.9661144
+"Clinton, Manhattan",33,40.7637581,-73.9918181
+"Co-op City, Bronx",72,40.8738889,-73.82944440000001
+"Cobble Hill, Brooklyn",81,40.686536,-73.9962255
+"College Point, Queens",94,40.786395,-73.8389657
+"Concord, Staten Island",65,42.4603719,-71.3489484
+"Concourse Village, Bronx",67,40.8255863,-73.9184388
+"Concourse, Bronx",62,40.8316761,-73.9227554
+"Coney Island, Brooklyn",86,40.5755438,-73.9707016
+"Country Club, Bronx",77,40.8391667,-73.8197222
+"Crown Heights, Brooklyn",91,40.6694022,-73.9422324
+"Cypress Hills, Brooklyn",96,40.6836873,-73.87963309999999
+"DUMBO, Brooklyn",111,40.7033164,-73.9881451
+"Ditmas Park, Brooklyn",101,40.6414876,-73.9593998
+"Dongan Hills, Staten Island",70,40.5906641,-74.088452
+"Douglaston, Queens",99,40.76401509999999,-73.7433727
+"Downtown, Brooklyn",106,40.6960679,-73.9845407
+"Dutch Kills, Queens",104,40.7575331,-73.939115
+"Dyker Heights, Brooklyn",116,40.6214932,-74.00958399999999
+"East Elmhurst, Queens",109,40.7737505,-73.8713099
+"East Flatbush, Brooklyn",121,40.6481656,-73.9299899
+"East Harlem, Manhattan",38,40.7957399,-73.93892129999999
+"East New York, Brooklyn",126,40.6590529,-73.8759245
+"East Tremont, Bronx",82,40.8477113,-73.90096729999999
+"East Village, Manhattan",43,40.7264773,-73.98153370000001
+"East Williamsburg, Brooklyn",131,40.7141953,-73.9316461
+"Eastchester, Bronx",87,40.95956049999999,-73.8095574
+"Edenwald, Bronx",92,40.8863969,-73.84119869999999
+"Edgemere, Queens",114,39.2420525,-76.448016
+"Edgewater Park, Bronx",97,40.0681666,-74.90072180000001
+"Egbertville, Staten Island",75,40.578566,-74.1243132
+"Elm Park, Staten Island",80,40.6311567,-74.1386767
+"Elmhurst, Queens",119,41.8994744,-87.9403418
+"Eltingville, Staten Island",85,40.5394463,-74.156292
+"Emerson Hill, Staten Island",90,40.6074525,-74.0963115
+"Far Rockaway, Queens",124,40.5998931,-73.74484369999999
+"Farragut, Brooklyn",136,35.8778548,-84.17113450000001
+"Fieldston, Bronx",102,40.8964814,-73.9023362
+"Financial District, Manhattan",48,40.7077143,-74.00827869999999
+"Flatbush, Brooklyn",141,40.6414876,-73.9593998
+"Flatiron, Manhattan",53,40.740083,-73.9903489
+"Flatlands, Brooklyn",146,40.6232714,-73.9321664
+"Floral Park, Queens",129,40.7237133,-73.7048532
+"Flushing (Downtown), Queens",139,40.7628349,-73.8318032
+"Flushing, Queens",134,40.7674987,-73.833079
+"Fordham, Bronx",107,40.8592667,-73.8984694
+"Forest Hills Gardens, Queens",149,40.7147222,-73.8402778
+"Forest Hills, Queens",144,40.718106,-73.8448469
+"Fort Greene, Brooklyn",151,40.6920638,-73.97418739999999
+"Fort Hamilton, Brooklyn",156,40.6094454,-74.02854339999999
+"Fox Hills, Staten Island",95,40.6151042,-74.0845858
+"Fresh Meadows, Queens",154,40.7335179,-73.7801447
+"Fulton Ferry, Brooklyn",161,40.7035805,-73.9921853
+"Georgetown, Brooklyn",166,38.9097057,-77.06535650000001
+"Gerritsen Beach, Brooklyn",171,40.5870033,-73.9227554
+"Glen Oaks, Queens",159,41.8924364,-85.4968205
+"Glendale, Queens",164,33.5386523,-112.1859866
+"Gowanus, Brooklyn",176,40.6751161,-73.9879753
+"Gramercy, Manhattan",58,40.7367783,-73.9844722
+"Graniteville, Staten Island",100,40.7763877,-73.0485198
+"Grant City, Staten Island",105,40.5820492,-74.1048641
+"Grasmere, Staten Island",110,40.6041583,-74.0837638
+"Gravesend, Brooklyn",181,40.5918636,-73.9768653
+"Great Kills, Staten Island",115,40.5543273,-74.156292
+"Greenpoint, Brooklyn",186,40.7304701,-73.95150319999999
+"Greenridge, Staten Island",120,40.7763877,-73.0485198
+"Greenwich Village, Manhattan",63,40.7335719,-74.0027418
+"Grymes Hill, Staten Island",125,40.6187151,-74.09347509999999
+"Hamilton Heights, Manhattan",68,40.8252793,-73.94761390000001
+"Hammels, Queens",169,40.5879465,-73.80808689999999
+"Harlem (Central), Manhattan",73,40.8115504,-73.9464769
+"Heartland Village, Staten Island",130,40.5908869,-74.1585424
+"Herald Square, Manhattan",78,40.750247,-73.98770999999999
+"High Bridge, Bronx",112,40.836916,-73.9271294
+"Highland Park, Brooklyn",191,32.8334607,-96.79194539999999
+"Hillcrest, Queens",174,32.7478638,-117.1647094
+"Hollis, Queens",179,40.7112203,-73.762495
+"Holliswood, Queens",184,40.7216667,-73.7682897
+"Homecrest, Brooklyn",196,40.6004787,-73.9565551
+"Howard Beach, Queens",189,40.6571222,-73.8429989
+"Howland Hook, Staten Island",135,40.7763877,-73.0485198
+"Hudson Square, Manhattan",83,40.7265834,-74.0074731
+"Huguenot, Staten Island",140,40.5795317,-74.1502007
+"Hunters Point, Queens",194,37.730416,-122.384424
+"Hunts Point, Bronx",117,40.8094385,-73.8803315
+"Inwood, Manhattan",88,40.8677145,-73.9212019
+"Jackson Heights, Queens",199,40.7556818,-73.8830701
+"Jamaica Center, Queens",209,40.7021447,-73.8008771
+"Jamaica Estates, Queens",214,40.7290328,-73.78125539999999
+"Jamaica Hills, Queens",219,40.7135548,-73.796488
+"Jamaica, Queens",204,40.702677,-73.7889689
+"Kensington, Brooklyn",201,39.9934039,-75.1179823
+"Kew Gardens Hills, Queens",228,40.73844709999999,-73.8104048
+"Kew Gardens, Queens",224,40.705695,-73.8272029
+"Kings Highway, Brooklyn",206,40.6202587,-73.9417836
+"Kingsbridge Heights, Bronx",127,40.8711235,-73.8976328
+"Kingsbridge, Bronx",122,40.8833912,-73.9051185
+"Laurelton, Queens",232,40.67764,-73.7447853
+"Lefrak City, Queens",236,40.7362133,-73.8626355
+"Lenox Hill, Manhattan",93,40.7662315,-73.9602312
+"Lighthouse Hill, Staten Island",145,40.5772702,-74.1342726
+"Lincoln Square, Manhattan",98,40.7724641,-73.9834889
+"Lindenwood, Queens",240,38.786763,-90.5033325
+"Little Italy, Manhattan",103,40.7191413,-73.9973273
+"Little Neck, Queens",244,40.7612957,-73.7330753
+"Livingston, Staten Island",150,40.602095,-74.1285322
+"Long Island City, Queens",248,40.744679,-73.9485424
+"Longwood, Bronx",132,40.8248438,-73.8915875
+"Lower East Side, Manhattan",108,40.715033,-73.9842724
+"Malba, Queens",252,40.7906659,-73.8257325
+"Manhattan Beach, Brooklyn",211,33.8847361,-118.4109089
+"Manhattan Terrace, Brooklyn",216,40.7830603,-73.9712488
+"Manhattan Valley, Manhattan",113,40.7966989,-73.9684247
+"Manhattanville, Manhattan",118,41.032206,-73.71578199999999
+"Manor Heights, Staten Island",155,40.60426349999999,-74.12662430000002
+"Mapleton, Brooklyn",221,40.1302338,-111.5785281
+"Marble Hill, Bronx",137,40.8771416,-73.91268389999999
+"Marine Park, Brooklyn",226,40.6113817,-73.93318649999999
+"Mariner's Harbor, Staten Island",160,40.63677010000001,-74.1587547
+"Maspeth, Queens",256,40.7294018,-73.9065883
+"Melrose, Bronx",142,40.824545,-73.9104143
+"Middle Village, Queens",260,40.712924,-73.900193
+"Midland Beach, Staten Island",165,40.7763877,-73.0485198
+"Midtown South, Manhattan",123,40.7549309,-73.9840195
+"Midtown, Manhattan",128,33.829408,-118.03102
+"Midwood, Brooklyn",230,40.6204388,-73.95997779999999
+"Mill Basin, Brooklyn",234,40.6096768,-73.9114293
+"Mill Island, Brooklyn",238,40.6096768,-73.9114293
+"Morningside Heights, Manhattan",133,40.8105443,-73.9620581
+"Morris Heights, Bronx",147,40.8505298,-73.91554289999999
+"Morris Park, Bronx",152,40.850332,-73.8513735
+"Morrisania, Bronx",157,40.8310814,-73.9058574
+"Mott Haven, Bronx",162,40.8091068,-73.9228881
+"Mount Eden, Bronx",167,38.0561798,-85.15106469999999
+"Mount Hope, Bronx",172,41.4513121,-74.5346103
+"Murray Hill, Manhattan",138,40.7478792,-73.9756567
+"Murray Hill, Queens",264,40.7478792,-73.9756567
+"Navy Yard, Brooklyn",242,38.8764653,-77.0005547
+"Neponsit, Queens",268,40.5707646,-73.8610191
+"New Brighton, Staten Island",170,40.6404369,-74.090226
+"New Dorp Beach, Staten Island",180,40.5695781,-74.1073767
+"New Dorp, Staten Island",175,40.5795317,-74.1502007
+"New Hyde Park, Queens",271,40.7351018,-73.6879082
+"New Lots, Brooklyn",246,40.6632877,-73.8898367
+"New Springville, Staten Island",185,40.5847957,-74.16034840000002
+"NoHo, Manhattan",143,40.7286587,-73.9925526
+"North Corona, Queens",274,40.7543725,-73.8669188
+"North Riverdale, Bronx",177,40.9090464,-73.90364869999999
+"North Side, Brooklyn",250,37.5721815,-77.4452234
+"Norwood, Bronx",182,40.8810341,-73.878486
+"Oakland Gardens, Queens",277,40.7408584,-73.758241
+"Oakwood, Staten Island",190,40.7763877,-73.0485198
+"Ocean Hill, Brooklyn",254,40.6782737,-73.9108212
+"Ocean Parkway, Brooklyn",258,40.61287799999999,-73.96838620000001
+"Old Place, Staten Island",195,40.6303813,-74.1859776
+"Old Town, Staten Island",200,40.5972845,-74.08699519999999
+"Olinville, Bronx",187,40.8803912,-73.8668996
+"Ozone Park, Queens",280,40.6794072,-73.8507279
+"Paerdegat Basin, Brooklyn",262,40.6241972,-73.90144389999999
+"Park Hill, Staten Island",205,40.6119566,-74.0814154
+"Park Slope, Brooklyn",266,40.6710672,-73.98142279999999
+"Parkchester, Bronx",192,40.8382522,-73.8566087
+"Pelham Bay, Bronx",197,40.8438486,-73.8304179
+"Pelham Gardens, Bronx",202,40.8627726,-73.84343919999999
+"Pelham Parkway, Bronx",207,40.8553279,-73.8639594
+"Pleasant Plains, Staten Island",210,40.5239944,-74.21569989999999
+"Plum Beach, Brooklyn",270,40.583293,-73.9209991
+"Pomonok, Queens",283,40.732341,-73.81077239999999
+"Port Ivory, Staten Island",215,40.6409366,-74.1801442
+"Port Morris, Bronx",212,40.8022025,-73.9166051
+"Port Richmond, Staten Island",220,40.63549140000001,-74.1254641
+"Prince's Bay, Staten Island",225,40.52899439999999,-74.197644
+"Prospect Heights, Brooklyn",273,40.6774196,-73.9668408
+"Prospect Lefferts Gardens, Brooklyn",276,40.6592355,-73.9533895
+"Prospect Park South, Brooklyn",279,40.6457741,-73.96610609999999
+"Queens Village, Queens",286,40.7156628,-73.7419017
+"Queensboro Hill, Queens",289,40.7674987,-73.833079
+"Randall Manor, Staten Island",229,40.6348829,-74.1074675
+"Ravenswood, Queens",292,40.7643574,-73.92346189999999
+"Red Hook, Brooklyn",282,40.6733676,-74.00831889999999
+"Rego Park, Queens",295,40.72557219999999,-73.8624893
+"Remsen Village, Brooklyn",285,40.6466536,-73.9131066
+"Richmond Hill, Queens",298,31.9382652,-81.3034433
+"Richmond Town, Staten Island",233,40.5673546,-74.1342726
+"Richmond Valley, Staten Island",237,40.5201055,-74.22931129999999
+"Ridgewood, Queens",301,40.7043986,-73.9018292
+"Riverdale, Bronx",217,40.89961830000001,-73.9088276
+"Rochdale, Queens",303,53.6097136,-2.1561
+"Rockaway Park, Queens",305,40.57978629999999,-73.8372237
+"Roosevelt Island, Manhattan",148,40.76050310000001,-73.9509934
+"Rosebank, Staten Island",241,40.7763877,-73.0485198
+"Rosedale, Queens",307,40.6584068,-73.7389596
+"Rossville, Staten Island",245,40.5456634,-74.21634279999999
+"Roxbury, Queens",309,42.3151978,-71.0913748
+"Rugby, Brooklyn",288,40.6408302,-73.96529989999999
+"Sandy Ground, Staten Island",249,40.5409817,-74.21650819999999
+"Schuylerville, Bronx",222,43.1000755,-73.5817825
+"Sea Gate, Brooklyn",291,40.5768098,-74.0079781
+"Seaside, Queens",311,30.3216504,-86.1429286
+"Sheepshead Bay, Brooklyn",294,40.5953955,-73.94575379999999
+"Shore Acres, Staten Island",253,40.6084816,-74.0684795
+"Silver Lake, Staten Island",257,40.6245495,-74.0916944
+"SoHo, Manhattan",153,40.723301,-74.0029883
+"Somerville, Queens",313,42.3875968,-71.0994968
+"Soundview, Bronx",227,40.8247728,-73.8695889
+"South Beach, Staten Island",261,40.7763877,-73.0485198
+"South Corona, Queens",315,33.8752935,-117.5664384
+"South Jamaica, Queens",317,40.6808594,-73.7919103
+"South Ozone Park, Queens",319,40.6764003,-73.8124984
+"South Side, Brooklyn",297,41.80546409999999,-87.60876379999999
+"South Village, Manhattan",158,40.7283451,-74.0028116
+"Spring Creek, Brooklyn",300,40.6530977,-73.87425
+"Springfield Gardens, Queens",321,40.6715916,-73.779798
+"Spuyten Duyvil, Bronx",231,40.88116369999999,-73.9154069
+"St. Albans, Queens",322,40.6895283,-73.76436880000001
+"St. George, Staten Island",265,40.7763877,-73.0485198
+"Stapleton, Staten Island",269,40.7763877,-73.0485198
+"Starrett City, Brooklyn",302,40.6501402,-73.8837345
+"Steinway, Queens",323,40.7745459,-73.9037477
+"Stuyvesant Heights, Brooklyn",304,40.6824166,-73.9319933
+"Stuyvesant Town, Manhattan",163,40.7316903,-73.9778494
+"Sunnyside Gardens, Queens",325,40.7495045,-73.915069
+"Sunnyside, Queens",324,40.7432759,-73.9196324
+"Sunnyside, Staten Island",272,40.6128507,-74.1026407
+"Sunset Park, Brooklyn",306,40.65272,-74.00933479999999
+"Sutton Place, Manhattan",168,40.7576281,-73.961698
+"Throgs Neck, Bronx",235,40.818399,-73.8213213
+"Times Square, Manhattan",173,40.7579747,-73.9855426
+"Todt Hill, Staten Island",275,40.7763877,-73.0485198
+"Tompkins Park North, Brooklyn",308,40.72642949999999,-73.9817841
+"Tompkinsville, Staten Island",278,40.7763877,-73.0485198
+"Tottenville, Staten Island",281,40.5795317,-74.1502007
+"Travis, Staten Island",284,40.5795317,-74.1502007
+"Tribeca, Manhattan",178,40.7162692,-74.0086323
+"Tudor City, Manhattan",183,40.74884910000001,-73.97161609999999
+"Turtle Bay, Manhattan",188,21.7051806,-157.9988444
+"Union Square, Manhattan",193,40.7358633,-73.9910835
+"Unionport, Bronx",239,40.83034079999999,-73.8506737
+"University Heights, Bronx",243,41.4978306,-81.53734560000001
+"Upper East Side, Manhattan",198,40.7735649,-73.9565551
+"Upper West Side, Manhattan",203,40.7870106,-73.9753676
+"Utopia, Queens",326,40.7348094,-73.79323029999999
+"Van Nest, Bronx",247,40.8415796,-73.8706949
+"Vinegar Hill, Brooklyn",310,40.70371859999999,-73.98226830000002
+"Wakefield, Bronx",251,40.89655,-73.8507279
+"Wall Street, Manhattan",208,40.7060361,-74.0088256
+"Ward Hill, Staten Island",287,40.5795317,-74.1502007
+"Washington Heights, Manhattan",213,40.8417082,-73.9393554
+"Weeksville, Brooklyn",312,40.6738462,-73.9250996
+"West Brighton, Brooklyn",314,40.6270298,-74.10931409999999
+"West Brighton, Staten Island",290,40.6270298,-74.10931409999999
+"West Farms, Bronx",255,40.8430609,-73.8816001
+"West Village, Manhattan",218,40.73468,-74.0047554
+"Westchester Square, Bronx",259,40.839815,-73.8464802
+"Westerleigh, Staten Island",293,40.621215,-74.1318094
+"Whitestone, Queens",327,40.7920449,-73.8095574
+"Williamsbridge, Bronx",263,40.8787602,-73.85283559999999
+"Williamsburg, Brooklyn",316,40.7081156,-73.9570696
+"Willowbrook, Staten Island",296,40.5795317,-74.1502007
+"Windsor Terrace, Brooklyn",318,40.6539346,-73.9756567
+"Wingate, Brooklyn",320,34.9843176,-80.4492319
+"Woodhaven, Queens",328,42.1389839,-83.24179939999999
+"Woodlawn, Bronx",267,40.8976347,-73.8668996
+"Woodrow, Staten Island",299,40.5434385,-74.19764409999999
+"Woodside, Queens",329,37.4299388,-122.2538557
+"Yorkville, Manhattan",223,41.6411409,-88.44729480000001
