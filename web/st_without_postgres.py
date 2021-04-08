@@ -32,7 +32,7 @@ def make_main_body(rest_df, ngbr_df, neighborhood):
     # generate grid cells from dataframe
     with grid:
         for i, row in zip(range(ngbr_df.shape[0]), rest_df.itertuples()):
-            grid.cell(chr(i + 97), 1, 2, i+1, i+1).image_card(name='. '.join([str(i+1),row.name]), address=row.address, score=str(row.score), image_url=row.image_url, url=row.url)
+            grid.cell(chr(i + 97), 1, 2, i+1, i+1).image_card(name='. '.join([str(i+1),row.name]), address=row.address, score=str(row.score), image_url=row.image_url, url=row.url, distance=str(round(row.distance,1)))
 
     # should be places in it's own function later
     # generate the map

@@ -11,11 +11,12 @@ def get_restaurant_dataframe(sort_by, ngbr_lat, ngbr_lon, page_num=0) -> pd.Data
     df = pd.read_csv(biz_data_path, header=0)
     df.rename({'lng': 'lon'}, axis=1, inplace=True)
     df['distance'] = df.apply(lambda row: Haversine(ngbr_lat, ngbr_lon, row.lat, row.lon), axis=1)
+    df.sort_values('distance', inplace=True)
 
     if sort_by == 'Most Reviewed':
         df.sort_values('total_review_count', ascending=False, inplace=True)
-    elif sort_by == 'Distance':
-        df.sort_values('distance', inplace=True)
+    # elif sort_by == 'Distance':
+    #     df.sort_values('distance', inplace=True)
     elif sort_by == 'Halal Score':
         df.sort_values('score', ascending=False, inplace=True)
     return df[page_num*20 : (page_num*20) + 20]

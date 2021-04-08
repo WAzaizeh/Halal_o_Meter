@@ -50,7 +50,7 @@ class Cell:
     def image(self, url):
         self.inner_html = '<img src ="' + url +'"/>'
 
-    def image_card(self, name, address, score, image_url, url):
+    def image_card(self, name, address, score, image_url, url, distance):
         crescent = ''
         for i in range(int(score)): crescent += '<img src="https://cdn.onlinewebfonts.com/svg/img_39469.png"/>'
         self.inner_html = '<div class="flex">'\
@@ -58,7 +58,9 @@ class Cell:
         + '<div class="main-body">'\
         + '<h3><a href="'+ url +'">'+ name +'</a></h3>'\
         + '<p class="crescent">'+ crescent + '</p>'\
-        + '<p class="location"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon_svg"><path d="M12 1.04a9.25 9.25 0 0 1 6.54 15.79l-5.83 5.84A1 1 0 0 1 12 23a1 1 0 0 1-.71-.29l-5.83-5.88A9.25 9.25 0 0 1 12 1.04zm0 2.01a7.25 7.25 0 0 0-5.13 12.37L12 20.54l5.13-5.12A7.25 7.25 0 0 0 12 3.05zm0 3.2a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path></svg> 0.2 miles </p>' \
+        + '<p class="location"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon_svg"><path d="M12 1.04a9.25 9.25 0 0 1 6.54 15.79l-5.83 5.84A1 1 0 0 1 12 23a1 1 0 0 1-.71-.29l-5.83-5.88A9.25 9.25 0 0 1 12 1.04zm0 2.01a7.25 7.25 0 0 0-5.13 12.37L12 20.54l5.13-5.12A7.25 7.25 0 0 0 12 3.05zm0 3.2a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path></svg>'\
+        + distance \
+        + ' miles</p>' \
         + '<p class="light">Summer drinks are back at Starbucks. Order today. </p>'\
         + '</div>'\
         + '<div class="address">'\
