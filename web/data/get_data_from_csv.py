@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 import sys
-sys.path.append('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src')
+# sys.path.append('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src')
 from data.distance_calc import Haversine
 
 
 @st.cache
 def get_restaurant_dataframe(sort_by, ngbr_lat, ngbr_lon, page_num=0) -> pd.DataFrame():
-    biz_data_path = '/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/web/data/clones/businesses_database_clone.csv'
+    biz_data_path = 'web/data/clones/businesses_database_clone.csv'
     df = pd.read_csv(biz_data_path, header=0)
     df.rename({'lng': 'lon'}, axis=1, inplace=True)
     df['distance'] = df.apply(lambda row: Haversine(ngbr_lat, ngbr_lon, row.lat, row.lon), axis=1)
@@ -22,7 +22,7 @@ def get_restaurant_dataframe(sort_by, ngbr_lat, ngbr_lon, page_num=0) -> pd.Data
 
 @st.cache
 def get_neighborhoods_dataframe() -> pd.DataFrame():
-    coord_data_path = '/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/web/data/clones/coordinates_database_clone.csv'
+    coord_data_path = 'web/data/clones/coordinates_database_clone.csv'
     df = pd.read_csv(coord_data_path, header=0)
     df.columns = ['name', 'id', 'lat', 'lon']
     return df

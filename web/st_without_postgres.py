@@ -68,7 +68,7 @@ def make_main_body(rest_df, ngbr_df, neighborhood):
 
 def main():
     """Main function of the App"""
-    st.sidebar.image(Image.open('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/web/data/logo/logo.png'), use_column_width=True)
+    st.sidebar.image(Image.open('web/data/logo/logo.png'), use_column_width=True)
     st.sidebar.markdown('---')
     st.sidebar.header('Filters')
     sort_by = st.sidebar.radio('Sort by:', ('Halal Score', 'Most Reviewed', 'Distance'))
