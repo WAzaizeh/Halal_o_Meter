@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import sys
 sys.path.append('/Users/wesamazaizeh/Desktop/Projects/halal_o_meter/src')
-from src.features.feature_engineering.distance_calc import Haversine
+from distance_calc import Haversine
 
 
 @st.cache
