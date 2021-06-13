@@ -6,12 +6,20 @@ from data.distance_calc import Haversine
 
 
 @st.cache
-def get_restaurant_dataframe(sort_by, ngbr_lat, ngbr_lon, page_num=0) -> pd.DataFrame():
+def get_restaurant_dataframe(sort_by, halal_filter, ngbr_lat, ngbr_lon, page_num=0) -> pd.DataFrame():
     biz_data_path = './data/processed/businesses_database_clone.csv'
     df = pd.read_csv(biz_data_path, header=0)
     df.rename({'lng': 'lon'}, axis=1, inplace=True)
     df['distance'] = df.apply(lambda row: Haversine(ngbr_lat, ngbr_lon, row.lat, row.lon), axis=1)
     df.sort_values('distance', inplace=True)
+
+    # filter dataframe by halal score mask
+    if halal_filter:
+        try:
+            halal_mask = [int(score) for score in halal_filter]
+            df = df[ df['score'].isin(halal_mask)]
+        except:
+            st.error('Please enter a valid halal score. {} is not a valid halal score'.format(halal_filter))
 
     if sort_by == 'Most Reviewed':
         df.sort_values('total_review_count', ascending=False, inplace=True)

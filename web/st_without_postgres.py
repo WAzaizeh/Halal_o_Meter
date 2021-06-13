@@ -72,6 +72,8 @@ def main():
     st.sidebar.markdown('---')
     st.sidebar.header('Filters')
     sort_by = st.sidebar.radio('Sort by:', ('Halal Score', 'Most Reviewed', 'Distance'))
+    halal_filter = st.sidebar.multiselect('Filter by Halal score',
+                        ['1', '2', '3', '4', '5'])
     st.sidebar.markdown('---')
 
     # add list of neighborhoods to drop down menu
@@ -79,7 +81,7 @@ def main():
     neighborhood = st.selectbox('Select search neighborhood', ngbr_df['name'])
     neighborhood_coords = ngbr_df.loc[ngbr_df['name'] == neighborhood][['lat', 'lon']]
     with st.spinner(f"Loading {sort_by.lower()} ..."):
-        rest_df = get_restaurant_dataframe(sort_by, neighborhood_coords['lat'], neighborhood_coords['lon'])
+        rest_df = get_restaurant_dataframe(sort_by, halal_filter, neighborhood_coords['lat'], neighborhood_coords['lon'])
 
         make_main_body(rest_df=rest_df, ngbr_df=ngbr_df, neighborhood=neighborhood)
 
