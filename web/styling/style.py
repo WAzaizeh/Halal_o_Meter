@@ -28,7 +28,7 @@ def _set_block_container_style(
         .reportview-container .markdown-text-container {{
             width: 40vw !important;
         }}
-        .reportview-container .main .block-container .element-container:nth-child(9) {{
+        .reportview-container .main .block-container .element-container:nth-child(10) {{
             width: 38% !important;
             position: fixed;
             top: 150px;
