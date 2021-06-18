@@ -38,7 +38,7 @@ def make_main_body(rest_df, ngbr_df, neighborhood):
     # generate the map
 
     # Adding code so we can have map default to the center of the data
-    midpoint = ((rest_df['lat'].mean()), (rest_df['lon'].mean()))
+    midpoint = ((rest_df['lat'].median()), (rest_df['lon'].median()))
 
     st.pydeck_chart(pdk.Deck(
             map_style='mapbox://styles/mapbox/light-v9',
